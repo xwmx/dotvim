@@ -1,1 +1,0 @@
-.vim/vendor/janus/janus/vim/gvimrc
