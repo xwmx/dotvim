@@ -1,6 +1,6 @@
 # dotvim
 
-A vim configuration.
+A configuration for [Vim](https://www.vim.org/) and [MacVim](http://macvim-dev.github.io/macvim/).
 
 ## Setup
 
