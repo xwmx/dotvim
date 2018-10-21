@@ -1,1 +1,1 @@
-# dotvim
+# .vim.config
