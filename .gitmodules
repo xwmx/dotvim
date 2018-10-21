@@ -1,0 +1,3 @@
+[submodule ".vim/vendor/janus"]
+	path = .vim/vendor/janus
+	url = https://github.com/carlhuda/janus.git
