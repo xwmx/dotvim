@@ -2,6 +2,12 @@
 
 A vim configuration.
 
+## Setup
+
+```bash
+git clone https://github.com/alphabetum/dotvim.git ~/.vim && ~/.vim/config/bin/dotvim-setup
+```
+
 ## [`config/home`](config/home)
 
 Configuration files to be linked to from the home directory.
