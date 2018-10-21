@@ -1,6 +1,7 @@
 [submodule ".vim/vendor/janus"]
 	path = home/.vim/vendor/janus
 	url = https://github.com/carlhuda/janus.git
+	ignore = dirty
 [submodule "home/.vim/pack/plugins/opt/ctrlp"]
 	path = home/.vim/pack/plugins/opt/ctrlp
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
