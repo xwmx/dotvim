@@ -1,0 +1,13 @@
+# Ignore temp vim files.
+_backup
+_temp
+.netrwhist
+
+# vim-plug
+#
+# Ignore plugins installed with vim-plug.
+#
+# https://github.com/junegunn/vim-plug
+vim-plug-plugins/*
+!vim-plug-plugins/.keep
+
