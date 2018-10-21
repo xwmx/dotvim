@@ -1,3 +1,63 @@
 [submodule ".vim/vendor/janus"]
 	path = home/.vim/vendor/janus
 	url = https://github.com/carlhuda/janus.git
+[submodule "home/.vim/pack/plugins/opt/ctrlp"]
+	path = home/.vim/pack/plugins/opt/ctrlp
+	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule "home/.vim/pack/plugins/opt/neomake"]
+	path = home/.vim/pack/plugins/opt/neomake
+	url = https://github.com/neomake/neomake.git
+[submodule "home/.vim/pack/plugins/opt/nerdcommenter"]
+	path = home/.vim/pack/plugins/opt/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "home/.vim/pack/plugins/opt/tagbar"]
+	path = home/.vim/pack/plugins/opt/tagbar
+	url = https://github.com/majutsushi/tagbar.git
+[submodule "home/.vim/pack/plugins/opt/vim-airline"]
+	path = home/.vim/pack/plugins/opt/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "home/.vim/pack/plugins/opt/nerdtree"]
+	path = home/.vim/pack/plugins/opt/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "home/.vim/pack/plugins/opt/vim-gitgutter"]
+	path = home/.vim/pack/plugins/opt/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "home/.vim/pack/plugins/opt/vim-json"]
+	path = home/.vim/pack/plugins/opt/vim-json
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "home/.vim/pack/plugins/opt/vim-polyglot"]
+	path = home/.vim/pack/plugins/opt/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot.git
+[submodule "home/.vim/pack/plugins/opt/vim-sensible"]
+	path = home/.vim/pack/plugins/opt/vim-sensible
+	url = https://github.com/tpope/vim-sensible.git
+[submodule "home/.vim/pack/plugins/opt/vim-sleuth"]
+	path = home/.vim/pack/plugins/opt/vim-sleuth
+	url = https://github.com/tpope/vim-sleuth.git
+[submodule "home/.vim/pack/plugins/opt/vim-signify"]
+	path = home/.vim/pack/plugins/opt/vim-signify
+	url = https://github.com/mhinz/vim-signify.git
+[submodule "home/.vim/pack/plugins/opt/syntastic"]
+	path = home/.vim/pack/plugins/opt/syntastic
+	url = https://github.com/vim-syntastic/syntastic.git
+[submodule "home/.vim/pack/plugins/opt/vim-pandoc"]
+	path = home/.vim/pack/plugins/opt/vim-pandoc
+	url = https://github.com/vim-pandoc/vim-pandoc.git
+[submodule "home/.vim/pack/plugins/opt/vim-pandoc-syntax"]
+	path = home/.vim/pack/plugins/opt/vim-pandoc-syntax
+	url = https://github.com/vim-pandoc/vim-pandoc-syntax.git
+[submodule "home/.vim/pack/plugins/opt/ale"]
+	path = home/.vim/pack/plugins/opt/ale
+	url = https://github.com/w0rp/ale.git
+[submodule "home/.vim/pack/plugins/opt/ack.vim"]
+	path = home/.vim/pack/plugins/opt/ack.vim
+	url = https://github.com/mileszs/ack.vim.git
+[submodule "home/.vim/pack/plugins/opt/fzf.vim"]
+	path = home/.vim/pack/plugins/opt/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git
+[submodule "home/.vim/pack/plugins/opt/anderson.vim"]
+	path = home/.vim/pack/plugins/opt/anderson.vim
+	url = https://github.com/tlhr/anderson.vim
+[submodule "home/.vim/pack/plugins/opt/delimitMate"]
+	path = home/.vim/pack/plugins/opt/delimitMate
+	url = https://github.com/Raimondi/delimitMate.git
