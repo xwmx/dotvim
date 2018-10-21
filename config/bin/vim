@@ -1,0 +1,92 @@
+#!/usr/bin/env bash
+###############################################################################
+# Vim
+#
+# A wrapper for vim commands.
+###############################################################################
+
+###############################################################################
+# Strict Mode
+###############################################################################
+
+set -o nounset
+set -o errexit
+set -o pipefail
+IFS=$'\n\t'
+
+###############################################################################
+# Unwrap
+###############################################################################
+
+# __unwrap()
+#
+# Usage:
+#   __unwrap
+#
+# Description:
+#   Return the next executable with the same basename as this script in the
+#   `$PATH`.
+__unwrap() {
+  local _basename
+  local _executables
+  local _next_executable
+
+  _basename=$(basename "${BASH_SOURCE}")
+  _executables=($(which -a "${_basename:-}"))
+  for _element in "${_executables[@]}"
+  do
+    if [[ ! "${_element}" == "${BASH_SOURCE}" ]] && [[ "${_element}" =~ ^/.* ]]
+    then
+      if [[ -z "${_next_executable:-}" ]]
+      then
+        _next_executable="${_element}"
+      fi
+    fi
+  done
+
+  # Exit if no other executable is found.
+  if [[ -z "${_next_executable:-}" ]]
+  then
+    printf "%s not found.\n" "${_basename:-}"
+    exit 1
+  else
+    printf "%s\n" "${_next_executable}"
+  fi
+}
+
+###############################################################################
+# Wrap
+###############################################################################
+
+# $__USE_NVM_FOR_VIM
+#
+# When set to '1', the `vim` command will transparently use `nvim` instead of
+# the default `vim`.
+__USE_NVM_FOR_VIM=0
+
+# Use `nvim` for all vim operations if it is present in the $PATH. Otherwise,
+# use regular `vim`.
+#
+# NOTE:
+# - `exec` tells the shell to just give control to the executable without
+#   forking. See: http://stackoverflow.com/a/1696062
+# - the `|| true` style used for setting `$_nvim_path` handles the non-zero
+#   exit from `which nvim` when `nvim` is not found, which otherwise would
+#   exit the program due to the `set -o errexit` strictness setting.
+#
+# More info about nvim configuration:
+# https://neovim.io/doc/user/nvim_from_vim.html
+#
+# NOTE: Disable nvim. nvim is currently slow on some systems.
+# TODO: Review use of nvim and the necessesity of this file.
+_nvim_path="$(which nvim)" || true
+__unwrapped_executable="$(__unwrap)"
+if ((__USE_NVM_FOR_VIM))    &&
+   [[ -e "${_nvim_path}" ]] &&
+   [[ -e "${HOME}/.config/nvim" ]]
+then
+  exec "${_nvim_path}" "$@"
+else
+  exec "${__unwrapped_executable}" "$@"
+fi
+
