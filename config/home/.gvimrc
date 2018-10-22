@@ -19,6 +19,14 @@
 " https://www.vim.org/
 " " ============================================================================
 
+" ============================================================================
+" Janus - .gvimrc (begin)                              Janus - .gvimrc (begin)
+"
+" Janus is a distribution of plug-ins and mappings for Vim, Gvim and MacVim.
+"
+" https://github.com/carlhuda/janus
+" ============================================================================
+
 if filereadable(expand("~/.gvimrc.before"))
   source ~/.gvimrc.before
 endif
@@ -32,3 +40,6 @@ if filereadable(expand("~/.gvimrc.after"))
   source ~/.gvimrc.after
 endif
 
+" ============================================================================
+" Janus - .gvimrc (end)                                  Janus - .gvimrc (end)
+" ============================================================================

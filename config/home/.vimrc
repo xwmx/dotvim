@@ -20,9 +20,13 @@
 " https://www.vim.org/
 " ============================================================================
 
-"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-" Janus setup
-"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+" ============================================================================
+" Janus - .vimrc (begin)                                Janus - .vimrc (begin)
+"
+" Janus is a distribution of plug-ins and mappings for Vim, Gvim and MacVim.
+"
+" https://github.com/carlhuda/janus
+" ============================================================================
 
 " Define paths
 let g:janus_path = escape(expand("~/.vim/janus/vim"), ' ')
@@ -58,3 +62,7 @@ exe 'source ' . g:janus_vim_path . '/core/plugins.vim'
 call janus#load_pathogen()
 
 " .vimrc.after is loaded after the plugins have loaded
+
+" ============================================================================
+" Janus - .vimrc (end)                                    Janus - .vimrc (end)
+" ============================================================================
