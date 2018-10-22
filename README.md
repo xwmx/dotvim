@@ -26,6 +26,6 @@ Executables for this configuration.
 [`config/home/.config/nvim`](config/home/.config/nvim) is Neovim's configuration location. In this configuration, it links to `~/.vim`. `.config/nvm/init.vim` is Neovim's equivalent of [`.vimrc`](config/home/.vimrc), so it is linked at [`init.vim`](init.vim).
 
 ```
-~/.config/nvim          -> dotvim/config/home/.config/nvim          -> dotvim
-~/.config/nvim/init.vim -> dotvim/config/home/.config/nvim/init.vim -> dotvim/init.vim
+~/.config/nvim          -> dotvim/config/home/.config/nvim -> dotvim
+~/.config/nvim/init.vim ↱                                   ↳ dotvim/init.vim -> .vimrc
 ```
