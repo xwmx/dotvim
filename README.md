@@ -34,7 +34,7 @@ Wraps `vim` and `nvim`, using `nvim` when present and configured, and otherwise 
 
 [Neovim](https://neovim.io) is a fork of vim focused on extensibility and agility.
 
-[`config/home/.config/nvim`](config/home/.config/nvim) is Neovim's configuration location. In this configuration, it links to `~/.vim`. `.config/nvm/init.vim` is Neovim's equivalent of [`.vimrc`](config/home/.vimrc), so it is linked at [`init.vim`](init.vim).
+`~/.config/nvim` is Neovim's configuration location and should be linked to [`config/home/.config/nvim`](config/home/.config/nvim), which in turn links to [`/`](/../../). `~/.config/nvm/init.vim` is Neovim's equivalent of [`.vimrc`](config/home/.vimrc), so it is linked at [`init.vim`](init.vim).
 
 ```
 ~/.config/nvim          -> dotvim/config/home/.config/nvim -> dotvim
