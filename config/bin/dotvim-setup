@@ -31,7 +31,6 @@ _dotvim_setup() {
   } && _dotvim_setup_config_files
 
   _dotvim_setup_neovim_config() {
-
     if [[ ! -e "${HOME}/.config/nvim" ]]
     then
       ln -s "${HOME}/.config/nvim" "${HOME}/config/home/.config/nvim"
