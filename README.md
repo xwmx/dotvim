@@ -22,7 +22,7 @@ Configuration files to be linked to from the home directory.
 
 This configuration uses [Janus](https://github.com/carlhuda/janus), a distribution of plug-ins and mappings for Vim, Gvim and MacVim.
 
-[`janus`](janus), which links to [`vendor/github.com/carlhuda/janus/janus`](vendor/github.com/carlhuda/janus/janus), is the primary directory for the Janus distribution.
+[`janus`](janus), which links to [`vendor/github.com/carlhuda/janus/janus`](vendor/github.com/carlhuda), is the primary directory for the Janus distribution.
 
 The Janus submodule contains plugins as submodules, which need to be loaded and updated either manually or using the `rake` command.
 
