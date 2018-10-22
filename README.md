@@ -13,11 +13,22 @@ git clone https://github.com/alphabetum/dotvim.git ~/.vim && ~/.vim/config/bin/d
 
 Configuration files to be linked to from the home directory.
 
+- [`.config/nvim`](config/home/.config/nvim)
+- [`.gvimrc`](config/home/.gvimrc)
+- [`.vimrc`](config/home/.vimrc)
+- [`.vimrc.after`](config/home/.vimrc.after)
+
 **[`config/bin`](config/bin)**
 
 Executables for this configuration.
 
-[`config/bin/vim`](config/bin/vim) wraps `vim` and `nvim`, using `nvim` when present and configured, and otherwise falls back to `vim.`
+*[`config/bin/dotvim-setup`](config/bin/dotvim-setup)*
+
+Creates symlinks in the home directory, `~/`, linking to the files in [`config/home`](config/home).
+
+*[`config/bin/vim`](config/bin/vim)*
+
+Wraps `vim` and `nvim`, using `nvim` when present and configured, and otherwise falls back to `vim.`
 
 ### Neovim
 
