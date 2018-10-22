@@ -2,13 +2,6 @@
 " Janus-related vimrc.
 "
 " Runs before Janus is loaded.
-"
-" NOTE: Slow plugins:
-" - TagBar
-"   - Calling ctags is slow, particularly the initial calls for a buffer.
-" - Syntastic
-"   - Does not have an async option at this time. Consider Neomake instead.
-" - NERDTree
 " ============================================================================
 
 " ############################################################################
@@ -49,6 +42,13 @@ let mapleader=","
 " Resources:
 " - https://gist.github.com/manasthakur/ab4cf8d32a28ea38271ac0d07373bb53
 " - https://shapeshed.com/vim-packages/#vim-8-brings-native-third-party-package-loading
+"
+" NOTE: Slow plugins:
+" - TagBar
+"   - Calling ctags is slow, particularly the initial calls for a buffer.
+" - Syntastic
+"   - Does not have an async option at this time. Consider Neomake instead.
+" - NERDTree
 "" ############################################################################
 
 " %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
