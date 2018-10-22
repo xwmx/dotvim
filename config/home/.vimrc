@@ -18,10 +18,37 @@
 " with Apple OS X.
 "
 " https://www.vim.org/
+"
+" TODO: Perfomance Issues
+"
+" Startup can slow, depending on the settings. To log startup timing:
+"
+" vim --startuptime vim-startup.log test.md
+"
+" Identified slow-loading files:
+"
+" - `vim-bufkill/plugin/bufkill.vim`
+" - `vim-airline/autoload/airline/extensions/default.vim`
+" - `/usr/local/Cellar/neovim/0.1.7/share/nvim/runtime/syntax/markdown.vim`
+" - `neomake/autoload/neomake.vim`
 " ============================================================================
 
 " ============================================================================
 " Janus - .vimrc (1) (begin)                        Janus - .vimrc (1) (begin)
+"
+" A distribution of plug-ins and mappings for Vim, Gvim and MacVim.
+"
+" https://github.com/carlhuda/janus
+"
+" NOTES:
+"
+" .vim/janus is the primary directory for the Janus distribution. Currently it
+" links to .vim/vendor/github.com/carlhuda/janus/janus
+"
+" The Janus submodule contains plugins as submodules, which need to be loaded
+" and updated either manually or using the `rake` command.
+"
+" ~/.janus is a [pathogen](https://github.com/tpope/vim-pathogen) directory.
 " --------------------------                        --------------------------
 "
 " Janus is a distribution of plug-ins and mappings for Vim, Gvim and MacVim.
