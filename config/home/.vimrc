@@ -21,8 +21,8 @@
 " ============================================================================
 
 " ============================================================================
-" Janus - .vimrc (begin)                                Janus - .vimrc (begin)
-" ----------------------                                ----------------------
+" Janus - .vimrc (1) (begin)                        Janus - .vimrc (1) (begin)
+" --------------------------                        --------------------------
 "
 " Janus is a distribution of plug-ins and mappings for Vim, Gvim and MacVim.
 "
@@ -41,6 +41,14 @@ exe 'source ' . g:janus_vim_path . '/core/before/plugin/janus.vim'
 call janus#add_group("tools")
 call janus#add_group("langs")
 call janus#add_group("colors")
+
+" ---------------------------                         ------------------------
+" Janus - .vimrc (1) (end)                            Janus - .vimrc (1) (end)
+" ============================================================================
+
+" ============================================================================
+" Janus - .vimrc (2) (begin)                        Janus - .vimrc (2) (begin)
+" ----------------------                            --------------------------
 
 ""
 "" Customisations
@@ -63,6 +71,6 @@ call janus#load_pathogen()
 
 " .vimrc.after is loaded after the plugins have loaded
 
-" --------------------                                    --------------------
-" Janus - .vimrc (end)                                    Janus - .vimrc (end)
+" ------------------------                            ------------------------
+" Janus - .vimrc (2) (end)                            Janus - .vimrc (2) (end)
 " ============================================================================
