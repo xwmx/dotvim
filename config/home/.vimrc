@@ -1,3 +1,25 @@
+" ============================================================================
+" .vimrc
+"
+" Startup commands for Vim.
+"
+" http://vimdoc.sourceforge.net/htmldoc/starting.html#vimrc
+" https://github.com/amix/vimrc
+"
+" Load order:
+"   .vimrc (This file)
+"   .gvimrc
+"
+" ---------
+" About Vim
+"
+" Vim is a highly configurable text editor for efficiently creating and
+" changing any kind of text. It is included as `vi` with most UNIX systems and
+" with Apple OS X.
+"
+" https://www.vim.org/
+" ============================================================================
+
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 " Janus setup
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
