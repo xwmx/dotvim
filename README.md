@@ -28,7 +28,7 @@ Creates symlinks in the home directory (`~/`) linking to the files in [`config/h
 
 *[`config/bin/vim`](config/bin/vim)*
 
-Wraps `vim` and `nvim`, using `nvim` when present and configured, and otherwise falls back to `vim.`
+Wraps `vim` and `nvim`, using `nvim` when present and configured, and otherwise falls back to `vim`.
 
 ### Neovim
 
