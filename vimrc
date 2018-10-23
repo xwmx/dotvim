@@ -103,6 +103,20 @@ set hidden
 set encoding=UTF-8
 
 " ============================================================================
+" Temporary Directories
+"
+" NOTE: This overrides settings from Janus:
+" janus/vim/core/before/plugin/settings.vim#L79
+" ============================================================================
+
+" http://vimdoc.sourceforge.net/htmldoc/options.html#'backupdir'
+set backupdir^=~/.vim/_/backup//
+
+" http://vimdoc.sourceforge.net/htmldoc/options.html#'directory'
+set directory^=~/.vim/_/temp//
+
+
+" ============================================================================
 " Leader
 " ============================================================================
 
