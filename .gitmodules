@@ -81,3 +81,6 @@
 [submodule "vendor/github.com/qpkorr/vim-bufkill"]
 	path = vendor/github.com/qpkorr/vim-bufkill
 	url = https://github.com/qpkorr/vim-bufkill.git
+[submodule "vendor/github.com/vim-ctrlspace/vim-ctrlspace"]
+	path = vendor/github.com/vim-ctrlspace/vim-ctrlspace
+	url = https://github.com/vim-ctrlspace/vim-ctrlspace.git

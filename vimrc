@@ -723,6 +723,26 @@ endfunction
 call SetupPluginVimBufkill()
 
 " ============================================================================
+" vim-ctrlspace
+"
+" Vim Space Controller
+"
+" https://github.com/vim-ctrlspace/vim-ctrlspace
+" ============================================================================
+
+function! SetupPluginVimCtrlspace()
+
+  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-ctrlspace
+
+  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+endfunction
+call SetupPluginVimCtrlspace()
+
+" ============================================================================
 " vim-gitgutter
 "
 " A Vim plugin which shows a git diff in the gutter (sign column) and
