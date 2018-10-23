@@ -84,3 +84,6 @@
 [submodule "vendor/github.com/vim-ctrlspace/vim-ctrlspace"]
 	path = vendor/github.com/vim-ctrlspace/vim-ctrlspace
 	url = https://github.com/vim-ctrlspace/vim-ctrlspace.git
+[submodule "vendor/github.com/vim-scripts/eclm_wombat.vim"]
+	path = vendor/github.com/vim-scripts/eclm_wombat.vim
+	url = https://github.com/vim-scripts/eclm_wombat.vim.git

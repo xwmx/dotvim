@@ -1,0 +1,1 @@
+../../../vendor/github.com/vim-scripts/eclm_wombat.vim

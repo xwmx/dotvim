@@ -1100,6 +1100,27 @@ endfunction
 call SetupPluginVimEclipse3Remix()
 
 " ============================================================================
+" eclm_wombat.vim
+"
+" Colour scheme based on ECLM and wombat schemes
+"
+" https://github.com/vim-scripts/eclm_wombat.vim
+" https://www.vim.org/scripts/script.php?script_id=2490
+" ============================================================================
+
+function! SetupPluginECLMWombatVim()
+
+  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd eclm_wombat.vim
+
+  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+endfunction
+call SetupPluginECLMWombatVim()
+
+" ============================================================================
 " vim-hybrid
 "
 " A dark colour scheme for Vim.
