@@ -704,6 +704,25 @@ endfunction
 call SetupPluginVimAirline()
 
 " ============================================================================
+" vim-bufkill
+"
+" In Vim, trying to unload, delete or wipe a buffer without closing the window
+" or split? You'll like this.
+"
+" https://github.com/qpkorr/vim-bufkill
+" ============================================================================
+
+function! SetupPluginVimBufkill()
+
+  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-bufkill
+
+endfunction
+call SetupPluginVimBufkill()
+
+" ============================================================================
 " vim-gitgutter
 "
 " A Vim plugin which shows a git diff in the gutter (sign column) and
