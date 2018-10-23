@@ -957,6 +957,25 @@ endfunction
 call SetupPluginVimSleuth()
 
 " ============================================================================
+" vim-textobj-line
+"
+"  Text objects for the current line.
+"
+" https://github.com/kana/vim-textobj-line
+" https://www.vim.org/scripts/script.php?script_id=3886
+" ============================================================================
+
+function! SetupPluginVimTextobjUser()
+
+  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-textobj-user
+
+endfunction
+call SetupPluginVimTextobjUser()
+
+" ============================================================================
 " vim-textobj-user
 "
 " Create your own text objects.
