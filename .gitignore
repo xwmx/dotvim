@@ -1,4 +1,8 @@
-# Ignore temp vim files.
+# .netrwhist
+#
+# .netrwhist holds history when netrw (and vim) is not active.
+#
+# http://vimhelp.appspot.com/pi_netrw.txt.html#.netrwhist
 .netrwhist
 
 # vim-plug
