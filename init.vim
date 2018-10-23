@@ -1,1 +1,1 @@
-config/home/.vimrc
+vimrc
