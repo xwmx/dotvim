@@ -5,7 +5,7 @@ A configuration for [Vim](https://www.vim.org/), [Neovim](https://neovim.io), an
 ## Setup
 
 ```bash
-git clone https://github.com/alphabetum/dotvim.git ~/.vim
+git clone --recurse-submodules -j8 https://github.com/alphabetum/dotvim.git ~/.vim
 ```
 ## Overview
 
