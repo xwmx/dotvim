@@ -435,6 +435,8 @@ call SetupPluginFZF()
 " Neomake
 "
 " Asynchronous linting and make framework for Neovim/Vim
+"
+" https://github.com/neomake/neomake
 " ============================================================================
 
 function! SetupPluginNeomake()
@@ -517,6 +519,8 @@ call SetupPluginNERDCommenter()
 " The NERDTree is a file system explorer for the Vim editor. Using this plugin,
 " users can visually browse complex directory hierarchies, quickly open files
 " for reading or editing, and perform basic file system operations.
+"
+" https://github.com/scrooloose/nerdtree
 " ============================================================================
 
 function! SetupPluginNERDTree()
@@ -566,6 +570,8 @@ call SetupPluginNERDTree()
 " syntastic
 "
 " Syntastic is a syntax checking plugin for Vim.
+"
+" https://github.com/vim-syntastic/syntastic
 " ============================================================================
 
 function! SetupPluginSyntastic()
@@ -592,6 +598,8 @@ call SetupPluginSyntastic()
 " tagbar
 "
 " Vim plugin that displays tags in a window, ordered by scope.
+"
+" https://github.com/majutsushi/tagbar
 " ============================================================================
 
 function! SetupPluginTagbar()
@@ -700,6 +708,8 @@ call SetupPluginVimAirline()
 "
 " A Vim plugin which shows a git diff in the gutter (sign column) and
 " stages/undoes hunks.
+"
+" https://github.com/airblade/vim-gitgutter
 " ============================================================================
 
 function! SetupPluginVimGitgutter()
@@ -749,6 +759,8 @@ call SetupPluginVimGo()
 "
 " A better JSON for Vim: distinct highlighting of keywords vs values,
 " JSON-specific (non-JS) warnings, quote concealing. Pathogen-friendly.
+"
+" https://github.com/elzr/vim-json
 " ============================================================================
 
 function! SetupPluginVimJson()
@@ -777,6 +789,8 @@ call SetupPluginVimJson()
 " vim-pandoc provides facilities to integrate Vim with the pandoc document
 " converter and work with documents written in its markdown variant (although
 " textile documents are also supported).
+"
+" https://github.com/vim-pandoc/vim-pandoc
 " ============================================================================
 
 function! SetupPluginVimPandoc()
@@ -803,6 +817,8 @@ call SetupPluginVimPandoc()
 "
 " Standalone pandoc syntax module, to be used alongside vim-pandoc.
 " Plug 'https://github.com/vim-pandoc/vim-pandoc-syntax'
+"
+" https://github.com/vim-pandoc/vim-pandoc-syntax
 " ============================================================================
 
 function! SetupPluginVimPandocSyntax()
@@ -859,6 +875,8 @@ call SetupPluginVimPolyglot()
 "
 " Think of sensible.vim as one step above 'nocompatible' mode: a universal set
 " of defaults that (hopefully) everyone can agree on.
+"
+" https://github.com/tpope/vim-sensible
 " ============================================================================
 
 function! SetupPluginVimSensible()
@@ -878,6 +896,8 @@ call SetupPluginVimSensible()
 " vim-signify
 "
 " Show a diff using Vim its sign column.
+"
+" https://github.com/mhinz/vim-signify
 " ============================================================================
 
 function! SetupPluginVimSignify()
@@ -932,7 +952,9 @@ call SetupPluginVimSignify()
 " ============================================================================
 " vim-sleuth
 "
-" sleuth.vim: Heuristically set buffer options
+" sleuth.vim: Heuristically set buffer options.
+"
+" https://github.com/tpope/vim-sleuth
 " ============================================================================
 
 function! SetupPluginVimSleuth()
@@ -979,6 +1001,8 @@ call SetupPluginVimTextobjUser()
 " vim-textobj-user
 "
 " Create your own text objects.
+"
+" https://github.com/kana/vim-textobj-user
 " ============================================================================
 
 function! SetupPluginVimTextobjUser()
