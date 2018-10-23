@@ -987,6 +987,26 @@ function! SetupPluginAnderson()
 endfunction
 call SetupPluginAnderson()
 
+" ============================================================================
+" vim-hybrid
+"
+" A dark colour scheme for Vim.
+"
+" https://github.com/w0ng/vim-hybrid
+" ============================================================================
+
+function! SetupPluginVimHybrid()
+
+  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  " packadd vim-hybrid
+
+  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+endfunction
+call SetupPluginVimHybrid()
+
 " %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 " vim-plug (end)
 " %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -68,3 +68,6 @@
 [submodule "vendor/github.com/fatih/vim-go"]
 	path = vendor/github.com/fatih/vim-go
 	url = https://github.com/fatih/vim-go.git
+[submodule "vendor/github.com/w0ng/vim-hybrid"]
+	path = vendor/github.com/w0ng/vim-hybrid
+	url = https://github.com/w0ng/vim-hybrid.git
