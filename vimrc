@@ -115,7 +115,6 @@ set backupdir^=~/.vim/cache/backup//
 " http://vimdoc.sourceforge.net/htmldoc/options.html#'directory'
 set directory^=~/.vim/cache/temp//
 
-
 " ============================================================================
 " Leader
 " ============================================================================
