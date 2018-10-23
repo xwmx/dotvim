@@ -1,5 +1,5 @@
 " ============================================================================
-" .vimrc
+" vimrc
 "
 " Startup commands for Vim.
 "
@@ -970,3 +970,4 @@ call janus#load_pathogen()
 "
 " https://github.com/carlhuda/janus/blob/master/janus/vim/core/janus/after/plugin/vimrc_after.vim
 " http://learnvimscriptthehardway.stevelosh.com/chapters/42.html#vimafter
+

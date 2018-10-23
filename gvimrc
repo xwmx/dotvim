@@ -1,5 +1,5 @@
 " ============================================================================
-" .gvimrc
+" gvimrc
 "
 " GUI-specific startup commands for Vim.
 "
@@ -280,3 +280,4 @@ if exists("custom_macvim_hig_movement")
   ino  <S-M-Right>    <C-O>ve
 
 endif " exists("custom_macvim_hig_movement")
+
