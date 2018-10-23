@@ -110,10 +110,10 @@ set encoding=UTF-8
 " ============================================================================
 
 " http://vimdoc.sourceforge.net/htmldoc/options.html#'backupdir'
-set backupdir^=~/.vim/_/backup//
+set backupdir^=~/.vim/cache/backup//
 
 " http://vimdoc.sourceforge.net/htmldoc/options.html#'directory'
-set directory^=~/.vim/_/temp//
+set directory^=~/.vim/cache/temp//
 
 
 " ============================================================================
