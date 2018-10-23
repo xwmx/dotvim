@@ -384,6 +384,26 @@ endfunction
 call SetupPluginDelimitMate()
 
 " ============================================================================
+" Dockerfile.vim
+"
+" Vim syntax file for Docker's Dockerfile and snippets for snipMate.
+"
+" https://github.com/ekalinin/Dockerfile.vim
+" ============================================================================
+
+function! SetupPluginDockerfileVim()
+
+  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd Dockerfile.vim
+
+  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+endfunction
+call SetupPluginDockerfileVim()
+
+" ============================================================================
 " FZF
 "
 " 🌸 A command-line fuzzy finder

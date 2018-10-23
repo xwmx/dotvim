@@ -62,3 +62,6 @@
 	path = vendor/github.com/carlhuda/janus
 	url = https://github.com/carlhuda/janus.git
 	ignore = dirty
+[submodule "vendor/github.com/ekalinin/Dockerfile.vim"]
+	path = vendor/github.com/ekalinin/Dockerfile.vim
+	url = https://github.com/ekalinin/Dockerfile.vim.git
