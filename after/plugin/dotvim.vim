@@ -1,9 +1,15 @@
 " ============================================================================
+"      _       _         _                 _
+"   __| | ___ | |___   _(_)_ __ ___ __   _(_)_ __ ___
+"  / _` |/ _ \| __\ \ / / | '_ ` _ \\ \ / / | '_ ` _ \
+" | (_| | (_) | |_ \ V /| | | | | | |\ V /| | | | | | |
+"  \__,_|\___/ \__| \_/ |_|_| |_| |_(_)_/ |_|_| |_| |_|
+"
+" ----------------------------------------------------------------------------
+"
 " after/plugin/dotvim.vim
 "
-" http://learnvimscriptthehardway.stevelosh.com/chapters/42.html#vimafter
-"
-" Startup commands for Vim, to be run after Janus initialization.
+" Startup commands for Vim, to be run after plugin initialization.
 "
 " http://vimdoc.sourceforge.net/htmldoc/starting.html#vimrc
 " https://github.com/amix/vimrc
