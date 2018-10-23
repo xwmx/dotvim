@@ -725,6 +725,26 @@ endfunction
 call SetupPluginVimGitgutter()
 
 " ============================================================================
+" vim-go
+"
+" Go development plugin for Vim.
+"
+" https://github.com/fatih/vim-go
+" ============================================================================
+
+function! SetupPluginVimGo()
+
+  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-go
+
+  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+endfunction
+call SetupPluginVimGo()
+
+" ============================================================================
 " vim-json
 "
 " A better JSON for Vim: distinct highlighting of keywords vs values,

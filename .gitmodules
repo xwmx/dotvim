@@ -65,3 +65,6 @@
 [submodule "vendor/github.com/ekalinin/Dockerfile.vim"]
 	path = vendor/github.com/ekalinin/Dockerfile.vim
 	url = https://github.com/ekalinin/Dockerfile.vim.git
+[submodule "vendor/github.com/fatih/vim-go"]
+	path = vendor/github.com/fatih/vim-go
+	url = https://github.com/fatih/vim-go.git
