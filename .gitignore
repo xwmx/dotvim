@@ -1,8 +1,4 @@
 # Ignore temp vim files.
-_backup/*
-!_backup/.keep
-_temp/*
-!_temp/.keep
 .netrwhist
 
 # vim-plug
