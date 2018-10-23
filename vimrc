@@ -957,6 +957,22 @@ endfunction
 call SetupPluginVimSleuth()
 
 " ============================================================================
+" vim-textobj-user
+"
+" Create your own text objects.
+" ============================================================================
+
+function! SetupPluginVimTextobjUser()
+
+  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-textobj-user
+
+endfunction
+call SetupPluginVimTextobjUser()
+
+" ============================================================================
 "  _____ _
 " |_   _| |__   ___ _ __ ___   ___  ___
 "   | | | '_ \ / _ \ '_ ` _ \ / _ \/ __|
