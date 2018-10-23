@@ -6,6 +6,4 @@
 # Ignore plugins installed with vim-plug.
 #
 # https://github.com/junegunn/vim-plug
-vim-plug-plugins/*
-!vim-plug-plugins/.keep
-
+vim-plug

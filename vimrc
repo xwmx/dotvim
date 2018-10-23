@@ -201,7 +201,7 @@ endif
 " %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 " Plugins will be downloaded under the specified directory.
-call plug#begin('~/.vim/vim-plug-plugins')
+call plug#begin('~/.vim/vim-plug')
 
 " ============================================================================
 " ack.vim
