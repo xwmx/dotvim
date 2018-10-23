@@ -11,12 +11,9 @@
 "
 " Startup commands for Vim, to be run after plugin initialization.
 "
+" http://learnvimscriptthehardway.stevelosh.com/chapters/42.html#vimafter
 " http://vimdoc.sourceforge.net/htmldoc/starting.html#vimrc
 " https://github.com/amix/vimrc
-"
-" Load order:
-"   .vimrc (This file)
-"   .gvimrc
 "
 " ---------
 " About Vim

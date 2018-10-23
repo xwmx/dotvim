@@ -15,8 +15,8 @@
 " https://github.com/amix/vimrc
 "
 " Load order:
-"   .vimrc (This file)
-"   .gvimrc
+"   vimrc (This file)
+"   gvimrc
 "
 " ---------
 " About Vim
@@ -42,7 +42,8 @@
 " ============================================================================
 
 " ============================================================================
-" Janus - .vimrc (1) (begin)                        Janus - .vimrc (1) (begin)
+" Janus - vimrc (1) (begin)                          Janus - vimrc (1) (begin)
+" -------------------------                          -------------------------
 "
 " A distribution of plug-ins and mappings for Vim, Gvim and MacVim.
 "
@@ -57,7 +58,7 @@
 " and updated either manually or using the `rake` command.
 "
 " ~/.janus is a [pathogen](https://github.com/tpope/vim-pathogen) directory.
-" --------------------------                        --------------------------
+" -------------------------                          -------------------------
 "
 " Janus is a distribution of plug-ins and mappings for Vim, Gvim and MacVim.
 "
@@ -77,8 +78,8 @@ call janus#add_group("tools")
 call janus#add_group("langs")
 call janus#add_group("colors")
 
-" ------------------------                            ------------------------
-" Janus - .vimrc (1) (end)                            Janus - .vimrc (1) (end)
+" -----------------------                              -----------------------
+" Janus - vimrc (1) (end)                              Janus - vimrc (1) (end)
 " ============================================================================
 
 " ############################################################################
@@ -941,8 +942,8 @@ call SetupPluginAnderson()
 call plug#end()
 
 " ============================================================================
-" Janus - .vimrc (2) (begin)                        Janus - .vimrc (2) (begin)
-" ----------------------                            --------------------------
+" Janus - vimrc (2) (begin)                          Janus - vimrc (2) (begin)
+" -------------------------                          -------------------------
 
 ""
 "" Customisations
@@ -965,17 +966,6 @@ call janus#load_pathogen()
 
 " .vimrc.after is loaded after the plugins have loaded
 
-" ------------------------                            ------------------------
-" Janus - .vimrc (2) (end)                            Janus - .vimrc (2) (end)
+" -----------------------                              -----------------------
+" Janus - vimrc (2) (end)                              Janus - vimrc (2) (end)
 " ============================================================================
-
-" ============================================================================
-" .vimrc.after
-" ============================================================================
-
-" NOTE: .vimrc.after is loaded during the Janus installation process.
-" TODO: Merge .vimrc.after with .vimrc
-"
-" https://github.com/carlhuda/janus/blob/master/janus/vim/core/janus/after/plugin/vimrc_after.vim
-" http://learnvimscriptthehardway.stevelosh.com/chapters/42.html#vimafter
-
