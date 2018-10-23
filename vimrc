@@ -1066,6 +1066,20 @@ endfunction
 call SetupPluginAnderson()
 
 " ============================================================================
+" vim-eclipse3remix
+" ============================================================================
+
+function! SetupPluginVimEclipse3Remix()
+
+  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-eclipse3remix
+
+endfunction
+call SetupPluginVimEclipse3Remix()
+
+" ============================================================================
 " vim-hybrid
 "
 " A dark colour scheme for Vim.
