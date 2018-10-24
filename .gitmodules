@@ -93,3 +93,7 @@
 [submodule "vendor/github.com/fxn/vim-monochrome"]
 	path = vendor/github.com/fxn/vim-monochrome
 	url = https://github.com/fxn/vim-monochrome.git
+[submodule "vendor/github.com/alphabetum/dracula-theme-vim"]
+	path = vendor/github.com/alphabetum/dracula-theme-vim
+	url = https://github.com/alphabetum/dracula-theme-vim.git
+	branch = alternative-colors

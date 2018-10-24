@@ -1104,6 +1104,29 @@ endfunction
 call SetupPluginAnderson()
 
 " ============================================================================
+" dracula-theme-vim
+"
+" Dracula for Vim.
+"
+" https://draculatheme.com/vim/
+"
+" NOTE: using fork with customizations:
+" https://github.com/alphabetum/dracula-theme-vim
+" ============================================================================
+
+function! SetupPluginDraculaThemeVim()
+
+  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd dracula-theme-vim
+
+  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+endfunction
+call SetupPluginDraculaThemeVim()
+
+" ============================================================================
 " vim-eclipse3remix
 " ============================================================================
 
