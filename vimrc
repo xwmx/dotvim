@@ -167,13 +167,6 @@ let g:pathogen_disabled = []
 " call add(g:pathogen_disabled, '<plugin_name>')
 """"""""""""""""""""""""""""""""""""""""""""""""
 
-" Disable vim-devicons
-"
-" TODO: Re-enable when fonts are installed.
-"
-" https://github.com/ryanoasis/vim-devicons
-call add(g:pathogen_disabled, 'vim-devicons')
-
 " ============================================================================
 " Disable Janus plugins
 " ============================================================================
