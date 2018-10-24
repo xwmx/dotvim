@@ -100,3 +100,6 @@
 [submodule "vendor/github.com/alphabetum/seti.vim"]
 	path = vendor/github.com/alphabetum/seti.vim
 	url = https://github.com/alphabetum/seti.vim.git
+[submodule "vendor/github.com/alphabetum/vim-vwilight"]
+	path = vendor/github.com/alphabetum/vim-vwilight
+	url = https://github.com/alphabetum/vim-vwilight.git

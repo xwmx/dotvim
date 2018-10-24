@@ -1223,6 +1223,25 @@ endfunction
 call SetupPluginVimMonochrome()
 
 " ============================================================================
+" vim-vwilight
+"
+" https://github.com/alphabetum/vim-vwilight
+" https://github.com/jaywilliams/vim-vwilight
+" ============================================================================
+
+function! SetupPluginVimVwilight()
+
+  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-vwilight
+
+  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+endfunction
+call SetupPluginVimVwilight()
+
+" ============================================================================
 " vwilight-original
 " ============================================================================
 
