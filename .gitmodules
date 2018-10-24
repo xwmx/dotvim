@@ -97,3 +97,6 @@
 	path = vendor/github.com/alphabetum/dracula-theme-vim
 	url = https://github.com/alphabetum/dracula-theme-vim.git
 	branch = alternative-colors
+[submodule "vendor/github.com/alphabetum/seti.vim"]
+	path = vendor/github.com/alphabetum/seti.vim
+	url = https://github.com/alphabetum/seti.vim.git

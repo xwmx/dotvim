@@ -1127,6 +1127,27 @@ endfunction
 call SetupPluginDraculaThemeVim()
 
 " ============================================================================
+" seti.vim
+"
+" The Seti colorscheme for vim.
+"
+" https://github.com/trusktr/seti.vim
+" https://github.com/alphabetum/seti.vim
+" ============================================================================
+
+function! SetupPluginSetiVim()
+
+  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd seti.vim
+
+  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+endfunction
+call SetupPluginSetiVim()
+
+" ============================================================================
 " vim-eclipse3remix
 " ============================================================================
 
