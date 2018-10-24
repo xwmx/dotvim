@@ -87,3 +87,6 @@
 [submodule "vendor/github.com/vim-scripts/eclm_wombat.vim"]
 	path = vendor/github.com/vim-scripts/eclm_wombat.vim
 	url = https://github.com/vim-scripts/eclm_wombat.vim.git
+[submodule "vendor/github.com/ryanoasis/vim-devicons"]
+	path = vendor/github.com/ryanoasis/vim-devicons
+	url = https://github.com/ryanoasis/vim-devicons.git

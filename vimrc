@@ -743,6 +743,31 @@ endfunction
 call SetupPluginVimCtrlspace()
 
 " ============================================================================
+" vim-devicons
+"
+" Adds file type glyphs/icons to popular Vim plugins: NERDTree, vim-airline,
+" Powerline, Unite, vim-startify and more.
+"
+" https://github.com/ryanoasis/vim-devicons
+" ============================================================================
+
+function! SetupPluginVimDevicons()
+
+  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Plug init:
+  " Plug 'ryanoasis/vim-devicons'
+
+  " Native Vim init:
+  " TODO: Re-enable when fonts are installed.
+  " packadd vim-devicons
+
+  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+endfunction
+call SetupPluginVimDevicons()
+
+" ============================================================================
 " vim-gitgutter
 "
 " A Vim plugin which shows a git diff in the gutter (sign column) and
