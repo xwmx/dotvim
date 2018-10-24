@@ -1148,20 +1148,6 @@ endfunction
 call SetupPluginSetiVim()
 
 " ============================================================================
-" vim-eclipse3remix
-" ============================================================================
-
-function! SetupPluginVimEclipse3Remix()
-
-  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
-
-  " Native Vim init:
-  packadd vim-eclipse3remix
-
-endfunction
-call SetupPluginVimEclipse3Remix()
-
-" ============================================================================
 " eclm_wombat.vim
 "
 " Colour scheme based on ECLM and wombat schemes
@@ -1181,6 +1167,20 @@ function! SetupPluginECLMWombatVim()
 
 endfunction
 call SetupPluginECLMWombatVim()
+
+" ============================================================================
+" vim-eclipse3remix
+" ============================================================================
+
+function! SetupPluginVimEclipse3Remix()
+
+  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-eclipse3remix
+
+endfunction
+call SetupPluginVimEclipse3Remix()
 
 " ============================================================================
 " vim-hybrid
