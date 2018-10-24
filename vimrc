@@ -1158,6 +1158,26 @@ function! SetupPluginVimHybrid()
 endfunction
 call SetupPluginVimHybrid()
 
+" ============================================================================
+" vim-monochrome
+"
+" A dark Vim color scheme for your focused hacking sessions.
+"
+" https://github.com/fxn/vim-monochrome
+" ============================================================================
+
+function! SetupPluginVimMonochrome()
+
+  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-monochrome
+
+  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+endfunction
+call SetupPluginVimMonochrome()
+
 " %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 " vim-plug (end)
 " %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
