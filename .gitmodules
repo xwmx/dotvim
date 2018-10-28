@@ -103,3 +103,6 @@
 [submodule "vendor/github.com/alphabetum/vim-vwilight"]
 	path = vendor/github.com/alphabetum/vim-vwilight
 	url = https://github.com/alphabetum/vim-vwilight.git
+[submodule "vendor/github.com/mxw/vim-jsx"]
+	path = vendor/github.com/mxw/vim-jsx
+	url = https://github.com/mxw/vim-jsx.git

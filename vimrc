@@ -841,6 +841,29 @@ endfunction
 call SetupPluginVimJson()
 
 " ============================================================================
+" vim-jsx
+"
+" React JSX syntax highlighting and indenting for vim.
+"
+" https://github.com/mxw/vim-jsx
+" ============================================================================
+
+function! SetupPluginVimJsx()
+
+  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Plug init:
+  " Plug 'https://github.com/mxw/vim-jsx'
+
+  " Native Vim init:
+  packadd vim-jsx
+
+  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+endfunction
+call SetupPluginVimJsx()
+
+" ============================================================================
 " vim-pandoc
 "
 " vim-pandoc provides facilities to integrate Vim with the pandoc document
