@@ -106,3 +106,6 @@
 [submodule "vendor/github.com/mxw/vim-jsx"]
 	path = vendor/github.com/mxw/vim-jsx
 	url = https://github.com/mxw/vim-jsx.git
+[submodule "vendor/github.com/sbdchd/neoformat"]
+	path = vendor/github.com/sbdchd/neoformat
+	url = https://github.com/sbdchd/neoformat.git

@@ -425,6 +425,29 @@ endfunction
 call SetupPluginFZF()
 
 " ============================================================================
+" Neoformat
+"
+" ✨ A (Neo)vim plugin for formatting code.
+"
+" https://github.com/sbdchd/neoformat.git
+" ============================================================================
+
+function! SetupPluginNeoformat()
+
+  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+" Plug init:
+  " Plug 'https://github.com/sbdchd/neoformat'
+
+  " Native Vim init:
+  packadd neoformat
+
+  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+endfunction
+call SetupPluginNeoformat()
+
+" ============================================================================
 " Neomake
 "
 " Asynchronous linting and make framework for Neovim/Vim
