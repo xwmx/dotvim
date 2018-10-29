@@ -291,6 +291,12 @@ function! SetupPluginAle()
   " highlight.
   let g:ale_set_highlights = 0
 
+  " Use ESLint for JavaScript
+  "
+  " https://eslint.org/
+  " https://github.com/eslint/eslint/
+  let g:ale_linters = {'javascript': ['eslint']}
+
 endfunction
 call SetupPluginAle()
 
