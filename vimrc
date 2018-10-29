@@ -285,11 +285,10 @@ function! SetupPluginAle()
   let g:ale_sign_warning = '›'
   let g:ale_sign_error = '›'
 
-  " Turn off highlights
-  "
-  " In MacVim this disables the underline. In terminal vim, it disabled the
-  " highlight.
-  let g:ale_set_highlights = 0
+  " Only use highlights in MacVim.
+  if ! has("gui_macvim")
+    let g:ale_set_highlights = 0
+  endif
 
   " Use ESLint for JavaScript
   "
