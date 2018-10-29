@@ -32,52 +32,190 @@
 " https://github.com/carlhuda/janus
 " ============================================================================
 
-" ############################################################################
-"  ____  _           _
-" |  _ \(_)___ _ __ | | __ _ _   _
-" | | | | / __| '_ \| |/ _` | | | |
-" | |_| | \__ \ |_) | | (_| | |_| |
-" |____/|_|___/ .__/|_|\__,_|\__, |
-"             |_|            |___/
-"
-" ############################################################################
-
 " ============================================================================
-" ColorColumn
+"            _                _
+"   ___ ___ | | ___  _ __ ___| |__   ___ _ __ ___   ___  ___
+"  / __/ _ \| |/ _ \| '__/ __| '_ \ / _ \ '_ ` _ \ / _ \/ __|
+" | (_| (_) | | (_) | |  \__ \ | | |  __/ | | | | |  __/\__ \
+"  \___\___/|_|\___/|_|  |___/_| |_|\___|_| |_| |_|\___||___/
 " ============================================================================
 
-" Highlight the 81st column, to limit line length to 80 columns.
+" ============================================================================
+" anderson.vim
 "
-" More Information:
-"   http://programmers.stackexchange.com/a/148729
-"   http://www.emacswiki.org/emacs/EightyColumnRule
+" Dark vim colorscheme based on colors from Wes Anderson films.
 "
-if has("gui_macvim")
-  " Experimental ColorColumn that tweaks the non-GUI version to make the
-  " foreground less glaring (to avoid too much noise from newlines) and make
-  " the background match the NonText background.
-  "
-  " last: hi ColorColumn guifg=#bbbbbb guibg=#1a1a1a gui=NONE
-  hi ColorColumn guifg=NONE guibg=#1c1d1e gui=bold
-else
-  hi ColorColumn guifg=#f8f8f8 guibg=#161616 gui=NONE
-endif
+" https://github.com/tlhr/anderson.vim
+" ============================================================================
 
-if exists('+colorcolumn')
-  " In Vim >= 7.3, also highlight columns 120+
-  "
-  " (120-320 because you have to provide an upper bound and 320 just
-  "  covers a 1080p GVim window in Ubuntu Mono 11 font.)
-  let &colorcolumn="81,".join(range(120,320),",")
-else
-  " fallback for Vim < v7.3
-  autocmd BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
-endif
+function! SetupPluginAnderson()
+
+  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  " packadd anderson
+
+  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+endfunction
+call SetupPluginAnderson()
 
 " ============================================================================
-" colorschemes
+" dracula-theme-vim
 "
-" Leaving favorites commented out for easy switching
+" Dracula for Vim.
+"
+" https://draculatheme.com/vim/
+"
+" NOTE: using fork with customizations:
+" https://github.com/alphabetum/dracula-theme-vim
+" ============================================================================
+
+function! SetupPluginDraculaThemeVim()
+
+  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd dracula-theme-vim
+
+  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+endfunction
+call SetupPluginDraculaThemeVim()
+
+" ============================================================================
+" seti.vim
+"
+" The Seti colorscheme for vim.
+"
+" https://github.com/trusktr/seti.vim
+" https://github.com/alphabetum/seti.vim
+" ============================================================================
+
+function! SetupPluginSetiVim()
+
+  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd seti.vim
+
+  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+endfunction
+call SetupPluginSetiVim()
+
+" ============================================================================
+" eclm_wombat.vim
+"
+" Colour scheme based on ECLM and wombat schemes
+"
+" https://github.com/vim-scripts/eclm_wombat.vim
+" https://www.vim.org/scripts/script.php?script_id=2490
+" ============================================================================
+
+function! SetupPluginECLMWombatVim()
+
+  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd eclm_wombat.vim
+
+  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+endfunction
+call SetupPluginECLMWombatVim()
+
+" ============================================================================
+" vim-eclipse3remix
+" ============================================================================
+
+function! SetupPluginVimEclipse3Remix()
+
+  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-eclipse3remix
+
+endfunction
+call SetupPluginVimEclipse3Remix()
+
+" ============================================================================
+" vim-hybrid
+"
+" A dark colour scheme for Vim.
+"
+" https://github.com/w0ng/vim-hybrid
+" ============================================================================
+
+function! SetupPluginVimHybrid()
+
+  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  " packadd vim-hybrid
+
+  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+endfunction
+call SetupPluginVimHybrid()
+
+" ============================================================================
+" vim-monochrome
+"
+" A dark Vim color scheme for your focused hacking sessions.
+"
+" https://github.com/fxn/vim-monochrome
+" ============================================================================
+
+function! SetupPluginVimMonochrome()
+
+  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-monochrome
+
+  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+endfunction
+call SetupPluginVimMonochrome()
+
+" ============================================================================
+" vim-vwilight
+"
+" https://github.com/alphabetum/vim-vwilight
+" https://github.com/jaywilliams/vim-vwilight
+" ============================================================================
+
+function! SetupPluginVimVwilight()
+
+  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-vwilight
+
+  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+endfunction
+call SetupPluginVimVwilight()
+
+" ============================================================================
+" vwilight-original
+" ============================================================================
+
+function! SetupPluginVwilightOriginal()
+
+  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vwilight-original
+
+  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+endfunction
+call SetupPluginVwilightOriginal()
+
+" ============================================================================
+" Set Colorscheme
 " ============================================================================
 
 "colorscheme base16-chalk
@@ -119,6 +257,48 @@ else
   colorscheme dracula
   " 'hybrid' is a good default to return to if necessary.
   " colorscheme hybrid
+endif
+
+" ############################################################################
+"  ____  _           _
+" |  _ \(_)___ _ __ | | __ _ _   _
+" | | | | / __| '_ \| |/ _` | | | |
+" | |_| | \__ \ |_) | | (_| | |_| |
+" |____/|_|___/ .__/|_|\__,_|\__, |
+"             |_|            |___/
+"
+" ############################################################################
+
+" ============================================================================
+" ColorColumn
+" ============================================================================
+
+" Highlight the 81st column, to limit line length to 80 columns.
+"
+" More Information:
+"   http://programmers.stackexchange.com/a/148729
+"   http://www.emacswiki.org/emacs/EightyColumnRule
+"
+if has("gui_macvim")
+  " Experimental ColorColumn that tweaks the non-GUI version to make the
+  " foreground less glaring (to avoid too much noise from newlines) and make
+  " the background match the NonText background.
+  "
+  " last: hi ColorColumn guifg=#bbbbbb guibg=#1a1a1a gui=NONE
+  hi ColorColumn guifg=NONE guibg=#1c1d1e gui=bold
+else
+  hi ColorColumn guifg=#f8f8f8 guibg=#161616 gui=NONE
+endif
+
+if exists('+colorcolumn')
+  " In Vim >= 7.3, also highlight columns 120+
+  "
+  " (120-320 because you have to provide an upper bound and 320 just
+  "  covers a 1080p GVim window in Ubuntu Mono 11 font.)
+  let &colorcolumn="81,".join(range(120,320),",")
+else
+  " fallback for Vim < v7.3
+  autocmd BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
 
 " ============================================================================
@@ -562,8 +742,4 @@ nnoremap <silent> <leader>DD :exe ":profile start profile.log"<cr>:exe ":profile
 nnoremap <silent> <leader>DP :exe ":profile pause"<cr>
 nnoremap <silent> <leader>DC :exe ":profile continue"<cr>
 nnoremap <silent> <leader>DQ :exe ":profile pause"<cr>:noautocmd qall!<cr>
-
-  " highlight ALEWarningSign ctermfg=245 ctermbg=235  cterm=NONE guifg=#868686 guibg=#2b2b2b gui=NONE
-  " highlight ALEErrorSign ctermfg=245 ctermbg=235  cterm=NONE guifg=#cf6a4c guibg=#2b2b2b gui=NONE
-
 
