@@ -107,6 +107,14 @@ if has("gui_macvim")
   "colorscheme seti
   colorscheme vwilight
   " colorscheme Tomorrow-Night
+
+  " Custom ALE colors.
+  "
+  " More information:
+  " https://github.com/w0rp/ale
+  " ~/.vimrc
+  highlight ALEWarningSign ctermfg=245 ctermbg=235  cterm=NONE guifg=#868686 guibg=#2b2b2b gui=NONE
+  highlight ALEErrorSign   ctermfg=245 ctermbg=235  cterm=NONE guifg=#cf6a4c guibg=#2b2b2b gui=NONE
 else
   colorscheme dracula
   " 'hybrid' is a good default to return to if necessary.
@@ -554,5 +562,8 @@ nnoremap <silent> <leader>DD :exe ":profile start profile.log"<cr>:exe ":profile
 nnoremap <silent> <leader>DP :exe ":profile pause"<cr>
 nnoremap <silent> <leader>DC :exe ":profile continue"<cr>
 nnoremap <silent> <leader>DQ :exe ":profile pause"<cr>:noautocmd qall!<cr>
+
+  " highlight ALEWarningSign ctermfg=245 ctermbg=235  cterm=NONE guifg=#868686 guibg=#2b2b2b gui=NONE
+  " highlight ALEErrorSign ctermfg=245 ctermbg=235  cterm=NONE guifg=#cf6a4c guibg=#2b2b2b gui=NONE
 
 

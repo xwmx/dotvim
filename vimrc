@@ -266,12 +266,9 @@ function! SetupPluginAle()
   " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Native Vim init:
-  " NOTE: Currently using Neomake.
-  " packadd ale
+  packadd ale
 
   " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
-
-  " highlight ALEWarning ctermbg=DarkMagenta
 
   let g:airline#extensions#ale#enabled = 1
 
@@ -281,9 +278,18 @@ function! SetupPluginAle()
   \ '\.min\.css$': {'ale_linters': [], 'ale_fixers': []},
   \}
 
-  let g:ale_sign_warning = '•'
+  " Use more subtle symbols.
+  "
+  " NOTE: Color overrides can be found in the 'colorschemes' section of
+  " after/plugin/dotvim.vim
+  let g:ale_sign_warning = '›'
+  let g:ale_sign_error = '›'
 
-  highlight ALEWarningSign ctermfg=245 ctermbg=235  cterm=NONE guifg=#868686 guibg=#2b2b2b gui=NONE
+  " Turn off highlights
+  "
+  " In MacVim this disables the underline. In terminal vim, it disabled the
+  " highlight.
+  let g:ale_set_highlights = 0
 
 endfunction
 call SetupPluginAle()
@@ -445,7 +451,8 @@ function! SetupPluginNeoformat()
   " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
 endfunction
-call SetupPluginNeoformat()
+" NOTE: Disable in favor of ALE
+" call SetupPluginNeoformat()
 
 " ============================================================================
 " Neomake
@@ -485,7 +492,8 @@ function! SetupPluginNeomake()
     \ }
 
 endfunction
-call SetupPluginNeomake()
+" NOTE: Disable in favor of ALE
+" call SetupPluginNeomake()
 
 " ============================================================================
 " NERD Commenter
