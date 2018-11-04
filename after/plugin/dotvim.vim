@@ -242,8 +242,8 @@ set background=dark
 if has("gui_macvim")
   "colorscheme base16-default
   " colorscheme dracula
-  "colorscheme seti
-  colorscheme vwilight
+  colorscheme seti
+  " colorscheme vwilight
   " colorscheme Tomorrow-Night
 
   " Custom ALE colors.
