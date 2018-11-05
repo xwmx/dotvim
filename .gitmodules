@@ -19,9 +19,6 @@
 [submodule "vendor/github.com/airblade/vim-gitgutter"]
 	path = vendor/github.com/airblade/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
-[submodule "vendor/github.com/elzr/vim-json"]
-	path = vendor/github.com/elzr/vim-json
-	url = https://github.com/elzr/vim-json.git
 [submodule "vendor/github.com/sheerun/vim-polyglot"]
 	path = vendor/github.com/sheerun/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
@@ -103,9 +100,6 @@
 [submodule "vendor/github.com/alphabetum/vim-vwilight"]
 	path = vendor/github.com/alphabetum/vim-vwilight
 	url = https://github.com/alphabetum/vim-vwilight.git
-[submodule "vendor/github.com/mxw/vim-jsx"]
-	path = vendor/github.com/mxw/vim-jsx
-	url = https://github.com/mxw/vim-jsx.git
 [submodule "vendor/github.com/sbdchd/neoformat"]
 	path = vendor/github.com/sbdchd/neoformat
 	url = https://github.com/sbdchd/neoformat.git
@@ -113,3 +107,6 @@
 	path = vendor/github.com/prettier/vim-prettier
 	url = https://github.com/prettier/vim-prettier.git
 	ignore = dirty
+[submodule "vendor/github.com/elzr/vim-json"]
+	path = vendor/github.com/elzr/vim-json
+	url = https://github.com/elzr/vim-json.git
