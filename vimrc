@@ -273,11 +273,11 @@ function! SetupPluginAck()
   " Use ripgrep `rg` if available.
   " http://www.wezm.net/technical/2016/09/ripgrep-with-vim/
   if executable('rg')
-    let g:ackprg = 'rg --vimgrep --no-heading'
+    let g:ackprg = 'rg --vimgrep --no-heading --hidden --glob "!.git/*"'
   " Use The Silver Searcher `ag` if available.
   " https://github.com/mileszs/ack.vim#can-i-use-ag-the-silver-searcher-with-this
   elseif executable('ag')
-    let g:ackprg = 'ag --vimgrep'
+    let g:ackprg = 'ag --vimgrep --hidden'
   endif
 
 endfunction
