@@ -102,6 +102,16 @@ set nocompatible
 set hidden
 set encoding=UTF-8
 
+" updatetime
+"
+" Set to 100ms (default 4000) to reduce the update delay experienced with
+" plugins like vim-gitgutter.
+"
+" http://vimdoc.sourceforge.net/htmldoc/options.html#'updatetime'
+" https://www.reddit.com/r/vim/comments/3ql651/
+" https://github.com/airblade/vim-gitgutter#getting-started
+set updatetime=100
+
 " ============================================================================
 " Temporary Directories
 "
