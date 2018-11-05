@@ -349,7 +349,8 @@ function! SetupPluginCtrlp()
   " https://elliotekj.com/2016/11/22/setup-ctrlp-to-use-ripgrep-in-vim/
   if executable('rg')
     set grepprg=rg\ --color=never\ --hidden
-    let g:ctrlp_user_command = 'rg %s --files --color=never --hidden --glob ""'
+    let g:ctrlp_user_command =
+      \ 'rg %s --files --color=never --hidden --glob "!.git/*"'
     let g:ctrlp_use_caching = 0
   elseif executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor\ --hidden
