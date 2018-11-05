@@ -342,6 +342,7 @@ function! SetupPluginCtrlp()
 
   " Use abbreviation for CtrlP/Command-T cache refresh
   :ca rc ClearCtrlPCache
+
   " Include hidden files
   let g:ctrlp_show_hidden = 1
 
