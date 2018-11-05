@@ -253,6 +253,11 @@ if has("gui_macvim")
   " ~/.vimrc
   hi ALEWarningSign ctermfg=245 ctermbg=235  cterm=NONE guifg=#868686 guibg=#2b2b2b gui=NONE
   hi ALEErrorSign   ctermfg=245 ctermbg=235  cterm=NONE guifg=#cf6a4c guibg=#2b2b2b gui=NONE
+
+  " Improve SpellCap undercurl (underline) color.
+  "
+  " ALEWarning is linked to SpellCap.
+  hi SpellCap term=reverse ctermbg=9 gui=undercurl guisp=#6A6ED3
 else
   colorscheme dracula
   " 'hybrid' is a good default to return to if necessary.
