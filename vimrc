@@ -345,6 +345,23 @@ function! SetupPluginCtrlp()
   " Include hidden files
   let g:ctrlp_show_hidden = 1
 
+  " Ignore version control directories.
+  let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+
+  " Default searching order.
+  "
+  " Ctrl+D:
+  " Toggle between full-path search and filename only search.
+  " Note: in filename mode, the prompt's base is >d> instead of >>>
+  "
+  " Ctrl+R:
+  " Toggle between the string mode and full regexp mode.
+  " Note: in full regexp mode, the prompt's base is r>> instead of >>>
+  "
+  " https://unix.stackexchange.com/a/144571
+  " let g:ctrlp_by_filename = 1
+  let g:ctrlp_regexp = 1
+
   " Use `rg` or `ag` if available. More information:
   " https://elliotekj.com/2016/11/22/setup-ctrlp-to-use-ripgrep-in-vim/
   if executable('rg')
