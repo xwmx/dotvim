@@ -109,3 +109,7 @@
 [submodule "vendor/github.com/sbdchd/neoformat"]
 	path = vendor/github.com/sbdchd/neoformat
 	url = https://github.com/sbdchd/neoformat.git
+[submodule "vendor/github.com/prettier/vim-prettier"]
+	path = vendor/github.com/prettier/vim-prettier
+	url = https://github.com/prettier/vim-prettier.git
+	ignore = dirty

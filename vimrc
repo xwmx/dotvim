@@ -142,6 +142,22 @@ let mapleader=","
 " - NERDTree
 "" ############################################################################
 
+" s:PluginEnabled()
+"
+" A utility function to test whether a plugin is installed and enabled.
+"
+" Returns:
+"   1  If matching the given name is installed.
+"   0  If not.
+"
+" More Information:
+"   https://vi.stackexchange.com/a/10947
+function! PluginEnabled(name)
+  let l:hits =
+    \ filter(split(execute(':scriptname'), "\n"), 'v:val =~? "' . a:name . '"')
+  return len(l:hits) != 0
+endfunction
+
 " %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 " Pathogen
 "
@@ -985,6 +1001,45 @@ function! SetupPluginVimPolyglot()
 
 endfunction
 call SetupPluginVimPolyglot()
+
+" ============================================================================
+" vim-prettier
+"
+" A Vim plugin for Prettier
+"
+" https://github.com/prettier/vim-prettier
+"
+" Prettier
+"
+" Prettier is an opinionated code formatter.
+"
+" https://prettier.io/
+" https://github.com/prettier/prettier
+" ============================================================================
+
+function! SetupPluginVimPrettier()
+
+  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Plug init  with post install (yarn install | npm install):
+  " Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+
+  " Native Vim init:
+  packadd vim-prettier
+
+  " Run `npm install` if vim-prettier is enabled.
+  if PluginEnabled("vim-prettier")
+    let vim_prettier_init = '
+          \ _vim_prettier_path="${HOME}/.vim/pack/plugins/opt/vim-prettier" &&
+          \ [ -e "${_vim_prettier_path}" ] &&
+          \ [ ! -e "${_vim_prettier_path}/node_modules" ] &&
+          \ (cd "${_vim_prettier_path}" && npm install)
+          \ '
+    call system(vim_prettier_init)
+  endif
+
+endfunction
+call SetupPluginVimPrettier()
 
 " ============================================================================
 " vim-sensible
