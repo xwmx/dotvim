@@ -77,6 +77,40 @@ if has("gui_macvim")
 endif
 
 " ============================================================================
+" GUI options
+" ============================================================================
+
+" disable right scrollbar
+set guioptions-=r
+" disable left scrollbar
+set guioptions-=L
+" Only scroll to the end of the current line.
+" set guioptions+=h
+
+" ============================================================================
+" Font
+" ============================================================================
+
+" SetGuiFont()
+"
+" Set the GUI font with a font size determined by the screen width.
+"
+" Fonts must be installed from here:
+" https://github.com/abertsch/Menlo-for-Powerline
+"
+" Depends on (but does not require) cscreen:
+" http://www.pyehouse.com/cscreen/
+function! SetGuiFont()
+  let screenwidth = system("cscreen | awk '{print $4}' | head -2 | tail -1")
+  if screenwidth > "1919\n"
+    set guifont=Menlo\ for\ Powerline:h13
+  else
+    set guifont=Menlo\ for\ Powerline:h11
+  endif
+endfunction
+call SetGuiFont()
+
+" ============================================================================
 " Whitespace Display
 " ============================================================================
 
@@ -106,6 +140,29 @@ set listchars+=space:·
 " ============================================================================
 " Custom MacVim HIG Shift Movement Mappings
 " ============================================================================
+
+" Enable custom HIG movement and selection settings when running MacVim
+"
+" Custom mapping location:
+"   .gvimrc.after
+" Original system mappings:
+"   https://github.com/b4winckler/macvim/blob/master/src/MacVim/gvimrc
+"
+if has("gui_macvim")
+  " Disable MacVim system default mappings
+  let macvim_skip_cmd_opt_movement = 1
+
+  " Enable custom MacVim HIG movement mappings.
+  let custom_macvim_hig_movement = 1
+
+  " If the above custom setting is not enabled, fall back to the MacVim
+  " defaults.
+  if !exists("custom_macvim_hig_movement")
+    " Reenable MacVim system default mappings
+    unlet macvim_skip_cmd_opt_movement
+    let macvim_hig_shift_movement = 1
+  endif
+endif
 
 " MacVim default mappings can be found in the default gvimrc:
 "
