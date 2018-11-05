@@ -368,7 +368,7 @@ function! SetupPluginCtrlp()
     set grepprg=rg\ --color=never\ --hidden
     let g:ctrlp_user_command =
       \ 'rg %s --files --color=never --hidden --glob "!.git/*"'
-    let g:ctrlp_use_caching = 0
+    let g:ctrlp_use_caching = 1
   elseif executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor\ --hidden
     let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
@@ -379,18 +379,18 @@ function! SetupPluginCtrlp()
   "
   " More information:
   " https://github.com/kien/ctrlp.vim/issues/305#issuecomment-9802791
-  " function! ClearCtrlPCacheOnFileSave()
-  "   if exists("g:loaded_ctrlp") && g:loaded_ctrlp
-  "     augroup CtrlPExtension
-  "       autocmd!
-  "       autocmd FocusGained  * CtrlPClearCache
-  "       autocmd BufWritePost * CtrlPClearCache
-  "     augroup END
-  "   endif
-  " endfunction
-  " if has("autocmd")
-  "   autocmd VimEnter * :call ClearCtrlPCacheOnFileSave()
-  " endif
+  function! CustomClearCtrlPCache()
+    if exists("g:loaded_ctrlp") && g:loaded_ctrlp
+      augroup CtrlPExtension
+        autocmd!
+        autocmd FocusGained  * CtrlPClearCache
+        autocmd BufWritePost * CtrlPClearCache
+      augroup END
+    endif
+  endfunction
+  if has("autocmd")
+    autocmd VimEnter * :call CustomClearCtrlPCache()
+  endif
 
   " Ignore local glyph directory in project since it slows down cache building.
   "
