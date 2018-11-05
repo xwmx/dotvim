@@ -331,10 +331,10 @@ function! SetupPluginAle()
   " https://github.com/eslint/eslint/
   let g:ale_linters = {'javascript': ['eslint']}
 
-  " Display linter name.
+  " Display additional linter information.
   "
   " https://github.com/w0rp/ale/blob/master/doc/ale.txt#L1085
-  let g:ale_echo_msg_format = '[%linter%] %code: %%s'
+  let g:ale_echo_msg_format = '[%linter% (%severity%)] %code: %%s'
 
 endfunction
 call SetupPluginAle()
