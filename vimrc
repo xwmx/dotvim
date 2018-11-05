@@ -153,9 +153,9 @@ let mapleader=","
 " More Information:
 "   https://vi.stackexchange.com/a/10947
 function! PluginEnabled(name)
-  let l:hits =
+  return len(
     \ filter(split(execute(':scriptname'), "\n"), 'v:val =~? "' . a:name . '"')
-  return len(l:hits) != 0
+    \ ) != 0
 endfunction
 
 " %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
