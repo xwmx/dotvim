@@ -251,8 +251,8 @@ if has("gui_macvim")
   " More information:
   " https://github.com/w0rp/ale
   " ~/.vimrc
-  highlight ALEWarningSign ctermfg=245 ctermbg=235  cterm=NONE guifg=#868686 guibg=#2b2b2b gui=NONE
-  highlight ALEErrorSign   ctermfg=245 ctermbg=235  cterm=NONE guifg=#cf6a4c guibg=#2b2b2b gui=NONE
+  hi ALEWarningSign ctermfg=245 ctermbg=235  cterm=NONE guifg=#868686 guibg=#2b2b2b gui=NONE
+  hi ALEErrorSign   ctermfg=245 ctermbg=235  cterm=NONE guifg=#cf6a4c guibg=#2b2b2b gui=NONE
 else
   colorscheme dracula
   " 'hybrid' is a good default to return to if necessary.
