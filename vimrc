@@ -1038,6 +1038,14 @@ function! SetupPluginVimPrettier()
     call system(vim_prettier_init)
   endif
 
+  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Alias :P to :PrettierAsync
+  "
+  " More Information:
+  " https://stackoverflow.com/a/3879737
+  cnoreabbrev P PrettierAsync
+
 endfunction
 call SetupPluginVimPrettier()
 
