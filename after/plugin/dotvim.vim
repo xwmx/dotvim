@@ -256,8 +256,8 @@ if has("gui_macvim")
 
   " Improve SpellCap undercurl (underline) color.
   "
-  " ALEWarning is linked to SpellCap.
-  hi SpellCap term=reverse ctermbg=9 gui=undercurl guisp=#6A6ED3
+  " ALEWarning is linked to SpellCap. (485880)
+  hi SpellCap term=reverse ctermbg=9 gui=undercurl guisp=#364464
 else
   colorscheme dracula
   " 'hybrid' is a good default to return to if necessary.
