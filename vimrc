@@ -166,8 +166,8 @@ let mapleader=","
 " A utility function to test whether a plugin is installed and enabled.
 "
 " Returns:
-"   1  If matching the given name is installed.
-"   0  If not.
+"   true   If matching the given name is enabled.
+"   false  If not.
 "
 " More Information:
 "   https://vi.stackexchange.com/a/10947
