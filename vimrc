@@ -98,8 +98,17 @@ call janus#add_group("colors")
 " set nocompatible and hidden
 "
 " Required by plugins like vim-ctrlspace
+"
+" http://vimdoc.sourceforge.net/htmldoc/options.html#'compatible'
 set nocompatible
+" http://vimdoc.sourceforge.net/htmldoc/options.html#'hidden'
 set hidden
+
+" encoding
+"
+" string (default: 'latin1' or value from $LANG)
+"
+" http://vimdoc.sourceforge.net/htmldoc/options.html#'encoding'
 set encoding=UTF-8
 
 " updatetime
