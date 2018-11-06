@@ -372,7 +372,7 @@ set showcmd
 " ============================================================================
 " Wrapping
 "
-" Toggle wrapping. Similar to `:set wrap!`
+" " NOTE: Additional wrappping settings in gvimrc
 " ============================================================================
 
 " wrap / nowrap
@@ -425,7 +425,7 @@ augroup END
 
 " ToggleWrap()
 "
-" Toggle between wrap and no wrap.
+" Toggle between wrap and no wrap. Similar to `:set wrap!`
 function! ToggleWrap()
   if &wrap == 0
     set wrap

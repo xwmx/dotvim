@@ -138,6 +138,74 @@ set listchars+=tab:»\  " trailing space is intended.
 set listchars+=space:·
 
 " ============================================================================
+" Mouse and Scrolling
+" ============================================================================
+
+" CustomScrollWheelRight()
+"
+" Scroll right only to the end of the longest line when `nowrap` is set.
+function! CustomScrollWheelRight()
+  if &wrap
+    return 0
+  else
+    let l:scroll_column = col(".") - wincol() - &fdc + &number * &numberwidth
+    let l:window_width = winwidth(0) - &fdc - &number * &numberwidth
+    let l:longest_line_length =
+      \ max(map(range(1, line('$')), "virtcol([v:val, '$'])-1"))
+    let l:scroll_distance_from_end_of_longest_line =
+      \ l:longest_line_length - l:window_width - l:scroll_column + 1
+
+    " echom l:scroll_distance_from_end_of_longest_line
+    " echom bufnr("%")
+    " echom  win_getid()
+
+    if l:scroll_distance_from_end_of_longest_line > 6
+      normal 6zl
+    elseif l:scroll_distance_from_end_of_longest_line > 0
+      for i in range(1, l:scroll_distance_from_end_of_longest_line)
+        normal zl
+      endfor
+    endif
+  endif
+endfunction
+
+" ToggleCustomScrollWheelRight()
+"
+" Initialize CustomScrollWheelRight
+"
+" NOTE: Additional wrappping settings in after/plugin/dotvim.vim
+function! ToggleCustomScrollWheelRight()
+  if empty(maparg('<ScrollWheelRight>', 'n')) == 1
+    set nowrap
+
+    set sidescrolloff=1
+
+    " mousefocus
+    "
+    " Focus follows mouse.
+    "
+    " http://vimdoc.sourceforge.net/htmldoc/options.html#'mousefocus'
+    set mousefocus
+
+    map <ScrollWheelRight> :call CustomScrollWheelRight()<CR>
+  else
+    set wrap
+
+    set sidescrolloff=5
+
+    " mousefocus
+    "
+    " Focus follows mouse.
+    "
+    " http://vimdoc.sourceforge.net/htmldoc/options.html#'mousefocus'
+    set nomousefocus
+
+    unmap <ScrollWheelRight>
+  endif
+endfunction
+" call ToggleCustomScrollWheelRight()
+
+" ============================================================================
 " Custom MacVim HIG Shift Movement Mappings
 " ============================================================================
 
