@@ -370,12 +370,12 @@ set guicursor=v:blinkwait1400-blinkon800-blinkoff500
 set showcmd
 
 " ============================================================================
-" Wrap
+" Wrapping
 "
 " Toggle wrapping. Similar to `:set wrap!`
 " ============================================================================
 
-fun! ToggleWrap()
+function! ToggleWrap()
   if &wrap == 0
     if (&ft == '' || &ft == 'txt' || &ft == 'md' || &ft == 'markdown')
       set wrap linebreak
@@ -388,7 +388,7 @@ fun! ToggleWrap()
     set nowrap
     echo 'Line wrapping off. (set nowrap)'
   endif
-endfun
+endfunction
 
 command! -nargs=0 Wrap call ToggleWrap()
 command! -nargs=0 WrapToggle call ToggleWrap()
@@ -397,6 +397,18 @@ command! -nargs=0 ToggleWrap call ToggleWrap()
 " NOTE: This mapping overwrites a mapping from Vimwiki:
 " https://github.com/vimwiki/vimwiki
 nmap <leader>w :Wrap<CR>
+
+" breakindent
+"
+" Every wrapped line will continue visually indented (same amount of
+" space as the beginning of that line), thus preserving horizontal blocks
+" of text.
+set breakindent
+
+" showbreak
+"
+" String to put at the start of lines that have been wrapped.
+set showbreak=└\ 
 
 " ############################################################################
 "  _____ _ _        _____
