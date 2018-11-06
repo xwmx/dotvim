@@ -375,6 +375,45 @@ set showcmd
 " Toggle wrapping. Similar to `:set wrap!`
 " ============================================================================
 
+" wrap / nowrap
+set wrap
+
+" linebreak / nolinebreak
+"
+" Wrap long lines at a character in 'breakat' rather than at the last
+" character.
+set linebreak
+
+" breakat
+"
+" Characters that wrapping will break on when linebreak is set.
+"
+" (default ' ^I!@*-+;:,./?')
+let &breakat = substitute(&breakat, ":", "", "")
+
+" breakindent
+"
+" Every wrapped line will continue visually indented (same amount of
+" space as the beginning of that line), thus preserving horizontal blocks
+" of text.
+set breakindent
+
+" showbreak
+"
+" String to put at the start of lines that have been wrapped.
+set showbreak=└\ 
+
+" SetWrappingByFileType
+"
+" Specify FileType-specific wrap settings.
+augroup SetWrappingByFileType
+    autocmd!
+    autocmd FileType log setlocal nowrap
+augroup END
+
+" ToggleWrap()
+"
+" Toggle between wrap and no wrap.
 function! ToggleWrap()
   if &wrap == 0
     if (&ft == '' || &ft == 'txt' || &ft == 'md' || &ft == 'markdown')
@@ -397,18 +436,6 @@ command! -nargs=0 ToggleWrap call ToggleWrap()
 " NOTE: This mapping overwrites a mapping from Vimwiki:
 " https://github.com/vimwiki/vimwiki
 nmap <leader>w :Wrap<CR>
-
-" breakindent
-"
-" Every wrapped line will continue visually indented (same amount of
-" space as the beginning of that line), thus preserving horizontal blocks
-" of text.
-set breakindent
-
-" showbreak
-"
-" String to put at the start of lines that have been wrapped.
-set showbreak=└\ 
 
 " ############################################################################
 "  _____ _ _        _____
