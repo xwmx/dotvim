@@ -389,7 +389,7 @@ set linebreak
 " Characters that wrapping will break on when linebreak is set.
 "
 " (default ' ^I!@*-+;:,./?')
-let &breakat = substitute(&breakat, ":", "", "")
+set breakat-=:
 
 " breakindent
 "
