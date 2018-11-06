@@ -428,19 +428,19 @@ augroup END
 " Toggle between wrap and no wrap.
 function! ToggleWrap()
   if &wrap == 0
-    if (&ft == '' || &ft == 'txt' || &ft == 'md' || &ft == 'markdown')
-      set wrap linebreak
-      echo 'Line wrapping on. (set wrap linebreak)'
-    else
-      set wrap nolinebreak
-      echo 'Line wrapping on. (set wrap nolinebreak)'
-    endif
+    set wrap
+    echo 'Line wrapping on. (set wrap)'
   else
     set nowrap
     echo 'Line wrapping off. (set nowrap)'
   endif
 endfunction
 
+" :W, :Wrap, :WrapToggle, :ToggleWrap commands.
+"
+" NOTE: :W Overrides :W / :Wall
+" https://github.com/tpope/vim-eunuch/blob/master/doc/eunuch.txt#L87
+command! -nargs=0 W call ToggleWrap()
 command! -nargs=0 Wrap call ToggleWrap()
 command! -nargs=0 WrapToggle call ToggleWrap()
 command! -nargs=0 ToggleWrap call ToggleWrap()
