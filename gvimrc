@@ -177,29 +177,21 @@ endfunction
 function! ToggleCustomScrollWheelRight()
   if empty(maparg('<ScrollWheelRight>', 'n')) == 1
     set nowrap
-
     set sidescrolloff=1
-
     " mousefocus
     "
-    " Focus follows mouse.
+    " Focus follows mouse. When set to `nomousefocus`, scrolling in a window
+    " without focus results in unexpected behavior since the
+    " CustomScrollWheelRight() calculations are performed in the focused
+    " window.
     "
     " http://vimdoc.sourceforge.net/htmldoc/options.html#'mousefocus'
     set mousefocus
-
     map <ScrollWheelRight> :call CustomScrollWheelRight()<CR>
   else
     set wrap
-
     set sidescrolloff=5
-
-    " mousefocus
-    "
-    " Focus follows mouse.
-    "
-    " http://vimdoc.sourceforge.net/htmldoc/options.html#'mousefocus'
     set nomousefocus
-
     unmap <ScrollWheelRight>
   endif
 endfunction
