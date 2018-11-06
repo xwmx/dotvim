@@ -403,6 +403,18 @@ set breakindent
 " String to put at the start of lines that have been wrapped.
 set showbreak=└\ 
 
+" cpo
+"
+" Vi-compatible options.
+"
+" Options:
+"   n   When included, the column used for 'number' and
+"       'relativenumber' will also be used for text of wrapped
+""      lines.
+"
+" https://stackoverflow.com/a/5748653
+set cpo+=n
+
 " SetWrappingByFileType
 "
 " Specify FileType-specific wrap settings.
