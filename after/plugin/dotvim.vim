@@ -745,7 +745,7 @@ set virtualedit=block
 " ============================================================================
 " Profiler and debugging.
 "
-" See Also: vim --startuptime file.txt
+" See Also: vim --startuptime vim--startuptime.log file.js
 "
 " https://stackoverflow.com/a/12216578
 " ============================================================================
