@@ -206,7 +206,7 @@ endfunction
 "
 " NOTE: Additional wrappping settings in after/plugin/dotvim.vim
 function! ToggleCustomScrollWheelRight()
-  if empty(maparg('<ScrollWheelRight>', 'n')) == 1
+  if empty(maparg('<ScrollWheelRight>', 'n'))
     set nowrap
     set sidescrolloff=1
     " mousefocus
@@ -226,7 +226,7 @@ function! ToggleCustomScrollWheelRight()
     unmap <ScrollWheelRight>
   endif
 endfunction
-" call ToggleCustomScrollWheelRight()
+call ToggleCustomScrollWheelRight()
 
 " ============================================================================
 " Custom MacVim HIG Shift Movement Mappings
