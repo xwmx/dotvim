@@ -269,7 +269,7 @@ function! SetupPluginAck()
   " Native Vim init:
   packadd ack.vim
 
-  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   if has("gui_macvim") && has("gui_running")
     " Command-Shift-F on OSX
@@ -322,7 +322,7 @@ function! SetupPluginAle()
   " Native Vim init:
   packadd ale
 
-  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   let g:airline#extensions#ale#enabled = 1
 
@@ -382,7 +382,7 @@ function! SetupPluginCtrlp()
   " Native Vim init:
   packadd ctrlp
 
-  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   let g:ctrlp_map = ''
   let g:ctrlp_custom_ignore = {
@@ -472,7 +472,7 @@ function! SetupPluginDelimitMate()
   " Native Vim init:
   packadd delimitMate
 
-  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
 endfunction
 call SetupPluginDelimitMate()
@@ -492,7 +492,7 @@ function! SetupPluginDockerfileVim()
   " Native Vim init:
   packadd Dockerfile.vim
 
-  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
 endfunction
 call SetupPluginDockerfileVim()
@@ -520,7 +520,7 @@ function! SetupPluginFZF()
   " Native Vim init:
   packadd fzf.vim
 
-  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
 endfunction
 call SetupPluginFZF()
@@ -543,7 +543,7 @@ function! SetupPluginNeoformat()
   " Native Vim init:
   packadd neoformat
 
-  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
 endfunction
 " NOTE: Disable in favor of ALE
@@ -567,7 +567,7 @@ function! SetupPluginNeomake()
   " Native Vim init:
   packadd neomake
 
-  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Set Ruby file type to only use rubocop and mri
   "
@@ -615,7 +615,7 @@ function! SetupPluginNERDCommenter()
   " Native Vim init:
   packadd nerdcommenter
 
-  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Add an extra space after the comment delimeter in all languages.
   let g:NERDSpaceDelims = 1
@@ -671,7 +671,7 @@ function! SetupPluginNERDTree()
   " Native Vim init:
   packadd nerdtree
 
-  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " ---------------------------------------------------------------------------
   " Source:
@@ -811,7 +811,7 @@ function! SetupPluginTagbar()
   " Native Vim init:
   packadd tagbar
 
-  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Toggle tagbar shortcut
   nmap <leader>ttb :TagbarToggle<CR>
@@ -848,7 +848,7 @@ function! SetupPluginVimAirline()
   " Native Vim init:
   packadd vim-airline
 
-  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " enable tabline
   let g:airline#extensions#tabline#enabled = 1
@@ -931,7 +931,7 @@ function! SetupPluginVimCtrlspace()
   " Native Vim init:
   packadd vim-ctrlspace
 
-  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
 endfunction
 call SetupPluginVimCtrlspace()
@@ -956,7 +956,7 @@ function! SetupPluginVimDevicons()
   " TODO: Re-enable when fonts are installed.
   " packadd vim-devicons
 
-  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
 endfunction
 call SetupPluginVimDevicons()
@@ -986,7 +986,7 @@ function! SetupPluginVimGitgutter()
   " Native Vim init:
   packadd vim-gitgutter
 
-  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   let g:gitgutter_diff_base = 'HEAD'
 
@@ -1008,7 +1008,7 @@ function! SetupPluginVimGo()
   " Native Vim init:
   packadd vim-go
 
-  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
 endfunction
 call SetupPluginVimGo()
@@ -1032,7 +1032,7 @@ function! SetupPluginVimJson()
   " Native Vim init:
   packadd vim-json
 
-  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Disable quote concealing
   "
@@ -1062,7 +1062,7 @@ function! SetupPluginVimPandoc()
   " Native Vim init:
   " packadd vim-pandoc
 
-  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Disable folding.
   let g:pandoc#modules#disabled = ["folding"]
@@ -1090,7 +1090,7 @@ function! SetupPluginVimPandocSyntax()
   " Native Vim init:
   " packadd vim-pandoc-syntax
 
-  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Disable conceal for code blocks and inline code, which can be disorienting
   " in documents that include a lot of code.
@@ -1166,7 +1166,7 @@ function! SetupPluginVimPrettier()
     call system(vim_prettier_init)
   endif
 
-  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Alias :P to :PrettierAsync
   "
@@ -1223,7 +1223,7 @@ function! SetupPluginVimSignify()
   " Native Vim init:
   " packadd vim-signify
 
-  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " " g:signify_vcs_list
   " "
@@ -1275,7 +1275,7 @@ function! SetupPluginVimSleuth()
   " Native Vim init:
   packadd vim-sleuth
 
-  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " NOTE: vim-sleuth can cause slow load times, particularly with markdown.
   " More information:
