@@ -10,6 +10,5 @@ git clone --recurse-submodules -j8 https://github.com/alphabetum/dotvim.git ~/.v
 ## Overview
 
 - [`vimrc`](vimrc)
-- [`gvimrc`](gvimrc)
 - [`after/plugin/dotvim.vim`](after/plugin/dotvim.vim)
-
+- [`gvimrc`](gvimrc)

@@ -11,6 +11,14 @@
 "
 " Startup commands for Vim, to be run after plugin initialization.
 "
+" Load order:
+"   vimrc
+"   after/plugin/dotvim.vim (This file)
+"   gvimrc
+"
+" ---------
+" Resources
+"
 " http://learnvimscriptthehardway.stevelosh.com/chapters/42.html#vimafter
 " http://vimdoc.sourceforge.net/htmldoc/starting.html#vimrc
 " https://github.com/amix/vimrc
