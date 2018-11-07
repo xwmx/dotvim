@@ -261,6 +261,7 @@ function! SetupPluginAck()
   " NOTE: Disable Janus pathogen-installed version.
   " TODO: Remove this call when Janus has been removed.
   call add(g:pathogen_disabled, 'ack')
+  call janus#disable_plugin('ack')
 
   " Plug init:
   " Plug 'https://github.com/mileszs/ack.vim'
@@ -355,6 +356,7 @@ function! SetupPluginCtrlp()
   " NOTE: Disable Janus pathogen-installed vim-polyglot.
   " TODO: Remove this call when Janus has been removed.
   call add(g:pathogen_disabled, 'ctrlp')
+  call janus#disable_plugin('ctrlp')
 
   " Plug init:
   " Plug 'https://github.com/ctrlpvim/ctrlp.vim'
@@ -576,6 +578,7 @@ function! SetupPluginNERDCommenter()
   " NOTE: Disable Janus pathogen-installed nerdcommenter.
   " TODO: Remove this call when Janus has been removed.
   call add(g:pathogen_disabled, 'nerdcommenter')
+  call janus#disable_plugin('nerdcommenter')
 
   " Plug init:
   " Plug 'scrooloose/nerdcommenter'
@@ -619,6 +622,7 @@ function! SetupPluginNERDTree()
   " NOTE: Disable Janus pathogen-installed nerdcommenter.
   " TODO: Remove this call when Janus has been removed.
   call add(g:pathogen_disabled, 'nerdtree')
+  call janus#disable_plugin('nerdtree')
 
   " Plug init:
   " Plug 'https://github.com/scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -672,6 +676,7 @@ function! SetupPluginSyntastic()
   " https://github.com/vim-syntastic/syntastic/issues/699
   " TODO: Remove when Janus is removed.
   call add(g:pathogen_disabled, 'syntastic')
+  call janus#disable_plugin('syntastic')
 
   " Plug init:
   " Plug 'https://github.com/vim-syntastic/syntastic'
@@ -698,6 +703,7 @@ function! SetupPluginTagbar()
   " NOTE: Disable Janus pathogen-installed tagbar.
   " TODO: Remove this call when Janus has been removed.
   call add(g:pathogen_disabled, 'tagbar')
+  call janus#disable_plugin('tagbar')
 
   " Plug init:
   " Plug 'https://github.com/majutsushi/tagbar'
@@ -872,6 +878,7 @@ function! SetupPluginVimGitgutter()
   " NOTE: Disable Janus pathogen-installed vim-gitgutter.
   " TODO: Remove this call when Janus has been removed.
   call add(g:pathogen_disabled, 'vim-gitgutter')
+  call janus#disable_plugin('vim-gitgutter')
 
   " Plug init:
   " Plug 'https://github.com/airblade/vim-gitgutter'
@@ -1012,6 +1019,7 @@ function! SetupPluginVimPolyglot()
   " NOTE: Disable Janus pathogen-installed vim-polyglot.
   " TODO: Remove this call when Janus has been removed.
   call add(g:pathogen_disabled, 'vim-polyglot')
+  call janus#disable_plugin('vim-polyglot')
 
   " Plug init:
   " Plug 'sheerun/vim-polyglot'
@@ -1107,6 +1115,7 @@ function! SetupPluginVimSignify()
   " NOTE: Disable vim-signify and use vim-gitgutter instead.
   " TODO: Remove this section when Janus is removed.
   call add(g:pathogen_disabled, 'vim-signify')
+  call janus#disable_plugin('vim-signify')
 
   " Plug init:
   " Plug 'https://github.com/mhinz/vim-signify'
