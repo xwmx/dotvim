@@ -271,6 +271,24 @@ function! SetupPluginAck()
 
   " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
+  if has("gui_macvim") && has("gui_running")
+    " Command-Shift-F on OSX
+    map <D-F> :Ack<space>
+  else
+    " Define <C-F> to a dummy value to see if it would set <C-f> as well.
+    map <C-F> :dummy
+
+    if maparg("<C-f>") == ":dummy"
+      " <leader>f on systems where <C-f> == <C-F>
+      map <leader>f :Ack<space>
+    else
+      " <C-F> if we can still map <C-f> to <S-Down>
+      map <C-F> :Ack<space>
+    endif
+
+    map <C-f> <S-Down>
+  endif
+
   " Use ripgrep `rg` if available.
   " http://www.wezm.net/technical/2016/09/ripgrep-with-vim/
   if executable('rg')
@@ -365,6 +383,18 @@ function! SetupPluginCtrlp()
   packadd ctrlp
 
   " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  let g:ctrlp_map = ''
+  let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\v[\/]\.(git|hg|svn)$|bower_components|node_modules',
+    \ 'file': '\.pyc$\|\.pyo$\|\.rbc$|\.rbo$\|\.class$\|\.o$\|\~$\',
+    \ }
+
+  if has("gui_macvim") && has("gui_running")
+    macmenu &File.New\ Tab key=<D-S-t>
+    map <D-t> :CtrlP<CR>
+    imap <D-t> <ESC>:CtrlP<CR>
+  endif
 
   " Use abbreviation for CtrlP/Command-T cache refresh
   :ca rc ClearCtrlPCache
@@ -601,6 +631,14 @@ function! SetupPluginNERDCommenter()
   " Align comments with left of selection.
   let g:NERDDefaultAlign = 'left'
 
+  " NERDCommenter Mappings
+  if has("gui_macvim") && has("gui_running")
+    map <D-/> <plug>NERDCommenterToggle<CR>
+    imap <D-/> <Esc><plug>NERDCommenterToggle<CR>i
+  else
+    map <leader>/ <plug>NERDCommenterToggle<CR>
+  endif
+
 endfunction
 call SetupPluginNERDCommenter()
 
@@ -615,6 +653,10 @@ call SetupPluginNERDCommenter()
 " ============================================================================
 
 function! SetupPluginNERDTree()
+
+  " Before: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  let NERDTreeHijackNetrw = 0
 
   " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
@@ -631,6 +673,65 @@ function! SetupPluginNERDTree()
   packadd nerdtree
 
   " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " ---------------------------------------------------------------------------
+  " Source:
+  " https://github.com/carlhuda/janus/blob/master/janus/vim/tools/janus/after/plugin/nerdtree.vim
+  let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.rbc$', '\.rbo$', '\.class$', '\.o$', '\~$']
+
+  " Default mapping, <leader>n
+  map <leader>n :NERDTreeToggle<CR>:NERDTreeMirror<CR>
+
+  augroup AuNERDTreeCmd
+  autocmd AuNERDTreeCmd VimEnter * call s:CdIfDirectory(expand("<amatch>"))
+  autocmd AuNERDTreeCmd FocusGained * call s:UpdateNERDTree()
+
+  " If the parameter is a directory, cd into it
+  function s:CdIfDirectory(directory)
+    let explicitDirectory = isdirectory(a:directory)
+    let directory = explicitDirectory || empty(a:directory)
+
+    if explicitDirectory
+      exe "cd " . fnameescape(a:directory)
+    endif
+
+    " Allows reading from stdin
+    " ex: git diff | mvim -R -
+    if strlen(a:directory) == 0
+      return
+    endif
+
+    if directory
+      NERDTree
+      wincmd p
+      bd
+    endif
+
+    if explicitDirectory
+      wincmd p
+    endif
+  endfunction
+
+  " NERDTree utility function
+  function s:UpdateNERDTree(...)
+    let stay = 0
+
+    if(exists("a:1"))
+      let stay = a:1
+    end
+
+    if exists("t:NERDTreeBufName")
+      let nr = bufwinnr(t:NERDTreeBufName)
+      if nr != -1
+        exe nr . "wincmd w"
+        exe substitute(mapcheck("R"), "<CR>", "", "")
+        if !stay
+          wincmd p
+        end
+      endif
+    endif
+  endfunction
+  " ---------------------------------------------------------------------------
 
   " Show NERDTree hidden files
   let g:NERDTreeShowHidden = 1
@@ -703,7 +804,7 @@ function! SetupPluginTagbar()
   " NOTE: Disable Janus pathogen-installed tagbar.
   " TODO: Remove this call when Janus has been removed.
   call add(g:pathogen_disabled, 'tagbar')
-  call janus#disable_plugin('tagbar')
+  " call janus#disable_plugin('tagbar')
 
   " Plug init:
   " Plug 'https://github.com/majutsushi/tagbar'
@@ -878,7 +979,7 @@ function! SetupPluginVimGitgutter()
   " NOTE: Disable Janus pathogen-installed vim-gitgutter.
   " TODO: Remove this call when Janus has been removed.
   call add(g:pathogen_disabled, 'vim-gitgutter')
-  call janus#disable_plugin('vim-gitgutter')
+  " call janus#disable_plugin('vim-gitgutter')
 
   " Plug init:
   " Plug 'https://github.com/airblade/vim-gitgutter'
@@ -1019,7 +1120,7 @@ function! SetupPluginVimPolyglot()
   " NOTE: Disable Janus pathogen-installed vim-polyglot.
   " TODO: Remove this call when Janus has been removed.
   call add(g:pathogen_disabled, 'vim-polyglot')
-  call janus#disable_plugin('vim-polyglot')
+  " call janus#disable_plugin('vim-polyglot')
 
   " Plug init:
   " Plug 'sheerun/vim-polyglot'
