@@ -255,7 +255,8 @@ call plug#begin('~/.vim/vim-plug')
 
 function! SetupPluginAck()
 
-  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Pathogen init:
   " NOTE: Disable Janus pathogen-installed version.
@@ -317,7 +318,7 @@ call SetupPluginAck()
 
 function! SetupPluginAle()
 
-  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Native Vim init:
   packadd ale
@@ -368,7 +369,7 @@ call SetupPluginAle()
 
 function! SetupPluginCtrlp()
 
-  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Pathogen init:
   " NOTE: Disable Janus pathogen-installed vim-polyglot.
@@ -467,7 +468,7 @@ call SetupPluginCtrlp()
 
 function! SetupPluginDelimitMate()
 
-  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Native Vim init:
   packadd delimitMate
@@ -487,7 +488,7 @@ call SetupPluginDelimitMate()
 
 function! SetupPluginDockerfileVim()
 
-  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Native Vim init:
   packadd Dockerfile.vim
@@ -508,7 +509,7 @@ call SetupPluginDockerfileVim()
 
 function! SetupPluginFZF()
 
-  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " FZF folder location. More Information:
   " https://github.com/junegunn/fzf#as-vim-plugin
@@ -535,7 +536,7 @@ call SetupPluginFZF()
 
 function! SetupPluginNeoformat()
 
-  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
 " Plug init:
   " Plug 'https://github.com/sbdchd/neoformat'
@@ -559,7 +560,7 @@ endfunction
 
 function! SetupPluginNeomake()
 
-  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Plug init:
   " Plug 'https://github.com/neomake/neomake'
@@ -600,7 +601,7 @@ endfunction
 
 function! SetupPluginNERDCommenter()
 
-  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Pathogen init:
   "
@@ -657,7 +658,7 @@ function! SetupPluginNERDTree()
 
   let NERDTreeHijackNetrw = 0
 
-  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Pathogen init:
   " NOTE: Disable Janus pathogen-installed nerdcommenter.
@@ -768,7 +769,7 @@ call SetupPluginNERDTree()
 
 function! SetupPluginSyntastic()
 
-  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Pathogen init:
   " NOTE: Syntastic can be very slow and is not async, so experiement with
@@ -797,7 +798,7 @@ call SetupPluginSyntastic()
 
 function! SetupPluginTagbar()
 
-  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Pathogen init:
   " NOTE: Disable Janus pathogen-installed tagbar.
@@ -840,7 +841,7 @@ call SetupPluginTagbar()
 
 function! SetupPluginVimAirline()
 
-  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Plug init:
   " Plug 'vim-airline/vim-airline'
@@ -908,7 +909,7 @@ call SetupPluginVimAirline()
 
 function! SetupPluginVimBufkill()
 
-  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Native Vim init:
   packadd vim-bufkill
@@ -926,7 +927,7 @@ call SetupPluginVimBufkill()
 
 function! SetupPluginVimCtrlspace()
 
-  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Native Vim init:
   packadd vim-ctrlspace
@@ -947,7 +948,7 @@ call SetupPluginVimCtrlspace()
 
 function! SetupPluginVimDevicons()
 
-  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Plug init:
   " Plug 'ryanoasis/vim-devicons'
@@ -972,7 +973,7 @@ call SetupPluginVimDevicons()
 
 function! SetupPluginVimGitgutter()
 
-  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Pathogen init:
   " NOTE: Disable Janus pathogen-installed vim-gitgutter.
@@ -1003,7 +1004,7 @@ call SetupPluginVimGitgutter()
 
 function! SetupPluginVimGo()
 
-  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Native Vim init:
   packadd vim-go
@@ -1024,7 +1025,7 @@ call SetupPluginVimGo()
 
 function! SetupPluginVimJson()
 
-  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Plug init:
   " Plug 'https://github.com/elzr/vim-json'
@@ -1054,7 +1055,7 @@ call SetupPluginVimJson()
 
 function! SetupPluginVimPandoc()
 
-  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Plug init:
   " Plug 'https://github.com/vim-pandoc/vim-pandoc'
@@ -1082,7 +1083,7 @@ call SetupPluginVimPandoc()
 
 function! SetupPluginVimPandocSyntax()
 
-  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Plug init:
   " Plug 'https://github.com/vim-pandoc/vim-pandoc-syntax'
@@ -1113,7 +1114,7 @@ call SetupPluginVimPandocSyntax()
 
 function! SetupPluginVimPolyglot()
 
-  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Pathodgen init:
   " NOTE: Disable Janus pathogen-installed vim-polyglot.
@@ -1147,7 +1148,7 @@ call SetupPluginVimPolyglot()
 
 function! SetupPluginVimPrettier()
 
-  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Plug init  with post install (yarn install | npm install):
   " Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
@@ -1188,7 +1189,7 @@ call SetupPluginVimPrettier()
 
 function! SetupPluginVimSensible()
 
-  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Plug init:
   " Plug 'tpope/vim-sensible'
@@ -1209,7 +1210,7 @@ call SetupPluginVimSensible()
 
 function! SetupPluginVimSignify()
 
-  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   "Pathogen init:
   " NOTE: Disable vim-signify and use vim-gitgutter instead.
@@ -1267,7 +1268,7 @@ call SetupPluginVimSignify()
 
 function! SetupPluginVimSleuth()
 
-  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Plug init:
   " Plug 'tpope/vim-sleuth'
@@ -1297,7 +1298,7 @@ call SetupPluginVimSleuth()
 
 function! SetupPluginVimTextobjUser()
 
-  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Native Vim init:
   packadd vim-textobj-user
@@ -1315,7 +1316,7 @@ call SetupPluginVimTextobjUser()
 
 function! SetupPluginVimTextobjUser()
 
-  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Native Vim init:
   packadd vim-textobj-user
