@@ -1279,13 +1279,16 @@ function! SetupPluginVimSleuth()
   " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " NOTE: vim-sleuth can cause slow load times, particularly with markdown.
-  " More information:
+  More information:
   "   https://github.com/tpope/vim-sleuth/issues/4
   " Disable automatic vim-sleuth detection on markdown files to avoid slowdowns.
   autocmd BufRead,BufNewFile *.md,*.markdown let b:sleuth_automatic = 0
+  autocmd BufRead,BufNewFile *.js,*.jsx,*.json let b:sleuth_automatic = 0
+  autocmd BufRead,BufNewFile *.yml,*.yaml let b:sleuth_automatic = 0
 
 endfunction
-call SetupPluginVimSleuth()
+" NOTE: Disable vim-sleuth to avoid slowdowns.
+" call SetupPluginVimSleuth()
 
 " ============================================================================
 " vim-textobj-line
