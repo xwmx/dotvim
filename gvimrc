@@ -29,32 +29,6 @@
 " ============================================================================
 
 " ============================================================================
-" Janus - gvimrc (begin)                                Janus - gvimrc (begin)
-" ----------------------                               -----------------------
-
-"
-" Janus is a distribution of plug-ins and mappings for Vim, Gvim and MacVim.
-"
-" https://github.com/carlhuda/janus
-
-if filereadable(expand("~/.gvimrc.before"))
-  source ~/.gvimrc.before
-endif
-
-" CtrlP OS-X Menu remapping
-if janus#is_plugin_enabled('ctrlp') && has("gui_macvim")
-  macmenu &File.New\ Tab key=<D-S-t>
-endif
-
-if filereadable(expand("~/.gvimrc.after"))
-  source ~/.gvimrc.after
-endif
-
-" --------------------                                    --------------------
-" Janus - gvimrc (end)                                    Janus - gvimrc (end)
-" ============================================================================
-
-" ============================================================================
 " Encoding
 " ============================================================================
 
@@ -136,6 +110,18 @@ set listchars+=tab:»\  " trailing space is intended.
 
 " Set space to middle dot.
 set listchars+=space:·
+
+" ============================================================================
+" MacVim macmenu
+"
+" Set Mac-specific properties for {menu}
+" ============================================================================
+
+" Remap new tap to command-shift-t (instead of command-t). This works better
+" wit CtlrP
+if has("gui_macvim")
+  macmenu &File.New\ Tab key=<D-S-t>
+endif
 
 " ============================================================================
 " Mouse and Scrolling

@@ -391,7 +391,6 @@ function! SetupPluginCtrlp()
     \ }
 
   if has("gui_macvim") && has("gui_running")
-    macmenu &File.New\ Tab key=<D-S-t>
     map <D-t> :CtrlP<CR>
     imap <D-t> <ESC>:CtrlP<CR>
   endif
