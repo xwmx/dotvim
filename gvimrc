@@ -141,12 +141,24 @@ set listchars+=space:·
 " Mouse and Scrolling
 " ============================================================================
 
+" sidescrolloff
+"
+" The minimal number of screen columns to keep to the left and to the
+" right of the cursor if 'nowrap' is set.
+"
+" http://vimdoc.sourceforge.net/htmldoc/options.html#'sidescrolloff'
+if !&sidescrolloff
+  set sidescrolloff=1
+endif
+
 " CustomScrollWheelRight()
 "
 " Only right scroll until all of the longest line is visible in the window.
 " When the cursor is not on the longest line and needs to be moved to keep
 " scrolling, move it to the longest line, replicating the behavior of
 " guioptions-=h
+"
+" Only works in normal mode.
 "
 " http://vimdoc.sourceforge.net/htmldoc/options.html#'guioptions'
 function! CustomScrollWheelRight()
@@ -208,7 +220,6 @@ endfunction
 function! ToggleCustomScrollWheelRight()
   if empty(maparg('<ScrollWheelRight>', 'n'))
     set nowrap
-    set sidescrolloff=1
     " mousefocus
     "
     " Focus follows mouse. When set to `nomousefocus`, scrolling in a window
@@ -221,12 +232,11 @@ function! ToggleCustomScrollWheelRight()
     map <ScrollWheelRight> :call CustomScrollWheelRight()<CR>
   else
     set wrap
-    set sidescrolloff=5
     set nomousefocus
     unmap <ScrollWheelRight>
   endif
 endfunction
-call ToggleCustomScrollWheelRight()
+" call ToggleCustomScrollWheelRight()
 
 " ============================================================================
 " Custom MacVim HIG Shift Movement Mappings
