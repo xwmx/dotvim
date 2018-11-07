@@ -744,13 +744,33 @@ set virtualedit=block
 
 " ============================================================================
 " Profiler and debugging.
+"
+" https://stackoverflow.com/a/12216578
 " ============================================================================
 
-" Mappings for running profile
-"
-" source: https://github.com/bling/minivimrc/
-nnoremap <silent> <leader>DD :exe ":profile start profile.log"<cr>:exe ":profile func *"<cr>:exe ":profile file *"<cr>
-nnoremap <silent> <leader>DP :exe ":profile pause"<cr>
-nnoremap <silent> <leader>DC :exe ":profile continue"<cr>
-nnoremap <silent> <leader>DQ :exe ":profile pause"<cr>:noautocmd qall!<cr>
+function! ProfileStart()
+  profile start profile.log
+  profile func *
+  profile file *
+  echom "Profile Started."
+endfunction
+command! -nargs=0 ProfileStart call ProfileStart()
 
+function! ProfilePause()
+  profile pause
+  echom "Profile Paused."
+endfunction
+command! -nargs=0 ProfilePause call ProfilePause()
+
+function! ProfileContinue()
+  profile continue
+  echom "Profile Continued."
+endfunction
+command! -nargs=0 ProfileContinue call ProfileContinue()
+
+function! ProfileQuit()
+  profile pause
+  noautocmd qall!
+  echom "Profile Quit."
+endfunction
+command! -nargs=0 ProfileQuit call ProfileQuit()
