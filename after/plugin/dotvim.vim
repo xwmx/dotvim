@@ -573,6 +573,16 @@ vmap <d-cr> <Esc>:set invfu<cr>gv
 " Enable mouse in terminal vim
 set mouse=a
 
+" mousefocus
+"
+" Focus follows mouse. When set to `nomousefocus`, scrolling in a window
+" without focus results in unexpected behavior since the
+" CustomScrollWheelRight() calculations are performed in the focused
+" window.
+"
+" http://vimdoc.sourceforge.net/htmldoc/options.html#'mousefocus'
+set mousefocus
+
 " ============================================================================
 " Navigation and Selection
 " ============================================================================
