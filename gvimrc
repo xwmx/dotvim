@@ -143,29 +143,60 @@ set listchars+=space:·
 
 " CustomScrollWheelRight()
 "
-" Scroll right only to the end of the longest line when `nowrap` is set.
+" Only right scroll until all of the longest line is visible in the window.
+" When the cursor is not on the longest line and needs to be moved to keep
+" scrolling, move it to the longest line, replicating the behavior of
+" guioptions-=h
+"
+" http://vimdoc.sourceforge.net/htmldoc/options.html#'guioptions'
 function! CustomScrollWheelRight()
+  " Return early if wrap is enabled.
   if &wrap
     return 0
-  else
-    let l:scroll_column = col(".") - wincol() - &fdc + &number * &numberwidth
-    let l:window_width = winwidth(0) - &fdc - &number * &numberwidth
-    let l:longest_line_length =
-      \ max(map(range(1, line('$')), "virtcol([v:val, '$'])-1"))
-    let l:scroll_distance_from_end_of_longest_line =
-      \ l:longest_line_length - l:window_width - l:scroll_column + 1
+  endif
 
-    " echom l:scroll_distance_from_end_of_longest_line
-    " echom bufnr("%")
-    " echom  win_getid()
+  let l:cursor_column = col(".")
+  let l:scroll_column = col(".") - wincol() - &fdc + &number * &numberwidth
+  let l:window_width = winwidth(0) - &fdc - &number * &numberwidth
 
-    if l:scroll_distance_from_end_of_longest_line > 6
-      normal 6zl
-    elseif l:scroll_distance_from_end_of_longest_line > 0
-      for i in range(1, l:scroll_distance_from_end_of_longest_line)
-        normal zl
-      endfor
+  let l:line_lengths = map(range(1, line('$')), "virtcol([v:val, '$'])")
+
+  let l:longest_line_length = max(l:line_lengths)
+  let l:longest_line_number = index(l:line_lengths , l:longest_line_length) + 1
+
+  " Return early if the longest line length is less than the window.
+  if l:longest_line_length <= l:window_width
+    return 0
+  endif
+
+  let l:scroll_distance_from_end_of_longest_line =
+    \ l:longest_line_length - l:window_width - l:scroll_column + 1
+
+  let l:current_line_length = strlen(getline("."))
+  let l:current_line_number = line('$')
+
+  let l:distance_to_end_of_current_line =
+    \ l:current_line_length - l:cursor_column
+
+  " Return early if already scrolled to the end of the line.
+  if l:scroll_distance_from_end_of_longest_line <= 0
+    return 0
+  endif
+
+  " Move the cursor to the longest line when the end of the current line has
+  " been reached.
+  if l:current_line_number != l:longest_line_number
+    if l:distance_to_end_of_current_line <= 0
+      call cursor(l:longest_line_number , l:cursor_column)
     endif
+  endif
+
+  if l:scroll_distance_from_end_of_longest_line > 6
+    normal 6zl
+  else
+    for i in range(1, l:scroll_distance_from_end_of_longest_line)
+      normal zl
+    endfor
   endif
 endfunction
 
