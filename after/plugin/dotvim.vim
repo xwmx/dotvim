@@ -525,6 +525,9 @@ autocmd BufRead,BufNewFile *.cson set filetype=coffee
 " Always use 2-space tabstop with php.
 autocmd Filetype php setlocal ts=2
 
+" Set .zsh-theme files as zsh.
+autocmd BufRead,BufNewFile *.zsh-theme setfiletype zsh
+
 " ============================================================================
 " SH / shell default syntax config
 " ============================================================================
