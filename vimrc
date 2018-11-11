@@ -28,6 +28,7 @@
 "
 " https://www.vim.org/
 "
+" -----------------------
 " TODO: Perfomance Issues
 "
 " Startup can slow, depending on the settings. To log startup timing:
@@ -40,6 +41,7 @@
 " - `vim-airline/autoload/airline/extensions/default.vim`
 " - `/usr/local/Cellar/neovim/0.1.7/share/nvim/runtime/syntax/markdown.vim`
 " - `neomake/autoload/neomake.vim`
+"
 " ============================================================================
 
 " ============================================================================
