@@ -124,6 +124,12 @@ set encoding=UTF-8
 " https://github.com/airblade/vim-gitgutter#getting-started
 set updatetime=100
 
+" formatoptions
+"
+" r  Automatically insert the current comment leader after hitting <Enter> in
+"    Insert mode
+set formatoptions+=r
+
 " ============================================================================
 " Temporary Directories
 "
