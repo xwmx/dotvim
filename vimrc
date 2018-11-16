@@ -278,9 +278,6 @@ function! SetupPluginVimDevicons()
 
   " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
-  " whether or not to show the nerdtree brackets around flags
-  let g:webdevicons_conceal_nerdtree_brackets = 1
-
   " the amount of space to use after the glyph character (default ' ')
   let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
 
@@ -979,7 +976,6 @@ function! SetupPluginVimCtrlspace()
 
 endfunction
 call SetupPluginVimCtrlspace()
-
 
 " ============================================================================
 " vim-gitgutter

@@ -360,6 +360,20 @@ set guicursor=n:blinkwait1400-blinkon800-blinkoff500
 set guicursor=v:blinkwait1400-blinkon800-blinkoff500
 
 " ============================================================================
+" vim-devicons
+"
+" NOTE: plugin initialization and configuration in vimrc.
+" ============================================================================
+
+" After a re-source, fix syntax matching issues (concealing brackets).
+"
+" More information:
+" https://github.com/ryanoasis/vim-devicons/issues/154#issuecomment-222032236
+if exists('g:loaded_webdevicons')
+  call webdevicons#refresh()
+endif
+
+" ============================================================================
 " showcmd
 " ============================================================================
 
