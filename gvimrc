@@ -78,14 +78,17 @@ set guioptions-=L
 function! SetGuiFont()
   let screenwidth = system("cscreen | awk '{print $4}' | head -2 | tail -1")
   if screenwidth > "1919\n"
-    " set guifont=Menlo\ for\ Powerline:h13
-    " set guifont=Meslo\ LG\ M\ DZ\ for\ Powerline:h13
     set guifont=MesloLGMDZ\ Nerd\ Font:h13
-
+    " Fallbacks
+    set guifont+=Meslo\ LG\ M\ DZ\ for\ Powerline:h13
+    set guifont+=Menlo\ for\ Powerline:h13
+    set guifont+=Menlo:h13
   else
-    " set guifont=Menlo\ for\ Powerline:h11
-    " set guifont=Meslo\ LG\ M\ DZ\ for\ Powerline:h11
     set guifont=MesloLGMDZ\ Nerd\ Font:h11
+    " Fallbacks
+    set guifont+=Meslo\ LG\ M\ DZ\ for\ Powerline:h11
+    set guifont+=Menlo\ for\ Powerline:h11
+    set guifont+=Menlo:h11
   endif
 endfunction
 call SetGuiFont()
