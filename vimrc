@@ -254,6 +254,40 @@ endif
 call plug#begin('~/.vim/vim-plug')
 
 " ============================================================================
+" vim-devicons
+"
+" Adds file type glyphs/icons to popular Vim plugins: NERDTree, vim-airline,
+" Powerline, Unite, vim-startify and more.
+"
+" https://github.com/ryanoasis/vim-devicons
+"
+" NOTE: Load vim-devicons first so it's available when NERDTree and other
+" plugins load.
+" ============================================================================
+
+function! SetupPluginVimDevicons()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Plug init:
+  " Plug 'ryanoasis/vim-devicons'
+
+  " Native Vim init:
+  " TODO: Re-enable when fonts are installed.
+  packadd vim-devicons
+
+  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " whether or not to show the nerdtree brackets around flags
+  let g:webdevicons_conceal_nerdtree_brackets = 1
+
+  " the amount of space to use after the glyph character (default ' ')
+  let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
+
+endfunction
+call SetupPluginVimDevicons()
+
+" ============================================================================
 " ack.vim
 "
 " Vim plugin for the Perl module / CLI script 'ack', along with The Silver
@@ -946,30 +980,6 @@ function! SetupPluginVimCtrlspace()
 endfunction
 call SetupPluginVimCtrlspace()
 
-" ============================================================================
-" vim-devicons
-"
-" Adds file type glyphs/icons to popular Vim plugins: NERDTree, vim-airline,
-" Powerline, Unite, vim-startify and more.
-"
-" https://github.com/ryanoasis/vim-devicons
-" ============================================================================
-
-function! SetupPluginVimDevicons()
-
-  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
-
-  " Plug init:
-  " Plug 'ryanoasis/vim-devicons'
-
-  " Native Vim init:
-  " TODO: Re-enable when fonts are installed.
-  " packadd vim-devicons
-
-  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
-
-endfunction
-call SetupPluginVimDevicons()
 
 " ============================================================================
 " vim-gitgutter
