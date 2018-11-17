@@ -278,8 +278,10 @@ function! SetupPluginVimDevicons()
 
   " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
-  " the amount of space to use after the glyph character (default ' ')
-  let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
+  if has("gui_macvim") && has("gui_running")
+    " Reduce the amount of space after the glyph character (default ' ').
+    let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
+  endif
 
 endfunction
 call SetupPluginVimDevicons()
