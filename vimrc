@@ -296,7 +296,6 @@ call SetupPluginVimDevicons()
 function! SetupPluginAck()
 
   " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
-  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Pathogen init:
   " NOTE: Disable Janus pathogen-installed version.
