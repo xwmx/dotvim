@@ -1,19 +1,21 @@
 " ============================================================================
-"      _       _         _                 _
-"   __| | ___ | |___   _(_)_ __ ___ __   _(_)_ __ ___
-"  / _` |/ _ \| __\ \ / / | '_ ` _ \\ \ / / | '_ ` _ \
-" | (_| | (_) | |_ \ V /| | | | | | |\ V /| | | | | | |
-"  \__,_|\___/ \__| \_/ |_|_| |_| |_(_)_/ |_|_| |_| |_|
-"
+"             _
+"      __   _(_)_ __ ___
+"      \ \ / / | '_ ` _ \
+"       \ V /| | | | | | |
+"  ____(_)_/ |_|_| |_| |_|
+" |_____|
 " ----------------------------------------------------------------------------
 "
-" after/plugin/dotvim.vim
+" after/plugin/_.vim
 "
-" Startup commands for Vim, to be run after plugin initialization.
+" Startup commands for Vim, to be run after plugin initialization and all
+" other files in after/plugin..
 "
 " Load order:
 "   vimrc
-"   after/plugin/dotvim.vim (This file)
+"   after/plugin/*
+"   after/plugin/_.vim (This file)
 "   gvimrc
 "
 " ---------

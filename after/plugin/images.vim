@@ -2,6 +2,12 @@
 " after/plugin/images.vim
 "
 " Displaying and working with images in vim.
+"
+" Load order:
+"   vimrc
+"   after/plugin/* (This file)
+"   after/plugin/_.vim
+"   gvimrc
 " ----------------------------------------------------------------------------
 
 " Display images using `imagecat` when available.

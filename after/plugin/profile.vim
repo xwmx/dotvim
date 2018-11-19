@@ -4,6 +4,12 @@
 " See Also: vim --startuptime vim--startuptime.log file.js
 "
 " https://stackoverflow.com/a/12216578
+"
+" Load order:
+"   vimrc
+"   after/plugin/* (This file)
+"   after/plugin/_.vim
+"   gvimrc
 " ============================================================================
 
 function! ProfileStart()
