@@ -3,9 +3,9 @@
 "
 " Load order:
 "   vimrc
-"   after/plugin/*  (This file)
-"   after/plugin/_.vim
+"   after/plugin/* (This file)
 "   gvimrc
+"
 " ============================================================================
 
 " FlashCursorLineAndColumn()

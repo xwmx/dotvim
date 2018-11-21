@@ -3,9 +3,9 @@
 "
 " Load order:
 "   vimrc
-"   after/plugin/*  (This file)
-"   after/plugin/_.vim
+"   after/plugin/* (This file)
 "   gvimrc
+"
 " ===========================================================================
 
 " Highlight the 81st column, to limit line length to 80 columns.

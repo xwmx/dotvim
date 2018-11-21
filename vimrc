@@ -17,7 +17,6 @@
 " Load order:
 "   vimrc (This file)
 "   after/plugin/*
-"   after/plugin/_.vim
 "   gvimrc
 "
 " ---------

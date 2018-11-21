@@ -6,8 +6,8 @@
 " Load order:
 "   vimrc
 "   after/plugin/* (This file)
-"   after/plugin/_.vim
 "   gvimrc
+"
 " ----------------------------------------------------------------------------
 
 " Display images using `imagecat` when available.
