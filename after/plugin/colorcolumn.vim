@@ -6,7 +6,7 @@
 "   after/plugin/*  (This file)
 "   after/plugin/_.vim
 "   gvimrc
-" ============================================================================
+" ===========================================================================
 
 " Highlight the 81st column, to limit line length to 80 columns.
 "
@@ -27,11 +27,7 @@ function! ColorColumnInit()
   endif
 
   if exists('+colorcolumn')
-    " In Vim >= 7.3, also highlight columns 120+
-    "
-    " (120-320 because you have to provide an upper bound and 320 just
-    "  covers a 1080p GVim window in Ubuntu Mono 11 font.)
-    let &colorcolumn="81,".join(range(120,320),",")
+    let &colorcolumn="81"
   else
     " fallback for Vim < v7.3
     autocmd BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
