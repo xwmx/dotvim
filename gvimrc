@@ -249,8 +249,11 @@ if has("gui_macvim")
   " If the above custom setting is not enabled, fall back to the MacVim
   " defaults.
   if !exists("custom_macvim_hig_movement")
-    " Reenable MacVim system default mappings
+    " Reenable MacVim system default mappings.
     unlet macvim_skip_cmd_opt_movement
+    " Enable MacVIm HIG shift movement related settings. These are not enabled
+    " by default, but are enabled as a fallback. More info:
+    " https://git.io/b4winckler-macvim-gvimrc-L71
     let macvim_hig_shift_movement = 1
   endif
 endif
