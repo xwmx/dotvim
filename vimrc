@@ -313,7 +313,10 @@ function! SetupTabCompletionPlugins()
   call janus#disable_plugin('supertab')
 
   " Native Vim init:
-  packadd supertab
+  " if has("gui_macvim")
+  " else
+    packadd supertab
+  " endif
 
   " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 

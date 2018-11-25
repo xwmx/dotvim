@@ -113,3 +113,6 @@
 [submodule "vendor/github.com/ervandew/supertab"]
 	path = vendor/github.com/ervandew/supertab
 	url = https://github.com/ervandew/supertab.git
+[submodule "vendor/github.com/Valloric/YouCompleteMe"]
+	path = vendor/github.com/Valloric/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
