@@ -287,6 +287,36 @@ endfunction
 call SetupPluginVimDevicons()
 
 " ============================================================================
+" Tab Completion Plugins
+"
+" Supertab
+"
+" Perform all your vim insert mode completions with Tab.
+"
+" https://github.com/ervandew/supertab
+" ============================================================================
+
+function! SetupTabCompletionPlugins()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Pathogen init:
+  " NOTE: Disable Janus pathogen-installed version.
+  " TODO: Remove this call when Janus has been removed.
+  call add(g:pathogen_disabled, 'supertab')
+  call janus#disable_plugin('supertab')
+
+  " Native Vim init:
+  packadd supertab
+
+  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+endfunction
+call SetupTabCompletionPlugins()
+
+" %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+" ============================================================================
 " ack.vim
 "
 " Vim plugin for the Perl module / CLI script 'ack', along with The Silver

@@ -110,3 +110,6 @@
 [submodule "vendor/github.com/elzr/vim-json"]
 	path = vendor/github.com/elzr/vim-json
 	url = https://github.com/elzr/vim-json.git
+[submodule "vendor/github.com/ervandew/supertab"]
+	path = vendor/github.com/ervandew/supertab
+	url = https://github.com/ervandew/supertab.git
