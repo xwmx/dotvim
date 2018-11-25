@@ -294,6 +294,12 @@ call SetupPluginVimDevicons()
 " Perform all your vim insert mode completions with Tab.
 "
 " https://github.com/ervandew/supertab
+"
+" See also:
+" https://github.com/Shougo/neocomplete.vim
+" https://github.com/Shougo/deoplete.nvim
+" https://github.com/ajh17/VimCompletesMe
+" https://valloric.github.io/YouCompleteMe/
 " ============================================================================
 
 function! SetupTabCompletionPlugins()
