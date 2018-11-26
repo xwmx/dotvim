@@ -42,6 +42,25 @@
 " - `/usr/local/Cellar/neovim/0.1.7/share/nvim/runtime/syntax/markdown.vim`
 " - `neomake/autoload/neomake.vim`
 "
+" ---------
+" Resources
+"
+" - https://github.com/mhinz/vim-galore
+"   All things Vim!
+" - https://github.com/amix/vimrc
+"   The ultimate Vim configuration: vimrc
+" - https://github.com/carlhuda/janus
+" - https://spacevim.org/
+"   https://github.com/SpaceVim/SpaceVim
+"   A community-driven vim distribution
+" - https://github.com/LER0ever/EverVim
+"   A Modern, Powerful & Modular Vim Distribution
+" - https://vim.spf13.com/
+"   https://github.com/spf13/spf13-vim
+"   spf13-vim is a distribution of vim plugins and resources for Vim, GVim and
+"   MacVim.
+" - https://github.com/liangxianzhe/oh-my-vim
+"
 " ============================================================================
 
 " ============================================================================
@@ -765,6 +784,16 @@ call SetupPluginNERDCommenter()
 " for reading or editing, and perform basic file system operations.
 "
 " https://github.com/scrooloose/nerdtree
+"
+" See Also:
+" - https://github.com/tpope/vim-vinegar
+" - https://github.com/justinmk/vim-dirvish
+"   Directory viewer for Vim
+" - https://github.com/Shougo/defx.nvim
+"   The dark powered file explorer implementation.
+" - https://github.com/Shougo/vimfiler.vim
+"   Powerful file explorer implemented by Vim script (Not actively
+"   developed. Replaced by defx.nvim.
 " ============================================================================
 
 function! SetupPluginNERDTree()
