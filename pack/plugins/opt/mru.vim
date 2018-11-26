@@ -1,1 +1,0 @@
-../../../vendor/github.com/vim-scripts/mru.vim

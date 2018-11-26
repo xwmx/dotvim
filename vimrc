@@ -661,26 +661,6 @@ endfunction
 call SetupPluginFZF()
 
 " ============================================================================
-" mru.vim
-"
-" Plugin to manage Most Recently Used (MRU) files
-"
-" https://github.com/vim-scripts/mru.vim
-" ============================================================================
-
-function! SetupPluginMRUVim()
-
-  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
-
-  " Native Vim init:
-  packadd mru.vim
-
-  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
-
-endfunction
-call SetupPluginMRUVim()
-
-" ============================================================================
 " Neoformat
 "
 " ✨ A (Neo)vim plugin for formatting code.
