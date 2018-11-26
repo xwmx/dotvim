@@ -1134,6 +1134,30 @@ endfunction
 call SetupPluginVimGo()
 
 " ============================================================================
+" goyo.vim
+"
+" Distraction-free writing in Vim.
+"
+" https://github.com/junegunn/goyo.vim
+" ============================================================================
+
+function! SetupPluginGoyoVim()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd goyo.vim
+
+  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Add :Zen command, mirroring :Goyo. Derived from:
+  " https://github.com/junegunn/goyo.vim/blob/master/plugin/goyo.vim#L24
+  command! -nargs=? -bar -bang Zen call goyo#execute(<bang>0, <q-args>)
+
+endfunction
+call SetupPluginGoyoVim()
+
+" ============================================================================
 " vim-json
 "
 " A better JSON for Vim: distinct highlighting of keywords vs values,

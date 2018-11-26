@@ -116,3 +116,6 @@
 [submodule "vendor/github.com/Valloric/YouCompleteMe"]
 	path = vendor/github.com/Valloric/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "vendor/github.com/junegunn/goyo.vim"]
+	path = vendor/github.com/junegunn/goyo.vim
+	url = https://github.com/junegunn/goyo.vim.git
