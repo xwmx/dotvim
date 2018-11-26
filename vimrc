@@ -1154,6 +1154,26 @@ function! SetupPluginGoyoVim()
   " https://github.com/junegunn/goyo.vim/blob/master/plugin/goyo.vim#L24
   command! -nargs=? -bar -bang Zen call goyo#execute(<bang>0, <q-args>)
 
+  " Callbacks. More information:
+  " https://github.com/junegunn/goyo.vim#callbacks
+  " https://github.com/junegunn/goyo.vim/wiki/Customization
+  function! s:goyo_enter()
+    if has('gui_macvim')
+      " Set larger font size when enabling Goyo.
+      set guifont=MesloLGMDZ\ Nerd\ Font:h16
+    endif
+  endfunction
+
+  function! s:goyo_leave()
+    if has('gui_macvim')
+      " Reset font size when exiting Goyo.
+      call SetGuiFont()
+    endif
+  endfunction
+
+  autocmd! User GoyoEnter nested call <SID>goyo_enter()
+  autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
 endfunction
 call SetupPluginGoyoVim()
 
