@@ -817,6 +817,10 @@ function! SetupPluginNERDTree()
 
   " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
+  " Disable the 'Bookmarks' label 'Press ? for help' text. More info:
+  " https://github.com/scrooloose/nerdtree/blob/master/doc/NERDTree.txt#L1059
+  let NERDTreeMinimalUI = 1
+
   " ---------------------------------------------------------------------------
   " Source:
   " https://github.com/carlhuda/janus/blob/master/janus/vim/tools/janus/after/plugin/nerdtree.vim
