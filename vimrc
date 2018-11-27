@@ -252,13 +252,14 @@ let g:pathogen_disabled = []
 "call janus#disable_plugin('vroom')
 
 " ============================================================================
-" Disable plugins conditionally.
+" Conditional Plugin Settings
 " ============================================================================
 
 " git commit messages.
 if expand('%:t:r') == 'COMMIT_EDITMSG'
   call add(g:pathogen_disabled, 'vim-bufkill')
   call add(g:pathogen_disabled, 'vim-ctrlspace')
+  set nowrap
 endif
 
 " %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
