@@ -920,7 +920,7 @@ function! SetupPluginNERDTree()
 
   " Disable the 'Bookmarks' label 'Press ? for help' text. More info:
   " https://github.com/scrooloose/nerdtree/blob/master/doc/NERDTree.txt#L1059
-  let NERDTreeMinimalUI = 1
+  let g:NERDTreeMinimalUI = 1
 
   " Map <leader>f to opening the current buffer file in NERDTree.
   map <silent> <leader>f :NERDTreeFind<CR>
