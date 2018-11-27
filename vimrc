@@ -925,8 +925,6 @@ function! SetupPluginNERDTree()
   " Map <leader>f to opening the current buffer file in NERDTree.
   map <silent> <leader>f :NERDTreeFind<CR>
 
-  " TODO: Install https://github.com/Xuyuanp/nerdtree-git-plugin
-
   " Make arrows invisible.
   "
   " https://github.com/scrooloose/nerdtree/issues/904#issuecomment-433415882
@@ -936,6 +934,26 @@ function! SetupPluginNERDTree()
 
 endfunction
 call SetupPluginNERDTree()
+
+" ============================================================================
+" nerdtree-git-plugin
+"
+" Display git status in NERDTree
+"
+" https://github.com/Xuyuanp/nerdtree-git-plugin
+" ============================================================================
+
+function! SetupPluginNERDTreeGitPlugin()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  " packadd nerdtree-git-plugin
+  " NOTE: `packadd` isn't working, so `source` the file directly.
+  source pack/plugins/opt/nerdtree-git-plugin/nerdtree_plugin/git_status.vim
+
+endfunction
+call SetupPluginNERDTreeGitPlugin()
 
 " ============================================================================
 " syntastic

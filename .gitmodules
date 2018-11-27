@@ -119,3 +119,6 @@
 [submodule "vendor/github.com/junegunn/goyo.vim"]
 	path = vendor/github.com/junegunn/goyo.vim
 	url = https://github.com/junegunn/goyo.vim.git
+[submodule "vendor/github.com/Xuyuanp/nerdtree-git-plugin"]
+	path = vendor/github.com/Xuyuanp/nerdtree-git-plugin
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
