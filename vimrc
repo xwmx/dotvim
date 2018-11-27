@@ -819,15 +819,6 @@ function! SetupPluginNERDTree()
 
   " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
-  " Disable the 'Bookmarks' label 'Press ? for help' text. More info:
-  " https://github.com/scrooloose/nerdtree/blob/master/doc/NERDTree.txt#L1059
-  let NERDTreeMinimalUI = 1
-
-  " Map <leader>f to opening the current buffer file in NERDTree.
-  map <silent> <leader>f :NERDTreeFind<CR>
-
-  " TODO: Install https://github.com/Xuyuanp/nerdtree-git-plugin
-
   " ---------------------------------------------------------------------------
   " Source:
   " https://github.com/carlhuda/janus/blob/master/janus/vim/tools/janus/after/plugin/nerdtree.vim
@@ -909,6 +900,15 @@ function! SetupPluginNERDTree()
   if exists("g:NERDTreeIgnore")
     call add(g:NERDTreeIgnore, '\.DS_Store$')"
   endif
+
+  " Disable the 'Bookmarks' label 'Press ? for help' text. More info:
+  " https://github.com/scrooloose/nerdtree/blob/master/doc/NERDTree.txt#L1059
+  let NERDTreeMinimalUI = 1
+
+  " Map <leader>f to opening the current buffer file in NERDTree.
+  map <silent> <leader>f :NERDTreeFind<CR>
+
+  " TODO: Install https://github.com/Xuyuanp/nerdtree-git-plugin
 
 endfunction
 call SetupPluginNERDTree()
