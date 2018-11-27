@@ -822,6 +822,8 @@ function! SetupPluginNERDTree()
   " https://github.com/scrooloose/nerdtree/blob/master/doc/NERDTree.txt#L1059
   let NERDTreeMinimalUI = 1
 
+  " TODO: Install https://github.com/Xuyuanp/nerdtree-git-plugin
+
   " ---------------------------------------------------------------------------
   " Source:
   " https://github.com/carlhuda/janus/blob/master/janus/vim/tools/janus/after/plugin/nerdtree.vim
