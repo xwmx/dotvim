@@ -785,6 +785,7 @@ call SetupPluginNERDCommenter()
 " https://github.com/scrooloose/nerdtree
 "
 " See Also:
+" - https://medium.com/@victormours/a-better-nerdtree-setup-3d3921abc0b9
 " - https://github.com/tpope/vim-vinegar
 " - https://github.com/justinmk/vim-dirvish
 "   Directory viewer for Vim
