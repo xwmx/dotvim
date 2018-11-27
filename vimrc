@@ -280,6 +280,7 @@ call plug#begin('~/.vim/vim-plug')
 " Powerline, Unite, vim-startify and more.
 "
 " https://github.com/ryanoasis/vim-devicons
+" https://github.com/ryanoasis/vim-devicons/wiki/Extra-Configuration
 "
 " NOTE: Load vim-devicons first so it's available when NERDTree and other
 " plugins load.
@@ -298,7 +299,23 @@ function! SetupPluginVimDevicons()
 
   " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
+  " enable folder/directory glyph flag (disabled by default with 0)
+  let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+
+  " enable open and close folder/directory glyph flags (disabled by default
+  " with 0)
+  let g:DevIconsEnableFoldersOpenClose = 1
+
+  " adding to vim-airline's tabline
+  let g:webdevicons_enable_airline_tabline = 1
+
+  " ctrlp glyphs
+  let g:webdevicons_enable_ctrlp = 1
+
   if has("gui_macvim") && has("gui_running")
+    " specify OS to decide an icon for unix fileformat (not defined by default)
+    let g:WebDevIconsOS = 'Darwin'
+
     " Reduce the amount of space after the glyph character (default ' ').
     let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
   endif
@@ -909,6 +926,13 @@ function! SetupPluginNERDTree()
   map <silent> <leader>f :NERDTreeFind<CR>
 
   " TODO: Install https://github.com/Xuyuanp/nerdtree-git-plugin
+
+  " Make arrows invisible.
+  "
+  " https://github.com/scrooloose/nerdtree/issues/904#issuecomment-433415882
+  let g:NERDTreeDirArrowExpandable  = "\u00a0" " make arrows invisible
+  let g:NERDTreeDirArrowCollapsible = "\u00a0" " make arrows invisible
+  let g:NERDTreeNodeDelimiter       = "\u263a" " smiley face
 
 endfunction
 call SetupPluginNERDTree()
