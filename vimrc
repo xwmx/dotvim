@@ -932,6 +932,22 @@ function! SetupPluginNERDTree()
   let g:NERDTreeDirArrowCollapsible = "\u00a0" " make arrows invisible
   let g:NERDTreeNodeDelimiter       = "\u263a" " smiley face
 
+  " <LeftRelease>
+  "
+  " Add <LeftRelease> override to call WebDevIconsNERDTreeMapActivateNode on
+  " single click with `g:NERDTreeMouseMode = 3`.
+  "
+  " More information:
+  " https://github.com/ryanoasis/vim-devicons/pull/246
+  " https://git.io/scrooloose-nerdtree-doc-nerdtree-txt-L906
+  "
+  " TODO: Remove when the above pull request has been merged.
+  call NERDTreeAddKeyMap({
+    \ 'key': '<LeftRelease>',
+    \ 'callback': 'WebDevIconsNERDTreeMapActivateNode',
+    \ 'override': 1,
+    \ 'scope': 'DirNode' })
+
 endfunction
 call SetupPluginNERDTree()
 
