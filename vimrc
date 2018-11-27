@@ -925,28 +925,34 @@ function! SetupPluginNERDTree()
   " Map <leader>f to opening the current buffer file in NERDTree.
   map <silent> <leader>f :NERDTreeFind<CR>
 
-  " Make arrows invisible.
+  " vim-devicons Settings
   "
-  " https://github.com/scrooloose/nerdtree/issues/904#issuecomment-433415882
-  let g:NERDTreeDirArrowExpandable  = "\u00a0" " make arrows invisible
-  let g:NERDTreeDirArrowCollapsible = "\u00a0" " make arrows invisible
-  let g:NERDTreeNodeDelimiter       = "\u263a" " smiley face
+  " See also: SetupPluginVimDevicons()
+  if exists('g:webdevicons_enable_nerdtree') &&
+    \ g:webdevicons_enable_nerdtree == 1
+    " Make arrows invisible.
+    "
+    " https://github.com/scrooloose/nerdtree/issues/904#issuecomment-433415882
+    let g:NERDTreeDirArrowExpandable  = "\u00a0" " make arrows invisible
+    let g:NERDTreeDirArrowCollapsible = "\u00a0" " make arrows invisible
+    let g:NERDTreeNodeDelimiter       = "\u263a" " smiley face
 
-  " <LeftRelease>
-  "
-  " Add <LeftRelease> override to call WebDevIconsNERDTreeMapActivateNode on
-  " single click with `g:NERDTreeMouseMode = 3`.
-  "
-  " More information:
-  " https://github.com/ryanoasis/vim-devicons/pull/246
-  " https://git.io/scrooloose-nerdtree-doc-nerdtree-txt-L906
-  "
-  " TODO: Remove when the above pull request has been merged.
-  call NERDTreeAddKeyMap({
-    \ 'key': '<LeftRelease>',
-    \ 'callback': 'WebDevIconsNERDTreeMapActivateNode',
-    \ 'override': 1,
-    \ 'scope': 'DirNode' })
+    " <LeftRelease>
+    "
+    " Add <LeftRelease> override to call WebDevIconsNERDTreeMapActivateNode on
+    " single click with `g:NERDTreeMouseMode = 3`.
+    "
+    " More information:
+    " https://github.com/ryanoasis/vim-devicons/pull/246
+    " https://git.io/scrooloose-nerdtree-doc-nerdtree-txt-L906
+    "
+    " TODO: Remove when the above pull request has been merged.
+    call NERDTreeAddKeyMap({
+      \ 'key': '<LeftRelease>',
+      \ 'callback': 'WebDevIconsNERDTreeMapActivateNode',
+      \ 'override': 1,
+      \ 'scope': 'DirNode' })
+  endif
 
 endfunction
 call SetupPluginNERDTree()
