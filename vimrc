@@ -953,7 +953,8 @@ function! SetupPluginNERDTreeGitPlugin()
   source pack/plugins/opt/nerdtree-git-plugin/nerdtree_plugin/git_status.vim
 
 endfunction
-call SetupPluginNERDTreeGitPlugin()
+" NOTE: Disable nerdtree-git-plugin due to lag / performance issues.
+" call SetupPluginNERDTreeGitPlugin()
 
 " ============================================================================
 " syntastic
