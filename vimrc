@@ -823,6 +823,9 @@ function! SetupPluginNERDTree()
   " https://github.com/scrooloose/nerdtree/blob/master/doc/NERDTree.txt#L1059
   let NERDTreeMinimalUI = 1
 
+  " Map <leader>f to opening the current buffer file in NERDTree.
+  map <silent> <leader>f :NERDTreeFind<CR>
+
   " TODO: Install https://github.com/Xuyuanp/nerdtree-git-plugin
 
   " ---------------------------------------------------------------------------
