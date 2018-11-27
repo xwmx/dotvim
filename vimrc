@@ -356,16 +356,15 @@ function! SetupTabCompletionPlugins()
     "
     " More Information:
     " https://valloric.github.io/YouCompleteMe/#mac-os-x
-    "
-    " TODO: Determine how to handle this automatically, such as by detecting
-    " conditions when the install has to be run again.
-    " let you_complete_me_install = '
-    "   \ _ycm_path="${HOME}/.vim/pack/plugins/opt/YouCompleteMe" &&
-    "   \ (
-    "   \   cd "${_ycm_path}" &&
-    "   \   ./install.py --clang-completer
-    "   \ )'
-    " call system(you_complete_me_install)
+    let you_complete_me_install = '
+      \ _ycm_path="${HOME}/.vim/pack/plugins/opt/YouCompleteMe" &&
+      \ [ -e "${_ycm_path}/third_party/ycmd/build.py" ] &&
+      \ [ ! -e "${_ycm_path}/third_party/ycmd/ycm_core.so" ] &&
+      \ (
+      \   cd "${_ycm_path}" &&
+      \   ./install.py --clang-completer
+      \ )'
+    call system(you_complete_me_install)
 
     packadd YouCompleteMe
   else
