@@ -233,6 +233,26 @@ if has("gui_macvim")
   "
   " ALEWarning is linked to SpellCap. (485880)
   hi SpellCap term=reverse ctermbg=9 gui=undercurl guisp=#364464
+
+  " Flag / devicon color in NERDTree.
+  "
+  " Original:
+  " hi def link NERDTreeFlags Number
+  " Source:
+  " https://github.com/scrooloose/nerdtree/blob/master/syntax/nerdtree.vim#L89
+  hi def link NERDTreeFlags Directory
+
+  " Directory & Folder name color in NERDTree.
+  "
+  " Original:
+  " hi Directory                    ctermfg=167   ctermbg=NONE  cterm=NONE          guifg=#cd3f45   guibg=NONE      gui=NONE
+  hi Directory                    ctermfg=167   ctermbg=NONE  cterm=NONE          guifg=#7F7F7F   guibg=NONE      gui=NONE
+
+  " Link color in NERDTree
+  "
+  " Original:
+  hi PreProc                      ctermfg=197   ctermbg=NONE  cterm=NONE          guifg=#ff026a   guibg=NONE      gui=NONE
+
 else
   colorscheme dracula
   " 'hybrid' is a good default to return to if necessary.
