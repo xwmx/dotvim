@@ -279,5 +279,11 @@ else
   " colorscheme dracula
   " 'hybrid' is a good default to return to if necessary.
   " colorscheme hybrid
+
+  " vim-snazzy with adjustments.
   colorscheme snazzy
+  " Darker background.
+  hi Normal guibg=#181C1D
+  " Remove VertSplit line characters.
+  set fillchars+=vert:\ 
 endif
