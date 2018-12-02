@@ -23,8 +23,6 @@ function! ColorColumnInit()
     "
     " last: hi ColorColumn guifg=#bbbbbb guibg=#1a1a1a gui=NONE
     hi ColorColumn guifg=NONE guibg=#1c1d1e gui=bold
-  else
-    hi ColorColumn guifg=#f8f8f8 guibg=#161616 gui=NONE
   endif
 
   if exists('+colorcolumn')
