@@ -155,6 +155,28 @@ endfunction
 call SetupPluginVimMonochrome()
 
 " ============================================================================
+" vim-snazzy
+"
+" Elegant vim theme with bright colors.
+"
+" https://github.com/connorholyday/vim-snazzy
+" ============================================================================
+
+function! SetupPluginVimSnazzy()
+
+  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-snazzy
+
+  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+endfunction
+call SetupPluginVimSnazzy()
+
+
+
+" ============================================================================
 " vim-vwilight
 "
 " https://github.com/alphabetum/vim-vwilight
@@ -254,7 +276,8 @@ if has("gui_macvim")
   hi PreProc                      ctermfg=197   ctermbg=NONE  cterm=NONE          guifg=#ff026a   guibg=NONE      gui=NONE
 
 else
-  colorscheme dracula
+  " colorscheme dracula
   " 'hybrid' is a good default to return to if necessary.
   " colorscheme hybrid
+  colorscheme snazzy
 endif

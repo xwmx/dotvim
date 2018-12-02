@@ -122,3 +122,6 @@
 [submodule "vendor/github.com/Xuyuanp/nerdtree-git-plugin"]
 	path = vendor/github.com/Xuyuanp/nerdtree-git-plugin
 	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
+[submodule "vendor/github.com/connorholyday/vim-snazzy"]
+	path = vendor/github.com/connorholyday/vim-snazzy
+	url = https://github.com/connorholyday/vim-snazzy.git
