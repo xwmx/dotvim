@@ -9,7 +9,7 @@
 " ===========================================================================
 
 " Highlight the 81st column, to limit line length to 79 columns + 1 column
-" for `set listchars` newline character. 
+" for `set listchars` newline character.
 "
 " More Information:
 "   http://programmers.stackexchange.com/a/148729
