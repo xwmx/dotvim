@@ -282,8 +282,8 @@ else
 
   " vim-snazzy with adjustments.
   colorscheme snazzy
-  " Darker background.
-  hi Normal guibg=#181C1D
+  " Match background to shell theme background.
+  hi Normal guibg=#262626
   " Remove VertSplit line characters.
   set fillchars+=vert:\ 
 endif
