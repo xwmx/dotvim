@@ -128,3 +128,6 @@
 [submodule "vendor/github.com/jceb/vim-orgmode"]
 	path = vendor/github.com/jceb/vim-orgmode
 	url = https://github.com/jceb/vim-orgmode.git
+[submodule "vendor/github.com/tpope/vim-speeddating"]
+	path = vendor/github.com/tpope/vim-speeddating
+	url = https://github.com/tpope/vim-speeddating.git

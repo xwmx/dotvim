@@ -1549,6 +1549,24 @@ endfunction
 " call SetupPluginVimSleuth()
 
 " ============================================================================
+" vim-speeddating
+"
+" speeddating.vim: use CTRL-A/CTRL-X to increment dates, times, and more
+"
+" https://github.com/tpope/vim-speeddating
+" ============================================================================
+
+function! SetupPluginVimSpeeddating()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-speeddating
+
+endfunction
+call SetupPluginVimSpeeddating()
+
+" ============================================================================
 " vim-textobj-line
 "
 "  Text objects for the current line.
