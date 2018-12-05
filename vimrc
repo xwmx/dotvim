@@ -1282,6 +1282,26 @@ endfunction
 call SetupPluginVimJson()
 
 " ============================================================================
+" vim-orgmode
+"
+" Text outlining and task management for Vim based on Emacs' Org-Mode
+"
+" https://github.com/jceb/vim-orgmode
+" ============================================================================
+
+function! SetupPluginVimOrgmode()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-orgmode
+
+  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+endfunction
+call SetupPluginVimOrgmode()
+
+" ============================================================================
 " vim-pandoc
 "
 " vim-pandoc provides facilities to integrate Vim with the pandoc document

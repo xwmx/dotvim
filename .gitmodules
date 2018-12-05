@@ -125,3 +125,6 @@
 [submodule "vendor/github.com/connorholyday/vim-snazzy"]
 	path = vendor/github.com/connorholyday/vim-snazzy
 	url = https://github.com/connorholyday/vim-snazzy.git
+[submodule "vendor/github.com/jceb/vim-orgmode"]
+	path = vendor/github.com/jceb/vim-orgmode
+	url = https://github.com/jceb/vim-orgmode.git
