@@ -678,6 +678,28 @@ endfunction
 call SetupPluginFZF()
 
 " ============================================================================
+" image.vim
+"
+" View images in Vim
+"
+" https://github.com/ashisha/image.vim
+" ============================================================================
+
+function! SetupPluginImageVim()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  if has("gui_macvim")
+    " Native Vim init:
+    packadd image.vim
+  endif
+
+  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+endfunction
+call SetupPluginImageVim()
+
+" ============================================================================
 " Neoformat
 "
 " ✨ A (Neo)vim plugin for formatting code.

@@ -131,3 +131,6 @@
 [submodule "vendor/github.com/tpope/vim-speeddating"]
 	path = vendor/github.com/tpope/vim-speeddating
 	url = https://github.com/tpope/vim-speeddating.git
+[submodule "vendor/github.com/ashisha/image.vim"]
+	path = vendor/github.com/ashisha/image.vim
+	url = https://github.com/ashisha/image.vim.git
