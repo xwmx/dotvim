@@ -36,8 +36,7 @@ function! FlashCursorLineAndColumn()
   set nocursorcolumn
 endfunction
 
-" `map ;` to `FlashCursorLine()`
-map ; :call FlashCursorLineAndColumn()<CR>
+map <Leader>; :call FlashCursorLineAndColumn()<CR>
 
 " Cursor Line Highlighting
 set cursorline
