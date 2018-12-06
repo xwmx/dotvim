@@ -167,6 +167,13 @@ set updatetime=100
 "    Insert mode
 set formatoptions+=r
 
+" clipboard
+"
+" Cross-platform clipboard configuration.
+"
+" More information: https://stackoverflow.com/a/30691754
+set clipboard^=unnamed,unnamedplus
+
 " ============================================================================
 " Temporary Directories
 "
