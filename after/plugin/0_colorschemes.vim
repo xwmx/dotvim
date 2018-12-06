@@ -275,6 +275,29 @@ if has("gui_macvim")
   " Original:
   hi PreProc                      ctermfg=197   ctermbg=NONE  cterm=NONE          guifg=#ff026a   guibg=NONE      gui=NONE
 
+  " Set `:terminal` colors.
+  "
+  " More information:
+  " https://github.com/macvim-dev/macvim/issues/626
+  let g:terminal_ansi_colors = [
+    \   '#262626',
+    \   '#EA51B2',
+    \   '#00F769',
+    \   '#EBFC87',
+    \   '#62D6E8',
+    \   '#B45BCF',
+    \   '#A1EFE4',
+    \   '#E9E9F4',
+    \   '#626483',
+    \   '#EA51B2',
+    \   '#00F769',
+    \   '#EBFC87',
+    \   '#62D6E8',
+    \   '#B45BCF',
+    \   '#A1EFE4',
+    \   '#F7F7FB'
+    \ ]
+
 else
   " colorscheme dracula
   " 'hybrid' is a good default to return to if necessary.
