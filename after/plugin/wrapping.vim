@@ -55,6 +55,7 @@ set cpo+=n
 augroup SetWrappingByFileType
     autocmd!
     autocmd FileType log setlocal nowrap
+    autocmd TerminalOpen * if &buftype == 'terminal' | setlocal nowrap | endif
 augroup END
 
 " ToggleWrap()
