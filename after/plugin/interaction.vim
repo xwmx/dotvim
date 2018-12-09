@@ -199,3 +199,17 @@ inoremap <S-Tab> <C-V><Tab>
 "   all      Allow virtual editing in all modes.
 "   onemore  Allow the cursor to move just past the end of the line
 set virtualedit=block
+
+" ============================================================================
+" YouCompleteMe
+" ============================================================================
+
+if exists("g:loaded_youcompleteme")
+  " Map <Enter> to select item and close menu.
+  "
+  " More information:
+  " https://github.com/Valloric/YouCompleteMe/issues/83#issuecomment-215778231
+  " https://github.com/Valloric/YouCompleteMe/issues/76
+  " https://github.com/Valloric/YouCompleteMe/issues/2712
+  inoremap <expr> <Enter> pumvisible() ? '<Esc>a' : '<Enter>'
+endif
