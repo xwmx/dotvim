@@ -388,11 +388,11 @@ if exists("custom_macvim_hig_movement")
   " OnlyWhiteSpaceBeforeCursor()
   "
   " Returns:
-  "   0   If there is only whitespace before the current cursor position.
-  "   -1  If there are non-whitespace characters before the current cursor
+  "   1   If there is only whitespace before the current cursor position.
+  "   0   If there are non-whitespace characters before the current cursor
   "       position.
   function! OnlyWhiteSpaceBeforeCursor()
-    return match(
+    return ! match(
       \ strpart(getline('.'), 0, col('.') - 1),
       \ "^[[:space:]][[:space:]]*$"
       \ )
@@ -402,15 +402,15 @@ if exists("custom_macvim_hig_movement")
   " position or if the cursor is at the beginni of the line, use `b` to jump
   " back by words. If there are only whitespace characters before the current
   " cursor position, jump to the beginning of the line.
-  nn   <expr> <S-M-Left> OnlyWhiteSpaceBeforeCursor() ? 'vb' : 'v0'
-  vn   <expr> <S-M-Left> OnlyWhiteSpaceBeforeCursor() ? 'b' : '0'
+  nn   <expr> <S-M-Left> OnlyWhiteSpaceBeforeCursor() ? 'v0' : 'vb'
+  vn   <expr> <S-M-Left> OnlyWhiteSpaceBeforeCursor() ? '0' : 'b'
   " NOTE: Use `<ESC>` for more natural selection behavior.
   " - `<ESC>`:
   "   Always select the character before the cursor.
   " - `<C-O>` (ctrl-O):
   "   Cursor is at end of line: select character before cursor.
   "   Cursor is not at end of line: select character after cursor.
-  ino  <expr> <S-M-Left> OnlyWhiteSpaceBeforeCursor() ? '<ESC>vb' : '<ESC>v0'
+  ino  <expr> <S-M-Left> OnlyWhiteSpaceBeforeCursor() ? '<ESC>v0' : '<ESC>vb'
 
   " #########################
   " Command-Shift-Up Arrow
