@@ -448,14 +448,33 @@ if exists("custom_macvim_hig_movement")
   " Option-Shift-Right Arrow
   " ########################
 
+  " OnlyWhiteSpaceAfterCursor()
+  "
+  " Returns:
+  "   1   If there is only whitespace after the current cursor position.
+  "   0   If there are non-whitespace characters after the current cursor
+  "       position.
+  function! OnlyWhiteSpaceAfterCursor()
+    let l:line = getline('.')
+    let l:column = col('.')
+    let l:line_length = strwidth(l:line)
+    return (! match(
+      \ strpart(l:line, l:column, l:line_length),
+      \ "^[[:space:]]*$"
+      \ )) && l:column <= l:line_length
+  endfunction
+
   " These mappings:
-  "   Enter visual mode and select to end of current word.
+  "   Enter visual mode and select to end of current word. If cursor is at the
+  "   end of the line or there is only whitespace remaining, select the
+  "   newline, then select to the end of the next word again on subsequent
+  "   keypresses.
   "
   " Overrides MacVim Default mappings:
   "   Enter select mode and select to beginning of next word.
   "
-  nn   <S-M-Right>    ve
-  vn   <S-M-Right>    e
-  ino  <S-M-Right>    <C-O>ve
+  nn   <expr> <S-M-Right> OnlyWhiteSpaceAfterCursor() ? 'v$'      : 've'
+  vn   <expr> <S-M-Right> OnlyWhiteSpaceAfterCursor() ? '$'       : 'e'
+  ino  <expr> <S-M-Right> OnlyWhiteSpaceAfterCursor() ? '<C-O>v$' : '<C-O>ve'
 
 endif " exists("custom_macvim_hig_movement")
