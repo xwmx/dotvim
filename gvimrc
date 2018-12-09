@@ -403,9 +403,8 @@ if exists("custom_macvim_hig_movement")
   "   mode and use `b` to jump back by words. If there are only whitespace
   "   characters before the current cursor position, enter visual mode and
   "   jump to the beginning of the line.
-  "
-  nn   <expr> <S-M-Left> OnlyWhiteSpaceBeforeCursor() ? 'v0' : 'vb'
-  vn   <expr> <S-M-Left> OnlyWhiteSpaceBeforeCursor() ? '0' : 'b'
+  nn   <expr> <S-M-Left> OnlyWhiteSpaceBeforeCursor() ? 'v0'  : 'vb'
+  vn   <expr> <S-M-Left> OnlyWhiteSpaceBeforeCursor() ? '0'   : 'b'
   " NOTE: Use `<ESC>` for more natural selection behavior.
   " - `<ESC>`:
   "   Always select the character before the cursor.
@@ -439,7 +438,6 @@ if exists("custom_macvim_hig_movement")
   "
   " Overrides MacVim Default mappings:
   "   Enter select mode and select to end of line with newline.
-  "
   nn   <S-D-Right>    vg_
   vn   <S-D-Right>    g_
   ino  <S-D-Right>    <C-O>vg_
@@ -472,7 +470,6 @@ if exists("custom_macvim_hig_movement")
   "
   " Overrides MacVim Default mappings:
   "   Enter select mode and select to beginning of next word.
-  "
   nn   <expr> <S-M-Right> OnlyWhiteSpaceAfterCursor() ? 'v$'      : 've'
   vn   <expr> <S-M-Right> OnlyWhiteSpaceAfterCursor() ? '$'       : 'e'
   ino  <expr> <S-M-Right> OnlyWhiteSpaceAfterCursor() ? '<C-O>v$' : '<C-O>ve'
