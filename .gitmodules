@@ -134,3 +134,6 @@
 [submodule "vendor/github.com/ashisha/image.vim"]
 	path = vendor/github.com/ashisha/image.vim
 	url = https://github.com/ashisha/image.vim.git
+[submodule "vendor/github.com/mattn/emmet-vim"]
+	path = vendor/github.com/mattn/emmet-vim
+	url = https://github.com/mattn/emmet-vim.git

@@ -675,6 +675,38 @@ endfunction
 call SetupPluginDockerfileVim()
 
 " ============================================================================
+" Emmet-vim
+"
+" emmet-vim is a vim plug-in which provides support for expanding abbreviations
+" similar to emmet.io
+"
+" https://github.com/mattn/emmet-vim
+" ============================================================================
+
+function! SetupPluginEmmetVim()
+
+  " Before: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  let g:user_emmet_leader_key='<C-Z>'
+
+  " See also:
+  " https://drivy.engineering/setting-up-vim-for-react/
+  " let g:user_emmet_leader_key='<Tab>'
+  let g:user_emmet_settings = {
+    \   'javascript.jsx' : {
+    \     'extends' : 'jsx',
+    \   },
+    \ }
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd emmet-vim
+
+endfunction
+call SetupPluginEmmetVim()
+
+" ============================================================================
 " FZF
 "
 " 🌸 A command-line fuzzy finder
