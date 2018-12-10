@@ -92,6 +92,31 @@ endif
 " Ensure indent is on
 filetype plugin indent on
 
+" ====
+" Bash
+" ====
+
+" Associate Baskfile with bash
+"
+" Files with this name are expected to be bash files without a shebang since
+" they are sourced and run from `bask`.
+autocmd BufRead,BufNewFile Baskfile let b:is_bash=1
+autocmd BufRead,BufNewFile Baskfile set filetype=sh
+" Why `dist#ft#`? More info:
+" https://www.mail-archive.com/cygwin@cygwin.com/msg155510.html
+autocmd BufRead,BufNewFile Baskfile call dist#ft#SetFileTypeSH("bash")
+
+" ============
+" CoffeeScript
+" ============
+
+" Associate .cson files with CoffeeScript.
+autocmd BufRead,BufNewFile *.cson set filetype=coffee
+
+" ==========
+" JavaScript
+" ==========
+
 " Associate the .es6 file extension with JavaScript
 "
 " The `.es6` is used by 6to5 (and, by extension, Sprockets) which turns ES6+
@@ -104,15 +129,9 @@ filetype plugin indent on
 "   http://robots.thoughtbot.com/replace-coffeescript-with-es6
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 
-" Associate Baskfile with bash
-"
-" Files with this name are expected to be bash files without a shebang since
-" they are sourced and run from `bask`.
-autocmd BufRead,BufNewFile Baskfile let b:is_bash=1
-autocmd BufRead,BufNewFile Baskfile set filetype=sh
-" Why `dist#ft#`? More info:
-" https://www.mail-archive.com/cygwin@cygwin.com/msg155510.html
-autocmd BufRead,BufNewFile Baskfile call dist#ft#SetFileTypeSH("bash")
+" ====
+" Lisp
+" ====
 
 " Associate the .spacemacs dotfile with lisp
 "
@@ -122,6 +141,17 @@ autocmd BufRead,BufNewFile Baskfile call dist#ft#SetFileTypeSH("bash")
 " https://github.com/syl20bnr/spacemacs
 autocmd BufRead,BufNewFile .spacemacs setfiletype lisp
 
+" ===
+" PHP
+" ===
+
+" Always use 2-space tabstop with php.
+autocmd Filetype php setlocal ts=2
+
+" =========
+" sshconfig
+" =========
+
 " Associate the .sshconfig file extension with the sshconfig file type.
 "
 " In the current dotfile configuration, .sshconfig files (not an official
@@ -130,20 +160,22 @@ autocmd BufRead,BufNewFile .spacemacs setfiletype lisp
 " larger ssh configuration file.
 autocmd BufRead,BufNewFile *.sshconfig set filetype=sshconfig
 
-" Associate .cson files with CoffeeScript.
-autocmd BufRead,BufNewFile *.cson set filetype=coffee
-
-" Always use 2-space tabstop with php.
-autocmd Filetype php setlocal ts=2
-
-" Set .zsh-theme files as zsh.
-autocmd BufRead,BufNewFile *.zsh-theme setfiletype zsh
+" ====
+" Yaml
+" ====
 
 " Set .yaml and .yml as yaml files rather than eruby.yaml, which causes the
 " eruby delimeters to be used by NERD Commenter. More information:
 " https://lornajane.net/posts/2018/vim-settings-for-working-with-yaml
 " https://github.com/scrooloose/nerdcommenter/issues/326
 autocmd BufNewFile,BufRead *.{yaml,yml} set filetype=yaml
+
+" ===
+" ZSH
+" ===
+
+" Set .zsh-theme files as zsh.
+autocmd BufRead,BufNewFile *.zsh-theme setfiletype zsh
 
 " ============================================================================
 " SH / shell default syntax config
