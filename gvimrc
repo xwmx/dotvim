@@ -439,12 +439,28 @@ if exists("custom_macvim_hig_movement")
   ino  <S-D-Up>       <C-O>vgg
 
   " #########################
+  " Option-Shift-Up Arrow
+  " #########################
+
+  no   <S-M-Up>         v{
+  vm   <S-M-Up>         {
+  ino  <S-M-Up>         <ESC>v{
+
+  " #########################
   " Command-Shift-Down Arrow
   " #########################
 
   nn   <S-D-Down>     vG
   vn   <S-D-Down>     G
   ino  <S-D-Down>     <C-O>vG
+
+  " #########################
+  " Options-Shift-Down Arrow
+  " #########################
+
+  no   <S-M-Down>       v}
+  vn   <S-M-Down>       }
+  ino  <S-M-Down>       <ESC>v}
 
   " #########################
   " Command-Shift-Right Arrow
