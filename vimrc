@@ -536,6 +536,24 @@ endfunction
 call SetupPluginAle()
 
 " ============================================================================
+" AsyncRun
+"
+" Run Async Shell Commands in Vim 8.0 / NeoVim and Output to Quickfix Window
+"
+" https://github.com/skywind3000/asyncrun.vim
+" ============================================================================
+
+function! SetupPluginAsyncRun()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd asyncrun.vim
+
+endfunction
+call SetupPluginAsyncRun()
+
+" ============================================================================
 " ctrlp.vim
 "
 " Fuzzy file, buffer, mru, tag, etc finder.

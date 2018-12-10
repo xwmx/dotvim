@@ -137,3 +137,6 @@
 [submodule "vendor/github.com/mattn/emmet-vim"]
 	path = vendor/github.com/mattn/emmet-vim
 	url = https://github.com/mattn/emmet-vim.git
+[submodule "vendor/github.com/skywind3000/asyncrun.vim"]
+	path = vendor/github.com/skywind3000/asyncrun.vim
+	url = https://github.com/skywind3000/asyncrun.vim.git
