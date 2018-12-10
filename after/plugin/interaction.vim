@@ -212,8 +212,12 @@ if exists("g:loaded_youcompleteme")
   " https://github.com/Valloric/YouCompleteMe/issues/76
   " https://github.com/Valloric/YouCompleteMe/issues/2712
   "
-  " NOTE: Disable because it interferes with pair completion.
+  " NOTE: Disable because it interferes with vim-endwise.
   " TODO: Identify a way to implement this that doesn't interfere with
   " existing behaviors.
+  " More information:
+  " https://github.com/tpope/vim-endwise/issues/91
+  " https://github.com/tpope/vim-endwise/issues/22
+  "
   " inoremap <expr> <Enter> pumvisible() ? '<Esc>a' : '<Enter>'
 endif
