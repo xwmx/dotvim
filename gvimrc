@@ -418,6 +418,8 @@ if exists("custom_macvim_hig_movement")
     endif
   endfunction
 
+  " These mappings:
+  "   Enter visual mode and move the cursor left.
   nn   <expr> <S-M-Left> 'v' . OptionShiftLeftArrowMovement()
   vn   <expr> <S-M-Left> OptionShiftLeftArrowMovement()
   " NOTE: Use `<ESC>` for more natural selection behavior.
@@ -477,16 +479,30 @@ if exists("custom_macvim_hig_movement")
       \ )) && l:column <= l:line_length
   endfunction
 
+  " OptionShiftRightArrowMovement()
+  "
+  " Description:
+  "   Move the cursor forward.
+  "
+  " Returns:
+  "   '$'   When there is only whitespace after the cursor, move the cursor to
+  "         the end of the line.
+  "   'e'   Move the cursor to the end of the next word.
+  function! OptionShiftRightArrowMovement()
+    if OnlyWhiteSpaceAfterCursor()
+      return '$'
+    else
+      return 'e'
+    endif
+  endfunction
+
   " These mappings:
-  "   Enter visual mode and select to end of current word. If cursor is at the
-  "   end of the line or there is only whitespace remaining, select the
-  "   newline, then select to the end of the next word again on subsequent
-  "   keypresses.
+  "   Enter visual mode and move the cursor right.
   "
   " Overrides MacVim Default mappings:
   "   Enter select mode and select to beginning of next word.
-  nn   <expr> <S-M-Right> OnlyWhiteSpaceAfterCursor() ? 'v$'      : 've'
-  vn   <expr> <S-M-Right> OnlyWhiteSpaceAfterCursor() ? '$'       : 'e'
-  ino  <expr> <S-M-Right> OnlyWhiteSpaceAfterCursor() ? '<C-O>v$' : '<C-O>ve'
+  nn   <expr> <S-M-Right> 'v'       . OptionShiftRightArrowMovement()
+  vn   <expr> <S-M-Right>             OptionShiftRightArrowMovement()
+  ino  <expr> <S-M-Right> '<C-O>v'  . OptionShiftRightArrowMovement()
 
 endif " exists("custom_macvim_hig_movement")
