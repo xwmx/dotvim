@@ -211,5 +211,9 @@ if exists("g:loaded_youcompleteme")
   " https://github.com/Valloric/YouCompleteMe/issues/83#issuecomment-215778231
   " https://github.com/Valloric/YouCompleteMe/issues/76
   " https://github.com/Valloric/YouCompleteMe/issues/2712
-  inoremap <expr> <Enter> pumvisible() ? '<Esc>a' : '<Enter>'
+  "
+  " NOTE: Disable because it interferes with pair completion.
+  " TODO: Identify a way to implement this that doesn't interfere with
+  " existing behaviors.
+  " inoremap <expr> <Enter> pumvisible() ? '<Esc>a' : '<Enter>'
 endif
