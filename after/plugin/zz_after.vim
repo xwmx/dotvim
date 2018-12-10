@@ -139,6 +139,12 @@ autocmd Filetype php setlocal ts=2
 " Set .zsh-theme files as zsh.
 autocmd BufRead,BufNewFile *.zsh-theme setfiletype zsh
 
+" Set .yaml and .yml as yaml files rather than eruby.yaml, which causes the
+" eruby delimeters to be used by NERD Commenter. More information:
+" https://lornajane.net/posts/2018/vim-settings-for-working-with-yaml
+" https://github.com/scrooloose/nerdcommenter/issues/326
+autocmd BufNewFile,BufRead *.{yaml,yml} set filetype=yaml
+
 " ============================================================================
 " SH / shell default syntax config
 " ============================================================================
