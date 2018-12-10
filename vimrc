@@ -414,8 +414,6 @@ function! SetupTabCompletionPlugins()
     packadd supertab
   endif
 
-  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
-
 endfunction
 call SetupTabCompletionPlugins()
 
@@ -667,8 +665,6 @@ function! SetupPluginDelimitMate()
   " Native Vim init:
   packadd delimitMate
 
-  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
-
 endfunction
 call SetupPluginDelimitMate()
 
@@ -686,8 +682,6 @@ function! SetupPluginDockerfileVim()
 
   " Native Vim init:
   packadd Dockerfile.vim
-
-  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
 endfunction
 call SetupPluginDockerfileVim()
@@ -747,8 +741,6 @@ function! SetupPluginFZF()
   " Native Vim init:
   packadd fzf.vim
 
-  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
-
 endfunction
 call SetupPluginFZF()
 
@@ -768,8 +760,6 @@ function! SetupPluginImageVim()
     " Native Vim init:
     packadd image.vim
   endif
-
-  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
 endfunction
 call SetupPluginImageVim()
@@ -791,8 +781,6 @@ function! SetupPluginNeoformat()
 
   " Native Vim init:
   packadd neoformat
-
-  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
 endfunction
 " NOTE: Disable in favor of ALE
@@ -1248,8 +1236,6 @@ function! SetupPluginVimCtrlspace()
   " Native Vim init:
   packadd vim-ctrlspace
 
-  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
-
 endfunction
 call SetupPluginVimCtrlspace()
 
@@ -1299,8 +1285,6 @@ function! SetupPluginVimGo()
 
   " Native Vim init:
   packadd vim-go
-
-  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
 endfunction
 call SetupPluginVimGo()
@@ -1392,8 +1376,6 @@ function! SetupPluginVimOrgmode()
 
   " Native Vim init:
   packadd vim-orgmode
-
-  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
 endfunction
 call SetupPluginVimOrgmode()
