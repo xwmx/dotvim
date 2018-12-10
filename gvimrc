@@ -420,8 +420,8 @@ if exists("custom_macvim_hig_movement")
 
   " These mappings:
   "   Enter visual mode and move the cursor left.
-  nn   <expr> <S-M-Left> 'v' . OptionShiftLeftArrowMovement()
-  vn   <expr> <S-M-Left> OptionShiftLeftArrowMovement()
+  nn   <expr> <S-M-Left> 'v'      . OptionShiftLeftArrowMovement()
+  vn   <expr> <S-M-Left>            OptionShiftLeftArrowMovement()
   " NOTE: Use `<ESC>` for more natural selection behavior.
   " - `<ESC>`:
   "   Always select the character before the cursor.
