@@ -82,13 +82,6 @@ set showcmd
 " FileType settings
 " ============================================================================
 
- " Turn off balloons in ruby.  See:
- "   http://stackoverflow.com/a/1111363
- "   http://vimdoc.sourceforge.net/htmldoc/debugger.html#balloon-eval
-if has("gui_running")
-  autocmd FileType ruby,eruby set noballooneval
-endif
-
 " Ensure indent is on
 filetype plugin indent on
 
@@ -147,6 +140,17 @@ autocmd BufRead,BufNewFile .spacemacs setfiletype lisp
 
 " Always use 2-space tabstop with php.
 autocmd Filetype php setlocal ts=2
+
+" ====
+" Ruby
+" ====
+
+ " Turn off balloons in ruby.  See:
+ "   http://stackoverflow.com/a/1111363
+ "   http://vimdoc.sourceforge.net/htmldoc/debugger.html#balloon-eval
+if has("gui_running")
+  autocmd FileType ruby,eruby set noballooneval
+endif
 
 " =========
 " sshconfig
