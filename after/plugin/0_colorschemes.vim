@@ -236,7 +236,7 @@ call SetupPluginVwilightOriginal()
 "colorscheme Tomorrow-Night
 
 set background=dark
-if has("gui_macvim")
+if has("gui_macvim") || has("gui_vimr")
   " colorscheme base16-default
   " colorscheme dracula
   colorscheme seti
