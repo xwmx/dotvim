@@ -1415,6 +1415,23 @@ function! SetupPluginVimPandoc()
 endfunction
 call SetupPluginVimPandoc()
 
+" ============================================================================
+" Vim-Startify
+"
+" The fancy start screen for Vim.
+"
+" https://github.com/mhinz/vim-startify
+" ============================================================================
+
+function! SetupPluginVimStartify()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-startify
+
+endfunction
+call SetupPluginVimStartify()
 
 " ============================================================================
 " vim-pandoc-syntax
