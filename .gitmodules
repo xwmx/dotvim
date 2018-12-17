@@ -140,3 +140,6 @@
 [submodule "vendor/github.com/skywind3000/asyncrun.vim"]
 	path = vendor/github.com/skywind3000/asyncrun.vim
 	url = https://github.com/skywind3000/asyncrun.vim.git
+[submodule "vendor/github.com/Shougo/denite.nvim"]
+	path = vendor/github.com/Shougo/denite.nvim
+	url = https://github.com/Shougo/denite.nvim.git

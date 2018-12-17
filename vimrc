@@ -669,6 +669,30 @@ endfunction
 call SetupPluginDelimitMate()
 
 " ============================================================================
+" Denite.nvim
+"
+" 🐉 Dark powered asynchronous unite all interfaces for Neovim/Vim8
+"
+" Denite is a dark powered plugin for Neovim/Vim to unite all interfaces. It
+" can replace many features or plugins with its interface. It is like a fuzzy
+" finder, but is more generic.
+"
+" https://github.com/Shougo/denite.nvim
+" ============================================================================
+
+function! SetupPluginDeniteNVim()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd denite.nvim
+
+endfunction
+" NOTE: Don't load denite.nvim due to python version errors.
+" TODO: Resolve errors.
+" call SetupPluginDeniteNVim()
+
+" ============================================================================
 " Dockerfile.vim
 "
 " Vim syntax file for Docker's Dockerfile and snippets for snipMate.
