@@ -182,7 +182,11 @@ vnoremap ˜ :enew<cr>
 "
 " More information:
 " http://stackoverflow.com/a/4781099
-inoremap <S-Tab> <C-V><Tab>
+"
+" NOTE: This overrides a mapping from SnipMate and the `noremap` versions of
+" of the map commands can not be used, as noted in:
+" https://github.com/garbas/vim-snipmate/blob/master/doc/SnipMate.txt#L187
+imap <S-Tab> <C-V><Tab>
 
 " ============================================================================
 " virtualedit
