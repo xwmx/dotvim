@@ -671,7 +671,8 @@ function! SetupPluginDeniteNVim()
 
 endfunction
 " NOTE: Don't load denite.nvim due to python version errors.
-" TODO: Resolve errors.
+" TODO: Configure python versions, particularly with MacVim. More information:
+" https://github.com/macvim-dev/macvim/wiki/Python-2.x-and-Python-3.x
 " call SetupPluginDeniteNVim()
 
 " ============================================================================
