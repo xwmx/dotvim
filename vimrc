@@ -63,24 +63,6 @@
 "
 " ============================================================================
 
-" $PATH
-"
-" Set $PATH to first search in /usr/bin to avoid errors due to python
-" version incompatibilities.
-"
-" More information:
-" https://github.com/Valloric/YouCompleteMe/issues/2218
-" https://github.com/Valloric/YouCompleteMe/issues/3216
-" https://github.com/Valloric/YouCompleteMe/issues/3158
-"
-" Possibly related:
-" https://github.com/macvim-dev/macvim/pull/739
-"
-" TODO: Revisit this to identify a better solution.
-if has("gui_macvim")
-  let $PATH = '/usr/bin:' . $PATH
-endif
-
 " ============================================================================
 " Janus - vimrc (1) (begin)                          Janus - vimrc (1) (begin)
 " -------------------------                          -------------------------
