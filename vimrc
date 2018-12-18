@@ -632,6 +632,26 @@ endfunction
 call SetupPluginCtrlp()
 
 " ============================================================================
+" ctrlfs.vim
+"
+" An ack/ag/pt/rg powered code search and view tool, takes advantage of Vim 8's
+" power to support asynchronous searching, and lets you edit file in-place with
+" Edit Mode.
+"
+" https://github.com/dyng/ctrlsf.vim
+" ============================================================================
+
+function! SetupPluginCtrlSF()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd ctrlsf.vim
+
+endfunction
+call SetupPluginCtrlSF()
+
+" ============================================================================
 " delimitMate
 "
 " Vim plugin, provides insert mode auto-completion for quotes, parens,

@@ -146,3 +146,6 @@
 [submodule "vendor/github.com/mhinz/vim-startify"]
 	path = vendor/github.com/mhinz/vim-startify
 	url = https://github.com/mhinz/vim-startify.git
+[submodule "vendor/github.com/dyng/ctrlsf.vim"]
+	path = vendor/github.com/dyng/ctrlsf.vim
+	url = https://github.com/dyng/ctrlsf.vim.git
