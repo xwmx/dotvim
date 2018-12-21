@@ -203,25 +203,3 @@ imap <S-Tab> <C-V><Tab>
 "   all      Allow virtual editing in all modes.
 "   onemore  Allow the cursor to move just past the end of the line
 set virtualedit=block
-
-" ============================================================================
-" YouCompleteMe
-" ============================================================================
-
-if exists("g:loaded_youcompleteme")
-  " Map <Enter> to select item and close menu.
-  "
-  " More information:
-  " https://github.com/Valloric/YouCompleteMe/issues/83#issuecomment-215778231
-  " https://github.com/Valloric/YouCompleteMe/issues/76
-  " https://github.com/Valloric/YouCompleteMe/issues/2712
-  "
-  " NOTE: Disable because it interferes with vim-endwise.
-  " TODO: Identify a way to implement this that doesn't interfere with
-  " existing behaviors.
-  " More information:
-  " https://github.com/tpope/vim-endwise/issues/91
-  " https://github.com/tpope/vim-endwise/issues/22
-  "
-  " inoremap <expr> <Enter> pumvisible() ? '<Esc>a' : '<Enter>'
-endif

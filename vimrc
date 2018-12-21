@@ -392,6 +392,11 @@ function! SetupTabCompletionPlugins()
     call system(you_complete_me_install)
 
     packadd YouCompleteMe
+
+    " Use return / enter key to select current list item.
+    " More information:
+    " https://github.com/Valloric/YouCompleteMe/issues/232#issuecomment-439681828
+    let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
   else
     packadd supertab
   endif
