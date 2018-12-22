@@ -394,9 +394,22 @@ function! SetupTabCompletionPlugins()
     packadd YouCompleteMe
 
     " Use return / enter key to select current list item.
+    "
     " More information:
     " https://github.com/Valloric/YouCompleteMe/issues/232#issuecomment-439681828
-    let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
+    "
+    " g:ycm_key_list_stop_completion Default: ['<C-y>']
+    " NOTE: This conflicts with vim-endwise.
+    " NOTE: g:ycm_key_list_stop_completion might be set elsewhere.
+    " TODO: Identify a way to include this key command without conflicting
+    " with vim-endwise.
+    " let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
+
+
+    " Only use tab and shift tab to select items in completion menu.
+    let g:ycm_key_list_stop_completion = ['<C-y>', '<UP>', '<DOWN>']
+    let g:ycm_key_list_select_completion = ['<TAB>']
+    let g:ycm_key_list_previous_completion = ['<S-TAB>']
   else
     packadd supertab
   endif
