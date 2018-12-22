@@ -395,21 +395,21 @@ function! SetupTabCompletionPlugins()
 
     " Use return / enter key to select current list item.
     "
+    " NOTE: g:ycm_key_list_stop_completion conflicts with vim-endwisem, so
+    " custom mappings are needed.
+    "
     " More information:
     " https://github.com/Valloric/YouCompleteMe/issues/232#issuecomment-439681828
+    " https://github.com/tpope/vim-endwise/blob/master/plugin/endwise.vim#L91
     "
-    " g:ycm_key_list_stop_completion Default: ['<C-y>']
-    " NOTE: This conflicts with vim-endwise.
-    " NOTE: g:ycm_key_list_stop_completion might be set elsewhere.
-    " TODO: Identify a way to include this key command without conflicting
-    " with vim-endwise.
-    " let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
-
-
-    " Only use tab and shift tab to select items in completion menu.
-    let g:ycm_key_list_stop_completion = ['<C-y>', '<UP>', '<DOWN>']
-    let g:ycm_key_list_select_completion = ['<TAB>']
-    let g:ycm_key_list_previous_completion = ['<S-TAB>']
+    " Source:
+    " https://github.com/Shougo/neocomplcache.vim/issues/215#issuecomment-8861759
+    function! s:my_cr_function()
+      return pumvisible() ? "\<C-y>" : "\<CR>\<Plug>DiscretionaryEnd"
+    endfunction
+    imap <expr><silent> <CR> <SID>my_cr_function()
+    imap <C-X><CR> <CR><Plug>AlwaysEnd
+    let g:endwise_no_mappings = 1
   else
     packadd supertab
   endif
