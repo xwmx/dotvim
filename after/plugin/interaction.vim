@@ -16,6 +16,30 @@
 " ############################################################################
 
 " ============================================================================
+" <CR>
+" ============================================================================
+
+" Use return / enter key to select current list item in YouCompleteMe.
+"
+" NOTE: g:ycm_key_list_stop_completion conflicts with vim-endwisem, so
+" custom mappings are needed.
+"
+" More information:
+" https://github.com/Valloric/YouCompleteMe/issues/232#issuecomment-439681828
+" https://github.com/tpope/vim-endwise/blob/master/plugin/endwise.vim#L91
+"
+" Source:
+" https://github.com/Shougo/neocomplcache.vim/issues/215#issuecomment-8861759
+if exists("g:loaded_youcompleteme")
+  function! s:my_cr_function()
+    return pumvisible() ? "\<C-y>" : "\<CR>\<Plug>DiscretionaryEnd"
+  endfunction
+  imap <expr><silent> <CR> <SID>my_cr_function()
+  imap <C-X><CR> <CR><Plug>AlwaysEnd
+  let g:endwise_no_mappings = 1
+endif
+
+" ============================================================================
 " ESC / Ctrl-C / Ctrl-[
 " ============================================================================
 
