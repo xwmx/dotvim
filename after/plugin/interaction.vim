@@ -21,7 +21,7 @@
 
 " Use return / enter key to select current list item in YouCompleteMe.
 "
-" NOTE: g:ycm_key_list_stop_completion conflicts with vim-endwisem, so
+" NOTE: g:ycm_key_list_stop_completion conflicts with vim-endwise, so
 " custom mappings are needed.
 "
 " More information:
