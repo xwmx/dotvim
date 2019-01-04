@@ -32,3 +32,16 @@ else
   " NOTE: depends on `set notimeout ttimeout timeoutlen=100`
   tnoremap <Esc> <C-W>N
 endif
+
+" Enter Normal mode on ScrollWheelUp in terminal.
+"
+" Source:
+" https://github.com/vim/vim/issues/2490#issuecomment-393973253
+function! EnterNormalMode()
+  if &buftype == 'terminal' && mode('') == 't'
+    call feedkeys("\<c-w>N")
+    call feedkeys("\<c-y>")
+  endif
+endfunction
+
+tmap <silent> <ScrollWheelUp> <c-w>:call EnterNormalMode()<CR>
