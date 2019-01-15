@@ -1,6 +1,6 @@
 # dotvim
 
-A configuration for [Vim](https://www.vim.org/), [Neovim](https://neovim.io), and [MacVim](http://macvim-dev.github.io/macvim/).
+A full-featured development configuration for [Vim](https://www.vim.org/), [Neovim](https://neovim.io), and [MacVim](http://macvim-dev.github.io/macvim/).
 
 ## Setup
 
