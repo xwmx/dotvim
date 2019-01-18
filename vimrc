@@ -949,13 +949,19 @@ function! SetupPluginNERDTree()
   " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " ---------------------------------------------------------------------------
-  " Source:
+  " Derived from:
   " https://github.com/carlhuda/janus/blob/master/janus/vim/tools/janus/after/plugin/nerdtree.vim
   let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.rbc$', '\.rbo$', '\.class$', '\.o$', '\~$']
 
   " Default mapping, <leader>n
   map <leader>n :NERDTreeToggle<CR>:NERDTreeMirror<CR>
 
+  " Refresh root node on `VimEnter` and `FocusGained`
+  "
+  " Alternative, simpler augroup:
+  " augroup AuNERDTreeCmd
+  " autocmd AuNERDTreeCmd VimEnter * NERDTreeFocus | silent execute 'normal R' | wincmd p
+  " autocmd AuNERDTreeCmd FocusGained * NERDTreeFocus | silent execute 'normal R' | wincmd p
   augroup AuNERDTreeCmd
   autocmd AuNERDTreeCmd VimEnter * call s:CdIfDirectory(expand("<amatch>"))
   autocmd AuNERDTreeCmd FocusGained * call s:UpdateNERDTree()
@@ -998,7 +1004,7 @@ function! SetupPluginNERDTree()
       let nr = bufwinnr(t:NERDTreeBufName)
       if nr != -1
         exe nr . "wincmd w"
-        exe substitute(mapcheck("R"), "<CR>", "", "")
+        silent exe substitute(mapcheck("R"), "<CR>", "", "")
         if !stay
           wincmd p
         end
