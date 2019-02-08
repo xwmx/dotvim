@@ -275,6 +275,15 @@ if has("gui_macvim") || has("gui_vimr")
   " Original:
   hi PreProc                      ctermfg=197   ctermbg=NONE  cterm=NONE          guifg=#ff026a   guibg=NONE      gui=NONE
 
+  " Set GitGutter colors
+  "
+  " More Information:
+  " https://github.com/airblade/vim-gitgutter/commit/fd834e48eed21cc3c3ab66779a2296a16f41cbca
+  " https://github.com/airblade/vim-gitgutter/commit/fd834e48eed21cc3c3ab66779a2296a16f41cbca
+  hi GitGutterAdd                      ctermfg=188   ctermbg=64    cterm=bold          guifg=#009900   guibg=#2b2b2b   gui=bold
+  hi GitGutterDelete                   ctermfg=88    ctermbg=NONE  cterm=NONE          guifg=#ff2222   guibg=#2b2b2b   gui=NONE
+  hi GitGutterChange                   ctermfg=188   ctermbg=23    cterm=NONE          guifg=#bbbb00   guibg=#2b2b2b   gui=NONE
+
   " Set `:terminal` colors.
   "
   " More information:
