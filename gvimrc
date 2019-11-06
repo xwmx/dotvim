@@ -354,7 +354,7 @@ if exists("custom_macvim_hig_movement")
   " Backspace
   " ##################
 
-  nno <BS> x
+  nno <BS> hx
   vno <BS> x
 
   " ##################
