@@ -32,3 +32,7 @@ else
   " NOTE: depends on `set notimeout ttimeout timeoutlen=100`
   tnoremap <Esc> <C-W>N
 endif
+
+" Hide terminal in buffer lists to avoid getting stuck in them when using
+" `:bn` / `:bp`. More info: https://www.reddit.com/r/vim/comments/8njgul
+autocmd TerminalOpen * if bufwinnr('') > 0 | setlocal nobuflisted | endif
