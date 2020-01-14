@@ -1270,7 +1270,10 @@ function! SetupPluginVimCtrlspace()
   packadd vim-ctrlspace
 
 endfunction
-call SetupPluginVimCtrlspace()
+" TODO: Determine how to hide terminal buffers. The variable
+" `g:airline#extensions#tabline#ignore_bufadd_pat` appears to be ignored since
+" terminal buffers are still included in the buffer lists.
+" call SetupPluginVimCtrlspace()
 
 " ============================================================================
 " vim-gitgutter
