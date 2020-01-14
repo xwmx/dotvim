@@ -1269,11 +1269,14 @@ function! SetupPluginVimCtrlspace()
   " Native Vim init:
   packadd vim-ctrlspace
 
+  " NOTE: The airline / tabline variable normally used for hiding terminal
+  " buffers and other special buffers appears to be ignored:
+  " `g:airline#extensions#tabline#ignore_bufadd_pat`
+  " Terminal buffers are instead removed from the buffer list using an
+  " autocmd in `~/.vim/after/plugin/terminal.vim`.
+
 endfunction
-" TODO: Determine how to hide terminal buffers. The variable
-" `g:airline#extensions#tabline#ignore_bufadd_pat` appears to be ignored since
-" terminal buffers are still included in the buffer lists.
-" call SetupPluginVimCtrlspace()
+call SetupPluginVimCtrlspace()
 
 " ============================================================================
 " vim-gitgutter
