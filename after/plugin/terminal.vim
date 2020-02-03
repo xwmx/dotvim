@@ -31,6 +31,12 @@ else
   " Map <Esc> to switch to Terminal-Normal mode.
   " NOTE: depends on `set notimeout ttimeout timeoutlen=100`
   tnoremap <Esc> <C-W>N
+
+  " Map Shift+SPace to just <Space> in Terminal Normal mode.
+  " NOTE: Without this mapping <S-Space> is mapped to somthing that deletes
+  " the current input and escapes out of insert mode within the terminal's vim
+  " bindings.
+  tnoremap <S-Space> <Space>
 endif
 
 " Hide terminal in buffer lists to avoid getting stuck in them when using
