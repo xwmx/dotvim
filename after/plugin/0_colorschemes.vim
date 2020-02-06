@@ -284,6 +284,11 @@ if has("gui_running") && has("gui_macvim") || has("gui_vimr")
   hi GitGutterDelete                   ctermfg=88    ctermbg=NONE  cterm=NONE          guifg=#ff2222   guibg=#2b2b2b   gui=NONE
   hi GitGutterChange                   ctermfg=188   ctermbg=23    cterm=NONE          guifg=#bbbb00   guibg=#2b2b2b   gui=NONE
 
+  " Set Seti Pmenu colors.
+  " Original:
+  " hi Pmenu                        ctermfg=NONE  ctermbg=NONE  cterm=NONE          guifg=NONE      guibg=NONE      gui=NONE
+  hi Pmenu                        ctermfg=NONE  ctermbg=NONE  cterm=NONE          guifg=NONE      guibg=#282a2b      gui=NONE
+
   " Set `:terminal` colors.
   "
   " More information:
