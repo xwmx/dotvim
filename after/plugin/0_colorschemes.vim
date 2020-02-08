@@ -287,7 +287,9 @@ if has("gui_running") && has("gui_macvim") || has("gui_vimr")
   " Set Seti Pmenu colors.
   " Original:
   " hi Pmenu                        ctermfg=NONE  ctermbg=NONE  cterm=NONE          guifg=NONE      guibg=NONE      gui=NONE
+  " hi PmenuSel                     ctermfg=NONE  ctermbg=74    cterm=NONE          guifg=NONE      guibg=#4fa5c7   gui=NONE
   hi Pmenu                        ctermfg=NONE  ctermbg=NONE  cterm=NONE          guifg=NONE      guibg=#282a2b      gui=NONE
+  hi PmenuSel                     ctermfg=NONE  ctermbg=74    cterm=NONE          guifg=#5eebb8     guibg=#4c4f4f   gui=NONE
 
   " Set `:terminal` colors.
   "
