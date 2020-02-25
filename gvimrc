@@ -354,8 +354,33 @@ if exists("custom_macvim_hig_movement")
   " Backspace
   " ##################
 
-  nno <BS>            hx
-  vno <BS>            x
+  " DeleteNormalWithoutCopyingToClipboard()
+  "
+  " Description:
+  "   Delete in normal mode without copying text to clipboard.
+  function! DeleteNormalWithoutCopyingToClipboard()
+    set clipboard=
+    normal x
+    set clipboard=unnamed,unnamedplus
+  endfunction
+
+  " DeleteVisualWithoutCopyingToClipboard
+  "
+  " Description:
+  "   Delete in visual model without copying to clipboard.
+  function! DeleteVisualWithoutCopyingToClipboard()
+    set clipboard=
+    normal gvx
+    set clipboard=unnamed,unnamedplus
+  endfunction
+
+  " Original (copies deleted text to clipboard)
+  " nno <BS>            hx
+  " vno <BS>            x
+  "
+  " Updated (does not copy deleted text to clipboard)
+  nno <BS> h:<C-u>call DeleteNormalWithoutCopyingToClipboard()<CR>
+  vno <BS> :<C-u>call DeleteVisualWithoutCopyingToClipboard()<CR>
 
   " ##################
   " Option-Backspace
