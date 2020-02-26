@@ -591,7 +591,7 @@ function! SetupPluginCtrlp()
   "
   " https://unix.stackexchange.com/a/144571
   " let g:ctrlp_by_filename = 1
-  let g:ctrlp_regexp = 1
+  " let g:ctrlp_regexp = 1
 
   " Use `rg` or `ag` if available. More information:
   " https://elliotekj.com/2016/11/22/setup-ctrlp-to-use-ripgrep-in-vim/
