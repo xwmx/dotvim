@@ -8,7 +8,7 @@ A full-featured configuration for [Vim](https://www.vim.org/), [Neovim](https://
 ## Setup
 
 ```bash
-git clone --recurse-submodules -j8 https://github.com/alphabetum/dotvim.git ~/.vim
+git clone --recurse-submodules -j8 https://github.com/xwmx/dotvim.git ~/.vim
 ```
 ## Overview
 

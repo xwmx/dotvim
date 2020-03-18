@@ -13,7 +13,7 @@
 " Double flash the cursor line and column in yellow.
 "
 " Original CursorLine color settings:
-"   https://github.com/alphabetum/seti.vim/blob/master/colors/seti.vim#L15
+"   https://github.com/xwmx/seti.vim/blob/master/colors/seti.vim#L15
 "
 " Additional Information:
 "   https://vi.stackexchange.com/a/3481

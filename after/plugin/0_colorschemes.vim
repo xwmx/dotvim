@@ -43,7 +43,7 @@ call SetupPluginAnderson()
 " https://draculatheme.com/vim/
 "
 " NOTE: using fork with customizations:
-" https://github.com/alphabetum/dracula-theme-vim
+" https://github.com/xwmx/dracula-theme-vim
 " ============================================================================
 
 function! SetupPluginDraculaThemeVim()
@@ -64,7 +64,7 @@ call SetupPluginDraculaThemeVim()
 " The Seti colorscheme for vim.
 "
 " https://github.com/trusktr/seti.vim
-" https://github.com/alphabetum/seti.vim
+" https://github.com/xwmx/seti.vim
 " ============================================================================
 
 function! SetupPluginSetiVim()
@@ -179,7 +179,7 @@ call SetupPluginVimSnazzy()
 " ============================================================================
 " vim-vwilight
 "
-" https://github.com/alphabetum/vim-vwilight
+" https://github.com/xwmx/vim-vwilight
 " https://github.com/jaywilliams/vim-vwilight
 " ============================================================================
 
