@@ -387,7 +387,7 @@ function! SetupTabCompletionPlugins()
       \ [ ! -e "${_ycm_path}/third_party/ycmd/ycm_core.so" ] &&
       \ (
       \   cd "${_ycm_path}" &&
-      \   ./install.py --clang-completer
+      \   ./install.py --clang-completer --all
       \ )'
     call system(you_complete_me_install)
 
