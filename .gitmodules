@@ -113,9 +113,6 @@
 [submodule "vendor/github.com/ervandew/supertab"]
 	path = vendor/github.com/ervandew/supertab
 	url = https://github.com/ervandew/supertab.git
-[submodule "vendor/github.com/Valloric/YouCompleteMe"]
-	path = vendor/github.com/Valloric/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe.git
 [submodule "vendor/github.com/junegunn/goyo.vim"]
 	path = vendor/github.com/junegunn/goyo.vim
 	url = https://github.com/junegunn/goyo.vim.git
@@ -149,3 +146,6 @@
 [submodule "vendor/github.com/dyng/ctrlsf.vim"]
 	path = vendor/github.com/dyng/ctrlsf.vim
 	url = https://github.com/dyng/ctrlsf.vim.git
+[submodule "vendor/github.com/ycm-core/YouCompleteMe"]
+	path = vendor/github.com/ycm-core/YouCompleteMe
+	url = https://github.com/ycm-core/YouCompleteMe.git
