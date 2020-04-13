@@ -327,5 +327,8 @@ else
   set fillchars+=vert:\ 
 
   " Avoid color conflicts in Terminal.app
-  hi LineNr guifg=NONE guibg=#262626
+  if $TERM_PROGRAM == 'Apple_Terminal'
+    hi LineNr guifg=NONE guibg=#262626
+  endif
+
 endif
