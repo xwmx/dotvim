@@ -325,4 +325,7 @@ else
   hi Normal guibg=#262626
   " Remove VertSplit line characters.
   set fillchars+=vert:\ 
+
+  " Avoid color conflicts in Terminal.app
+  hi LineNr guifg=NONE guibg=#262626
 endif
