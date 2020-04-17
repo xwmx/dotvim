@@ -365,7 +365,7 @@ function! SetupTabCompletionPlugins()
   call janus#disable_plugin('supertab')
 
   " Native Vim init:
-  if has("gui_macvim")
+  if has("gui_macvim") && has("gui_running")
     let you_complete_me_init = '
       \ _ycm_path="${HOME}/.vim/pack/plugins/opt/YouCompleteMe" &&
       \ [ -e "${_ycm_path}" ] &&
@@ -532,6 +532,26 @@ function! SetupPluginAsyncRun()
 
 endfunction
 call SetupPluginAsyncRun()
+
+" ============================================================================
+" Black
+"
+" The uncompromising Python code formatter
+"
+" https://github.com/psf/black
+" https://black.readthedocs.io/en/stable/
+" https://black.readthedocs.io/en/stable/editor_integration.html
+" ============================================================================
+
+function! SetupPluginBlack()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd black
+
+endfunction
+call SetupPluginBlack()
 
 " ============================================================================
 " ctrlp.vim

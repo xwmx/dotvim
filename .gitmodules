@@ -149,3 +149,6 @@
 [submodule "vendor/github.com/ycm-core/YouCompleteMe"]
 	path = vendor/github.com/ycm-core/YouCompleteMe
 	url = https://github.com/ycm-core/YouCompleteMe.git
+[submodule "vendor/github.com/psf/black"]
+	path = vendor/github.com/psf/black
+	url = https://github.com/psf/black.git

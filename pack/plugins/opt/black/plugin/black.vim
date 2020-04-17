@@ -1,0 +1,1 @@
+../../../../../vendor/github.com/psf/black/plugin/black.vim
