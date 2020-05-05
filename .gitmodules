@@ -152,3 +152,6 @@
 [submodule "vendor/github.com/psf/black"]
 	path = vendor/github.com/psf/black
 	url = https://github.com/psf/black.git
+[submodule "vendor/github.com/aliou/bats.vim"]
+	path = vendor/github.com/aliou/bats.vim
+	url = https://github.com/aliou/bats.vim

@@ -534,6 +534,24 @@ endfunction
 call SetupPluginAsyncRun()
 
 " ============================================================================
+" aliou/bats.vim
+"
+" Syntax files for Bats (Bash Automated Testing System).
+"
+" https://github.com/aliou/bats.vim
+" ============================================================================
+
+function! SetupPluginBatsVim()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd bats.vim
+
+endfunction
+call SetupPluginBatsVim()
+
+" ============================================================================
 " Black
 "
 " The uncompromising Python code formatter
