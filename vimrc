@@ -614,6 +614,9 @@ function! SetupPluginCtrlp()
   " Include hidden files
   let g:ctrlp_show_hidden = 1
 
+  " Include the current file in the file list.
+  let g:ctrlp_match_current_file = 1
+
   " Ignore version control directories.
   let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
