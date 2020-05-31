@@ -37,8 +37,8 @@ else
   " the current input and escapes out of insert mode within the terminal's vim
   " bindings.
   tnoremap <S-Space> <Space>
-endif
 
-" Hide terminal in buffer lists to avoid getting stuck in them when using
-" `:bn` / `:bp`. More info: https://www.reddit.com/r/vim/comments/8njgul
-autocmd TerminalOpen * if bufwinnr('') > 0 | setlocal nobuflisted | endif
+  " Hide terminal in buffer lists to avoid getting stuck in them when using
+  " `:bn` / `:bp`. More info: https://www.reddit.com/r/vim/comments/8njgul
+  autocmd TerminalOpen * if bufwinnr('') > 0 | setlocal nobuflisted | endif
+endif
