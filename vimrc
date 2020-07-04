@@ -115,6 +115,10 @@ call janus#add_group("colors")
 
 " ============================================================================
 " Base Vim Settings
+"
+" NOTE: Settings have been fully migrated from:
+" janus/vim/core/before/plugin/settings.vim
+" TODO: Remove janus/vim/core/before/plugin/settings.vim from initialization.
 " ============================================================================
 
 " set nocompatible and hidden
@@ -122,7 +126,10 @@ call janus#add_group("colors")
 " Required by plugins like vim-ctrlspace
 "
 " http://vimdoc.sourceforge.net/htmldoc/options.html#'compatible'
-set nocompatible
+if has('vim_starting') && !has('nvim') && &compatible
+  set nocompatible               " Be iMproved
+endif
+
 " http://vimdoc.sourceforge.net/htmldoc/options.html#'hidden'
 set hidden
 
@@ -131,7 +138,20 @@ set hidden
 " string (default: 'latin1' or value from $LANG)
 "
 " http://vimdoc.sourceforge.net/htmldoc/options.html#'encoding'
-set encoding=UTF-8
+" NOTE: Neovim disallow changing 'enconding' option after initialization
+" see https://github.com/neovim/neovim/pull/2929 for more details
+if !has('nvim')
+  set encoding=UTF-8  " Set default encoding to UTF-8
+endif
+
+" Show line numbers
+set number
+
+" Show line and column number
+set ruler
+
+" Turn on syntax highlighting allowing local overrides
+syntax enable
 
 " updatetime
 "
@@ -155,6 +175,70 @@ set formatoptions+=r
 "
 " More information: https://stackoverflow.com/a/30691754
 set clipboard^=unnamed,unnamedplus
+
+" ============================================================================
+" Whitespace
+"
+" Copied (and edited) from: janus/vim/core/before/plugin/settings.vim
+" ============================================================================
+
+set tabstop=2                     " a tab is two spaces
+set shiftwidth=2                  " an autoindent (with <<) is two spaces
+set expandtab                     " use spaces, not tabs
+set list                          " Show invisible characters
+set backspace=indent,eol,start    " backspace through everything in insert mode
+
+if exists("g:enable_mvim_shift_arrow")
+  let macvim_hig_shift_movement = 1 " mvim shift-arrow-keys
+endif
+
+" List chars
+set listchars=""                  " Reset the listchars
+set listchars=tab:\ \             " a tab should display as "  ", trailing whitespace as "."
+set listchars+=trail:.            " show trailing spaces as dots
+set listchars+=extends:>          " The character to show in the last column when wrap is
+                                  " off and the line continues beyond the right of the screen
+set listchars+=precedes:<         " The character to show in the last column when wrap is
+                                  " off and the line continues beyond the left of the screen
+
+" ============================================================================
+" Searching
+"
+" Copied from: janus/vim/core/before/plugin/settings.vim
+" ============================================================================
+
+set hlsearch    " highlight matches
+
+set incsearch   " incremental searching
+set ignorecase  " searches are case insensitive...
+set smartcase   " ... unless they contain at least one capital letter
+
+" ============================================================================
+" Wild settings
+"
+" Copied from: janus/vim/core/before/plugin/settings.vim
+" ============================================================================
+
+" TODO: Investigate the precise meaning of these settings
+" set wildmode=list:longest,list:full
+
+" Disable output and VCS files
+set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
+
+" Disable archive files
+set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
+
+" Ignore bundler and sass cache
+set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
+
+" Ignore librarian-chef, vagrant, test-kitchen and Berkshelf cache
+set wildignore+=*/tmp/librarian/*,*/.vagrant/*,*/.kitchen/*,*/vendor/cookbooks/*
+
+" Ignore rails temporary asset caches
+set wildignore+=*/tmp/cache/assets/*/sprockets/*,*/tmp/cache/assets/*/sass/*
+
+" Disable temp and backup files
+set wildignore+=*.swp,*~,._*
 
 " ============================================================================
 " Temporary Directories
