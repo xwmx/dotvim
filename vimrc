@@ -904,17 +904,17 @@ call SetupPluginFZF()
 " https://github.com/ashisha/image.vim
 " ============================================================================
 
-function! SetupPluginImageVim()
-
-  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
-
-  if has("gui_macvim") && has("python")
-    " Native Vim init:
-    packadd image.vim
-  endif
-
-endfunction
-call SetupPluginImageVim()
+" function! SetupPluginImageVim()
+"
+"   " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+"
+"   if has("gui_macvim") && has("python")
+"     " Native Vim init:
+"     packadd image.vim
+"   endif
+"
+" endfunction
+" call SetupPluginImageVim()
 
 " ============================================================================
 " Neoformat
