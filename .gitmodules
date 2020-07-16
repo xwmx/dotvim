@@ -155,3 +155,6 @@
 [submodule "vendor/github.com/aliou/bats.vim"]
 	path = vendor/github.com/aliou/bats.vim
 	url = https://github.com/aliou/bats.vim
+[submodule "vendor/github.com/ajh17/VimCompletesMe"]
+	path = vendor/github.com/ajh17/VimCompletesMe
+	url = https://github.com/ajh17/VimCompletesMe.git
