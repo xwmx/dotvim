@@ -417,6 +417,13 @@ call SetupPluginVimDevicons()
 " ============================================================================
 " Tab Completion Plugins
 "
+" deoplete.nvim
+" -------------
+"
+" Dark powered asynchronous completion framework for neovim/Vim8
+
+" https://github.com/Shougo/deoplete.nvim
+"
 " YouCompleteMe
 " -------------
 "
@@ -491,6 +498,11 @@ function! SetupTabCompletionPlugins()
   " VimCompletesMe
   " --------------
   packadd VimCompletesMe
+
+  " deoplete.nvim
+  " --------------
+  " let g:deoplete#enable_at_startup = 1
+  " packadd deoplete.nvim
 
 endfunction
 call SetupTabCompletionPlugins()

@@ -158,3 +158,6 @@
 [submodule "vendor/github.com/ajh17/VimCompletesMe"]
 	path = vendor/github.com/ajh17/VimCompletesMe
 	url = https://github.com/ajh17/VimCompletesMe.git
+[submodule "vendor/github.com/Shougo/deoplete.nvim"]
+	path = vendor/github.com/Shougo/deoplete.nvim
+	url = https://github.com/Shougo/deoplete.nvim.git
