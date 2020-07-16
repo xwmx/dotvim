@@ -424,14 +424,6 @@ call SetupPluginVimDevicons()
 
 " https://github.com/Shougo/deoplete.nvim
 "
-" YouCompleteMe
-" -------------
-"
-" A code-completion engine for Vim
-"
-" https://valloric.github.io/YouCompleteMe/
-" https://github.com/Valloric/YouCompleteMe
-"
 " Supertab
 " --------
 "
@@ -447,11 +439,20 @@ call SetupPluginVimDevicons()
 "
 " https://github.com/ajh17/VimCompletesMe
 "
+" YouCompleteMe
+" -------------
+"
+" A code-completion engine for Vim
+"
+" https://valloric.github.io/YouCompleteMe/
+" https://github.com/Valloric/YouCompleteMe
+"
 " See Also
 " --------
 "
-" https://github.com/Shougo/neocomplete.vim
 " https://github.com/Shougo/deoplete.nvim
+" https://github.com/Shougo/neocomplete.vim
+" https://github.com/lifepillar/vim-mucomplete
 " ============================================================================
 
 function! SetupTabCompletionPlugins()
