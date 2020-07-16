@@ -450,7 +450,6 @@ call SetupPluginVimDevicons()
 " See Also
 " --------
 "
-" https://github.com/Shougo/deoplete.nvim
 " https://github.com/Shougo/neocomplete.vim
 " https://github.com/lifepillar/vim-mucomplete
 " ============================================================================
