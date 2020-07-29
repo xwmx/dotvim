@@ -536,6 +536,9 @@ function! SetupPluginAck()
 
   " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
+  " Use `Ack!` to avoid opening first result (see ack.vim README).
+  cnoreabbrev Ack Ack!
+
   if has("gui_macvim") && has("gui_running")
     " Command-Shift-F on OSX
     map <D-F> :Ack<space>
