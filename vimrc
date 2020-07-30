@@ -731,6 +731,9 @@ function! SetupPluginCtrlp()
   " Ignore version control directories.
   let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
+  " Don't switch to the existing window when the file is already open.
+  let g:ctrlp_switch_buffer = 0
+
   " Default searching order.
   "
   " Ctrl+D:
