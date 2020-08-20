@@ -465,39 +465,40 @@ function! SetupTabCompletionPlugins()
   call janus#disable_plugin('supertab')
 
   " Native Vim init:
-  " if has("gui_macvim") && has("gui_running")
-  "   let you_complete_me_init = '
-  "     \ _ycm_path="${HOME}/.vim/pack/plugins/opt/YouCompleteMe" &&
-  "     \ [ -e "${_ycm_path}" ] &&
-  "     \ [ ! -e "${_ycm_path}/third_party/ycmd/build.py" ] &&
-  "     \ (
-  "     \   cd "${_ycm_path}" &&
-  "     \   git submodule update --init --recursive
-  "     \ )'
-  "   call system(you_complete_me_init)
+  if has("gui_macvim") && has("gui_running")
+    let you_complete_me_init = '
+      \ _ycm_path="${HOME}/.vim/pack/plugins/opt/YouCompleteMe" &&
+      \ [ -e "${_ycm_path}" ] &&
+      \ [ ! -e "${_ycm_path}/third_party/ycmd/build.py" ] &&
+      \ (
+      \   cd "${_ycm_path}" &&
+      \   git submodule update --init --recursive
+      \ )'
+    call system(you_complete_me_init)
 
-  "   " NOTE: To install YouCompleteMe, run the following command. This must be
-  "   " done during at least some upgrades of YouCompleteMe.
-  "   "
-  "   " More Information:
-  "   " https://valloric.github.io/YouCompleteMe/#mac-os-x
-  "   let you_complete_me_install = '
-  "     \ _ycm_path="${HOME}/.vim/pack/plugins/opt/YouCompleteMe" &&
-  "     \ [ -e "${_ycm_path}/third_party/ycmd/build.py" ] &&
-  "     \ [ ! -e "${_ycm_path}/third_party/ycmd/ycm_core.so" ] &&
-  "     \ (
-  "     \   cd "${_ycm_path}" &&
-  "     \   ./install.py --clang-completer --all
-  "     \ )'
-  "   call system(you_complete_me_install)
-  "   packadd YouCompleteMe
-  " else
-  "   packadd supertab
-  " endif
+    " NOTE: To install YouCompleteMe, run the following command. This must be
+    " done during at least some upgrades of YouCompleteMe.
+    "
+    " More Information:
+    " https://valloric.github.io/YouCompleteMe/#mac-os-x
+    let you_complete_me_install = '
+      \ _ycm_path="${HOME}/.vim/pack/plugins/opt/YouCompleteMe" &&
+      \ [ -e "${_ycm_path}/third_party/ycmd/build.py" ] &&
+      \ [ ! -e "${_ycm_path}/third_party/ycmd/ycm_core.so" ] &&
+      \ (
+      \   cd "${_ycm_path}" &&
+      \   ./install.py --clang-completer --all
+      \ )'
+    call system(you_complete_me_install)
+    packadd YouCompleteMe
+  else
+    " packadd supertab
+    packadd VimCompletesMe
+  endif
 
   " VimCompletesMe
   " --------------
-  packadd VimCompletesMe
+  " packadd VimCompletesMe
 
   " deoplete.nvim
   " --------------
