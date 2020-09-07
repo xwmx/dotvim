@@ -505,6 +505,15 @@ function! SetupTabCompletionPlugins()
   " let g:deoplete#enable_at_startup = 1
   " packadd deoplete.nvim
 
+  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Turn off YCM auto hover documentation popup.
+  "
+  " https://www.reddit.com/r/vim/comments/gibavq
+  " https://www.reddit.com/r/vim/comments/g9v832
+  " https://vimawesome.com/plugin/youcompleteme#the-gycm_auto_hover-option
+  let g:ycm_auto_hover = ''
+
 endfunction
 call SetupTabCompletionPlugins()
 
