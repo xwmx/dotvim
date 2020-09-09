@@ -1235,6 +1235,11 @@ function! SetupPluginNERDTree()
       \ 'callback': 'WebDevIconsNERDTreeMapActivateNode',
       \ 'override': 1,
       \ 'scope': 'DirNode' })
+
+    " Click opens like a normal window in current tab.
+    "
+    " https://stackoverflow.com/a/30022579
+    let g:NERDTreeMapOpenInTab = 'o'
   endif
 
 endfunction
