@@ -1192,7 +1192,7 @@ function! SetupPluginNERDTree()
   endif
 
   " Set to use single mouse click to open node or file.
-  let g:NERDTreeMouseMode = 3
+  let g:NERDTreeMouseMode = 2
 
   " Configure NERDTreeIgnore
   "
@@ -1236,10 +1236,31 @@ function! SetupPluginNERDTree()
       \ 'override': 1,
       \ 'scope': 'DirNode' })
 
-    " Click opens like a normal window in current tab.
+    " Double click opens file in current tab.
     "
+    " Overrides:
+    " https://github.com/preservim/nerdtree/blob/master/autoload/nerdtree/ui_glue.vim#L13
+    "
+    " Resources:
+    " https://superuser.com/a/931083
     " https://stackoverflow.com/a/30022579
-    let g:NERDTreeMapOpenInTab = 'o'
+    call NERDTreeAddKeyMap({
+            \ 'key': '<2-LeftMouse>',
+            \ 'callback': 'NERDTreeOpenHandler',
+            \ 'quickhelpText': 'open in current tab',
+            \ 'scope': 'FileNode',
+            \ 'override': 1})
+
+    func! NERDTreeOpenHandler(node)
+        call a:node.open({'reuse':'currenttab', 'stay': 1, 'where': 'p', 'keepopen': 1})
+    endf
+
+    " <CR> Also opens file in the current tab.
+    "
+    " https://github.com/preservim/nerdtree/blob/master/doc/NERDTree.txt#L1276
+    let g:NERDTreeCustomOpenArgs = {
+      \  'file': {'reuse':'currenttab', 'where':'p', 'keepopen':1, 'stay':1}
+      \ }
   endif
 
 endfunction
