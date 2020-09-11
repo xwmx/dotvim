@@ -1191,7 +1191,7 @@ function! SetupPluginNERDTree()
     augroup end
   endif
 
-  " Set to use single mouse click to open node or file.
+  " Set to use single click for node and double click to open file.
   let g:NERDTreeMouseMode = 2
 
   " Configure NERDTreeIgnore
