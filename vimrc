@@ -87,18 +87,18 @@
 " https://github.com/carlhuda/janus
 
 " Define paths
-let g:janus_path = escape(expand("~/.vim/janus/vim"), ' ')
-let g:janus_vim_path = escape(expand("~/.vim/janus/vim"), ' ')
-let g:janus_custom_path = expand("~/.janus")
+" let g:janus_path = escape(expand("~/.vim/janus/vim"), ' ')
+" let g:janus_vim_path = escape(expand("~/.vim/janus/vim"), ' ')
+" let g:janus_custom_path = expand("~/.janus")
 
 " Source janus's core
-exe 'source ' . g:janus_vim_path . '/core/before/plugin/janus.vim'
+" exe 'source ' . g:janus_vim_path . '/core/before/plugin/janus.vim'
 
 " You should note that groups will be processed by Pathogen in reverse
 " order they were added.
-call janus#add_group("tools")
-call janus#add_group("langs")
-call janus#add_group("colors")
+" call janus#add_group("tools")
+" call janus#add_group("langs")
+" call janus#add_group("colors")
 
 " -----------------------                              -----------------------
 " Janus - vimrc (1) (end)                              Janus - vimrc (1) (end)
@@ -335,94 +335,94 @@ let g:pathogen_disabled = []
 
 " NOTE: Disable Janus pathogen-installed version.
 " TODO: Remove this call when Janus has been removed.
-call add(g:pathogen_disabled, 'ack')
-call janus#disable_plugin('ack')
+" call add(g:pathogen_disabled, 'ack')
+" call janus#disable_plugin('ack')
 
-"call janus#disable_plugin('buffergator')
-"call janus#disable_plugin('dispatch')
-"call janus#disable_plugin('fugitive')
-"call janus#disable_plugin('gist')
-"call janus#disable_plugin('gundo')
-"call janus#disable_plugin('narrowregion')
-"call janus#disable_plugin('vimwiki')
-"call janus#disable_plugin('vroom')
+" "call janus#disable_plugin('buffergator')
+" "call janus#disable_plugin('dispatch')
+" "call janus#disable_plugin('fugitive')
+" "call janus#disable_plugin('gist')
+" "call janus#disable_plugin('gundo')
+" "call janus#disable_plugin('narrowregion')
+" "call janus#disable_plugin('vimwiki')
+" "call janus#disable_plugin('vroom')
 
-" NOTE: Replaced with vim-css-color
-call add(g:pathogen_disabled, 'css_color')
-call janus#disable_plugin('css_color')
+" " NOTE: Replaced with vim-css-color
+" call add(g:pathogen_disabled, 'css_color')
+" call janus#disable_plugin('css_color')
 
-call add(g:pathogen_disabled, 'csv')
-call janus#disable_plugin('csv')
+" call add(g:pathogen_disabled, 'csv')
+" call janus#disable_plugin('csv')
 
-" NOTE: Disable Janus pathogen-installed ctrlp.
-" TODO: Remove this call when Janus has been removed.
-call add(g:pathogen_disabled, 'ctrlp')
-call janus#disable_plugin('ctrlp')
+" " NOTE: Disable Janus pathogen-installed ctrlp.
+" " TODO: Remove this call when Janus has been removed.
+" call add(g:pathogen_disabled, 'ctrlp')
+" call janus#disable_plugin('ctrlp')
 
-call add(g:pathogen_disabled, 'endwise')
-call janus#disable_plugin('endwise')
+" call add(g:pathogen_disabled, 'endwise')
+" call janus#disable_plugin('endwise')
 
-call add(g:pathogen_disabled, 'fugitive')
-call janus#disable_plugin('fugitive')
+" call add(g:pathogen_disabled, 'fugitive')
+" call janus#disable_plugin('fugitive')
 
-" NOTE: Disable Janus pathogen-installed nerdcommenter.
-" TODO: Remove this call when Janus has been removed.
-call add(g:pathogen_disabled, 'nerdcommenter')
-call janus#disable_plugin('nerdcommenter')
+" " NOTE: Disable Janus pathogen-installed nerdcommenter.
+" " TODO: Remove this call when Janus has been removed.
+" call add(g:pathogen_disabled, 'nerdcommenter')
+" call janus#disable_plugin('nerdcommenter')
 
-" NOTE: Disable Janus pathogen-installed nerdcommenter.
-" TODO: Remove this call when Janus has been removed.
-call add(g:pathogen_disabled, 'nerdtree')
-call janus#disable_plugin('nerdtree')
+" " NOTE: Disable Janus pathogen-installed nerdcommenter.
+" " TODO: Remove this call when Janus has been removed.
+" call add(g:pathogen_disabled, 'nerdtree')
+" call janus#disable_plugin('nerdtree')
 
-call add(g:pathogen_disabled, 'rails')
-call janus#disable_plugin('rails')
+" call add(g:pathogen_disabled, 'rails')
+" call janus#disable_plugin('rails')
 
-" NOTE: Disable Janus pathogen-installed version.
-" TODO: Remove this call when Janus has been removed.
-call add(g:pathogen_disabled, 'supertab')
-call janus#disable_plugin('supertab')
+" " NOTE: Disable Janus pathogen-installed version.
+" " TODO: Remove this call when Janus has been removed.
+" call add(g:pathogen_disabled, 'supertab')
+" call janus#disable_plugin('supertab')
 
-" NOTE: Syntastic can be very slow and is not async, so experiement with
-" Neomake, ALE, and other options instead. More information:
-" https://github.com/vim-syntastic/syntastic/issues/699
-" TODO: Remove when Janus is removed.
-call add(g:pathogen_disabled, 'syntastic')
-call janus#disable_plugin('syntastic')
+" " NOTE: Syntastic can be very slow and is not async, so experiement with
+" " Neomake, ALE, and other options instead. More information:
+" " https://github.com/vim-syntastic/syntastic/issues/699
+" " TODO: Remove when Janus is removed.
+" call add(g:pathogen_disabled, 'syntastic')
+" call janus#disable_plugin('syntastic')
 
-" NOTE: Disable Janus pathogen-installed tagbar.
-" TODO: Remove this call when Janus has been removed.
-call add(g:pathogen_disabled, 'tagbar')
-" call janus#disable_plugin('tagbar')
+" " NOTE: Disable Janus pathogen-installed tagbar.
+" " TODO: Remove this call when Janus has been removed.
+" call add(g:pathogen_disabled, 'tagbar')
+" " call janus#disable_plugin('tagbar')
 
-call add(g:pathogen_disabled, 'surround')
-call janus#disable_plugin('surround')
+" call add(g:pathogen_disabled, 'surround')
+" call janus#disable_plugin('surround')
 
-" NOTE: This has note been replaced with a native vim package as it is not
-" in use.
-call add(g:pathogen_disabled, 'unimpaired')
-call janus#disable_plugin('unimpaired')
+" " NOTE: This has note been replaced with a native vim package as it is not
+" " in use.
+" call add(g:pathogen_disabled, 'unimpaired')
+" call janus#disable_plugin('unimpaired')
 
-" NOTE: Disable Janus pathogen-installed vim-gitgutter.
-" TODO: Remove this call when Janus has been removed.
-call add(g:pathogen_disabled, 'vim-gitgutter')
-" call janus#disable_plugin('vim-gitgutter')
+" " NOTE: Disable Janus pathogen-installed vim-gitgutter.
+" " TODO: Remove this call when Janus has been removed.
+" call add(g:pathogen_disabled, 'vim-gitgutter')
+" " call janus#disable_plugin('vim-gitgutter')
 
-" NOTE: Disable Janus pathogen-installed vim-polyglot.
-" TODO: Remove this call when Janus has been removed.
-call add(g:pathogen_disabled, 'vim-polyglot')
-" call janus#disable_plugin('vim-polyglot')
+" " NOTE: Disable Janus pathogen-installed vim-polyglot.
+" " TODO: Remove this call when Janus has been removed.
+" call add(g:pathogen_disabled, 'vim-polyglot')
+" " call janus#disable_plugin('vim-polyglot')
 
-" NOTE: Disable vim-signify and use vim-gitgutter instead.
-" TODO: Remove this section when Janus is removed.
-call add(g:pathogen_disabled, 'vim-signify')
-call janus#disable_plugin('vim-signify')
+" " NOTE: Disable vim-signify and use vim-gitgutter instead.
+" " TODO: Remove this section when Janus is removed.
+" call add(g:pathogen_disabled, 'vim-signify')
+" call janus#disable_plugin('vim-signify')
 
-call add(g:pathogen_disabled, 'vim-trailing-whitespace')
-call janus#disable_plugin('vim-trailing-whitespace')
+" call add(g:pathogen_disabled, 'vim-trailing-whitespace')
+" call janus#disable_plugin('vim-trailing-whitespace')
 
-call add(g:pathogen_disabled, 'visualstar')
-call janus#disable_plugin('visualstar')
+" call add(g:pathogen_disabled, 'visualstar')
+" call janus#disable_plugin('visualstar')
 
 " ============================================================================
 " Conditional Plugin Settings
@@ -2144,20 +2144,20 @@ call plug#end()
 "" Customisations
 ""
 
-if filereadable(expand("~/.vimrc.before"))
-  source ~/.vimrc.before
-endif
+" if filereadable(expand("~/.vimrc.before"))
+"   source ~/.vimrc.before
+" endif
 
 
 " Disable plugins prior to loading pathogen
-exe 'source ' . g:janus_vim_path . '/core/plugins.vim'
+" exe 'source ' . g:janus_vim_path . '/core/plugins.vim'
 
 ""
 "" Pathogen setup
 ""
 
 " Load all groups, custom dir, and janus core
-call janus#load_pathogen()
+" call janus#load_pathogen()
 
 " .vimrc.after is loaded after the plugins have loaded
 
