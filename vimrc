@@ -350,8 +350,8 @@ call janus#disable_plugin('ack')
 call add(g:pathogen_disabled, 'css_color')
 call janus#disable_plugin('css_color')
 
-" call add(g:pathogen_disabled, 'csv')
-" call janus#disable_plugin('csv')
+call add(g:pathogen_disabled, 'csv')
+call janus#disable_plugin('csv')
 
 " NOTE: Disable Janus pathogen-installed vim-polyglot.
 " TODO: Remove this call when Janus has been removed.
@@ -756,6 +756,24 @@ function! SetupPluginBlack()
 
 endfunction
 call SetupPluginBlack()
+
+" ============================================================================
+" csv
+"
+" A Filetype plugin for csv files
+"
+" https://github.com/chrisbra/csv.vim
+" ============================================================================
+
+function! SetupPluginCsvVim()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd csv.vim
+
+endfunction
+call SetupPluginCsvVim()
 
 " ============================================================================
 " ctrlp.vim

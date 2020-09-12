@@ -167,3 +167,6 @@
 [submodule "vendor/github.com/tpope/vim-endwise"]
 	path = vendor/github.com/tpope/vim-endwise
 	url = https://github.com/tpope/vim-endwise.git
+[submodule "vendor/github.com/chrisbra/csv.vim"]
+	path = vendor/github.com/chrisbra/csv.vim
+	url = https://github.com/chrisbra/csv.vim.git
