@@ -1069,7 +1069,7 @@ function! SetupPluginFugitive()
   " Native Vim init:
   packadd vim-fugitive
 
-  " Before: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  " After: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Janus mappings. TODO: adapt
   " call janus#add_mapping('fugitive', 'nmap', '<leader>gb', ':Gblame<CR>')
@@ -1107,6 +1107,28 @@ function! SetupPluginFZF()
 
 endfunction
 call SetupPluginFZF()
+
+" ============================================================================
+" Gundo.vim
+"
+" Gundo.vim is Vim plugin to visualize your Vim undo tree.
+"
+" https://github.com/sjl/gundo.vim
+" ============================================================================
+
+function! SetupPluginGundoVim()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd gundo.vim
+
+  " After: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  let g:gundo_prefer_python3 = 1
+
+endfunction
+call SetupPluginGundoVim()
 
 " ============================================================================
 " image.vim

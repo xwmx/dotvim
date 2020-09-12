@@ -188,3 +188,6 @@
 [submodule "vendor/github.com/rgarver/Kwbd.vim"]
 	path = vendor/github.com/rgarver/Kwbd.vim
 	url = https://github.com/rgarver/Kwbd.vim.git
+[submodule "vendor/github.com/sjl/gundo.vim"]
+	path = vendor/github.com/sjl/gundo.vim
+	url = https://github.com/sjl/gundo.vim.git
