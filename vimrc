@@ -1506,7 +1506,8 @@ function! SetupPluginVimAirline()
   " TODO: Determine which extensions have the most impace on performance
   " and disable them in more, if not all, cases.
   if expand('%:t:r') == 'COMMIT_EDITMSG' || expand('%:e') == 'md'
-    let g:airline_extensions = ['branch', 'hunks', 'whitespace']
+    " let g:airline_extensions = ['branch', 'hunks', 'whitespace']
+    let g:airline_extensions = ['branch', 'whitespace']
   endif
 
 endfunction
@@ -2060,6 +2061,7 @@ call plug#end()
 " Conditionally load plugins.
 if expand('%:t:r') == 'COMMIT_EDITMSG'
   " git commit messages.
+  call SetupPluginVimAirline()
   set nowrap
 else
   call SetupPluginVimDevicons()
