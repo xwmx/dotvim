@@ -6,7 +6,7 @@
 #   _dotvim_config
 #
 # Description:
-#   Setup dotvim, linking configuration files.
+#   Set up dotvim, linking configuration files.
 _dotvim_config() {
 
   _dotvim_config_neovim_config() {
