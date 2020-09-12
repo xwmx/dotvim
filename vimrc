@@ -374,8 +374,8 @@ call janus#disable_plugin('nerdcommenter')
 call add(g:pathogen_disabled, 'nerdtree')
 call janus#disable_plugin('nerdtree')
 
-" call add(g:pathogen_disabled, 'rails')
-" call janus#disable_plugin('rails')
+call add(g:pathogen_disabled, 'rails')
+call janus#disable_plugin('rails')
 
 " NOTE: Disable Janus pathogen-installed version.
 " TODO: Remove this call when Janus has been removed.
@@ -1402,6 +1402,24 @@ function! SetupPluginNERDTreeGitPlugin()
 endfunction
 " NOTE: Disable nerdtree-git-plugin due to lag / performance issues.
 " call SetupPluginNERDTreeGitPlugin()
+
+" ============================================================================
+" rails.vim
+"
+" rails.vim: Ruby on Rails power tools
+"
+" https://github.com/tpope/vim-rails
+" ============================================================================
+
+function! SetupPluginRailsVim()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-rails
+
+endfunction
+call SetupPluginRailsVim()
 
 " ============================================================================
 " surround.vim
