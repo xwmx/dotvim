@@ -31,13 +31,6 @@
 " with Apple OS X.
 "
 " https://www.vim.org/
-"
-" -----------
-" About Janus
-"
-" Janus is a distribution of plug-ins and mappings for Vim, Gvim and MacVim.
-"
-" https://github.com/carlhuda/janus
 " ============================================================================
 
 " ############################################################################

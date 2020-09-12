@@ -86,9 +86,8 @@ let mapleader=","
 " ============================================================================
 " Base Vim Settings
 "
-" NOTE: Settings have been fully migrated from:
+" Migrated from:
 " janus/vim/core/before/plugin/settings.vim
-" TODO: Remove janus/vim/core/before/plugin/settings.vim from initialization.
 " ============================================================================
 
 " set nocompatible and hidden
@@ -359,7 +358,6 @@ function! SetupPluginVimDevicons()
   " Plug 'ryanoasis/vim-devicons'
 
   " Native Vim init:
-  " TODO: Re-enable when fonts are installed.
   packadd vim-devicons
 
   " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
