@@ -170,3 +170,6 @@
 [submodule "vendor/github.com/chrisbra/csv.vim"]
 	path = vendor/github.com/chrisbra/csv.vim
 	url = https://github.com/chrisbra/csv.vim.git
+[submodule "vendor/github.com/tpope/vim-surround"]
+	path = vendor/github.com/tpope/vim-surround
+	url = https://github.com/tpope/vim-surround.git

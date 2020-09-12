@@ -394,8 +394,8 @@ call janus#disable_plugin('syntastic')
 call add(g:pathogen_disabled, 'tagbar')
 " call janus#disable_plugin('tagbar')
 
-" call add(g:pathogen_disabled, 'surround')
-" call janus#disable_plugin('surround')
+call add(g:pathogen_disabled, 'surround')
+call janus#disable_plugin('surround')
 
 " NOTE: This has note been replaced with a native vim package as it is not
 " in use.
@@ -1403,6 +1403,24 @@ function! SetupPluginNERDTreeGitPlugin()
 endfunction
 " NOTE: Disable nerdtree-git-plugin due to lag / performance issues.
 " call SetupPluginNERDTreeGitPlugin()
+
+" ============================================================================
+" surround.vim
+"
+" mappings to easily delete, change and add such surroundings in pair
+"
+" https://github.com/tpope/vim-surround
+" ============================================================================
+
+function! SetupPluginSurround()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-surround
+
+endfunction
+call SetupPluginSurround()
 
 " ============================================================================
 " syntastic
