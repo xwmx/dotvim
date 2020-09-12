@@ -260,6 +260,50 @@ set directory^=~/.vim/cache/temp//
 " change the leader from backslash (\) to comma (,)
 let mapleader=","
 
+" =============================================================================
+" filetypes.vim
+"
+" Adapted from:
+" https://github.com/carlhuda/janus/blob/master/janus/vim/core/before/plugin/filetypes.vim
+" =============================================================================
+
+filetype plugin indent on " Turn on filetype plugins (:help filetype-plugin)
+
+if has("autocmd")
+  " In Makefiles, use real tabs, not tabs expanded to spaces
+  au FileType make setlocal noexpandtab
+
+  " Make sure all mardown files have the correct filetype set and setup wrapping
+  au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setf markdown
+  if !exists("g:disable_markdown_autostyle")
+    au FileType markdown setlocal wrap linebreak textwidth=72 nolist
+  endif
+
+  " make Python follow PEP8 for whitespace ( http://www.python.org/dev/peps/pep-0008/ )
+  au FileType python setlocal tabstop=4 shiftwidth=4
+
+  " Remember last location in file, but not for commit messages.
+  " see :help last-position-jump
+  au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g`\"" | endif
+endif
+
+" =============================================================================
+" Optional auto-save on focus lost
+"
+" Adapted from:
+" https://github.com/carlhuda/janus/blob/master/janus/vim/core/before/plugin/autocmds.vim
+"
+" See also:
+" https://stackoverflow.com/a/15252783
+" =============================================================================
+
+if has("autocmd")
+  if exists("g:autosave_on_blur")
+    au FocusLost * silent! wall
+  endif
+endif
+
 " ############################################################################
 "  ____  _             _
 " |  _ \| |_   _  __ _(_)_ __  ___
