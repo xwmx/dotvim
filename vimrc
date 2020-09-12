@@ -807,6 +807,24 @@ endfunction
 call SetupPluginBlack()
 
 " ============================================================================
+" buffergator
+"
+" Vim plugin to list, select and switch between buffers.
+"
+" https://github.com/jeetsukumaran/vim-buffergator
+" ============================================================================
+
+function! SetupPluginBuffergator()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-buffergator
+
+endfunction
+call SetupPluginBuffergator()
+
+" ============================================================================
 " csv
 "
 " A Filetype plugin for csv files

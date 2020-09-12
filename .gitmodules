@@ -191,3 +191,6 @@
 [submodule "vendor/github.com/sjl/gundo.vim"]
 	path = vendor/github.com/sjl/gundo.vim
 	url = https://github.com/sjl/gundo.vim.git
+[submodule "vendor/github.com/jeetsukumaran/vim-buffergator"]
+	path = vendor/github.com/jeetsukumaran/vim-buffergator
+	url = https://github.com/jeetsukumaran/vim-buffergator.git
