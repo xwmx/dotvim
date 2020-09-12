@@ -342,6 +342,23 @@ let g:pathogen_disabled = []
 "call janus#disable_plugin('vimwiki')
 "call janus#disable_plugin('vroom')
 
+call add(g:pathogen_disabled, 'css_color')
+call janus#disable_plugin('css_color')
+" call add(g:pathogen_disabled, 'csv')
+" call janus#disable_plugin('csv')
+" call add(g:pathogen_disabled, 'endwise')
+" call janus#disable_plugin('endwise')
+" call add(g:pathogen_disabled, 'fugitive')
+" call janus#disable_plugin('fugitive')
+" call add(g:pathogen_disabled, 'rails')
+" call janus#disable_plugin('rails')
+" call add(g:pathogen_disabled, 'surround')
+" call janus#disable_plugin('surround')
+" call add(g:pathogen_disabled, 'unimpaired')
+" call janus#disable_plugin('unimpaired')
+" call add(g:pathogen_disabled, 'vim-trailing-whitespace')
+" call janus#disable_plugin('vim-trailing-whitespace')
+
 " ============================================================================
 " Conditional Plugin Settings
 " ============================================================================
@@ -1479,6 +1496,26 @@ function! SetupPluginVimBufkill()
 
 endfunction
 call SetupPluginVimBufkill()
+
+" ============================================================================
+" vim-css-color
+"
+" A very fast, multi-syntax context-sensitive color name highlighter.
+"
+" https://github.com/ap/vim-css-color
+" ============================================================================
+
+function! SetupPluginVimCssColor()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-css-color
+
+endfunction
+call SetupPluginVimCssColor()
+
+
 
 " ============================================================================
 " vim-ctrlspace
