@@ -164,3 +164,6 @@
 [submodule "vendor/github.com/ap/vim-css-color"]
 	path = vendor/github.com/ap/vim-css-color
 	url = https://github.com/ap/vim-css-color.git
+[submodule "vendor/github.com/tpope/vim-endwise"]
+	path = vendor/github.com/tpope/vim-endwise
+	url = https://github.com/tpope/vim-endwise.git

@@ -358,8 +358,8 @@ call janus#disable_plugin('css_color')
 call add(g:pathogen_disabled, 'ctrlp')
 call janus#disable_plugin('ctrlp')
 
-" call add(g:pathogen_disabled, 'endwise')
-" call janus#disable_plugin('endwise')
+call add(g:pathogen_disabled, 'endwise')
+call janus#disable_plugin('endwise')
 
 " call add(g:pathogen_disabled, 'fugitive')
 " call janus#disable_plugin('fugitive')
@@ -968,6 +968,24 @@ function! SetupPluginEmmetVim()
 
 endfunction
 call SetupPluginEmmetVim()
+
+" ============================================================================
+" endwise.vim
+"
+" wisely add 'end' in ruby, endfunction/endif/more in vim script, etc
+"
+" https://github.com/tpope/vim-endwise
+" ============================================================================
+
+function! SetupPluginEndwise()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-endwise
+
+endfunction
+call SetupPluginEndwise()
 
 " ============================================================================
 " FZF
