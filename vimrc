@@ -1192,7 +1192,7 @@ function! SetupPluginNERDTree()
   endif
 
   " Set to use single click for node and double click to open file.
-  let g:NERDTreeMouseMode = 2
+  let g:NERDTreeMouseMode = 3
 
   " Configure NERDTreeIgnore
   "
@@ -1222,6 +1222,8 @@ function! SetupPluginNERDTree()
 
     " <LeftRelease>
     "
+    " DirNode
+    "
     " Add <LeftRelease> override to call WebDevIconsNERDTreeMapActivateNode on
     " single click with `g:NERDTreeMouseMode = 3`.
     "
@@ -1235,8 +1237,36 @@ function! SetupPluginNERDTree()
       \ 'callback': 'WebDevIconsNERDTreeMapActivateNode',
       \ 'override': 1,
       \ 'scope': 'DirNode' })
+    "
+    " FileNode
+    "
+    " Single click file to open in the last-used split in the current tab when
+    " MouseMode is 3.
+    "
+    " Overrides:
+    " https://github.com/preservim/nerdtree/blob/master/autoload/nerdtree/ui_glue.vim#L11
+    call NERDTreeAddKeyMap({
+      \ 'key': '<LeftRelease>',
+      \ 'callback': 'NERDTreeSingleClickOpenHandler',
+      \ 'quickhelpText': 'open in current tab',
+      \ 'override': 1,
+      \ 'scope': 'FileNode' })
 
-    " Double click opens file in current tab.
+    " NERDTreeSingleClickOpenHandler
+    "
+    " Open in the last-used split in the current tab when MouseMode is 3.
+    function! NERDTreeSingleClickOpenHandler(node)
+        " Only perform action with NERDTreeMouseMode since otherwise double
+        " click is required..
+        if g:NERDTreeMouseMode ==# 3
+          call a:node.open({'reuse':'currenttab', 'stay': 1, 'where': 'p', 'keepopen': 1})
+        endif
+    endf
+
+    " <2-LeftMouse>
+    "
+    " Double click file to open in the last-used split in the current tab when
+    " MouseMode is 2.
     "
     " Overrides:
     " https://github.com/preservim/nerdtree/blob/master/autoload/nerdtree/ui_glue.vim#L13
@@ -1246,12 +1276,15 @@ function! SetupPluginNERDTree()
     " https://stackoverflow.com/a/30022579
     call NERDTreeAddKeyMap({
             \ 'key': '<2-LeftMouse>',
-            \ 'callback': 'NERDTreeOpenHandler',
+            \ 'callback': 'NERDTreeDoubleClickOpenHandler',
             \ 'quickhelpText': 'open in current tab',
             \ 'scope': 'FileNode',
             \ 'override': 1})
 
-    func! NERDTreeOpenHandler(node)
+    " NERDTreeDoubleClickOpenHandler
+    "
+    " Open file in the last-used split in the current tab.
+    function! NERDTreeDoubleClickOpenHandler(node)
         call a:node.open({'reuse':'currenttab', 'stay': 1, 'where': 'p', 'keepopen': 1})
     endf
 
