@@ -179,3 +179,6 @@
 [submodule "vendor/github.com/tpope/vim-rails"]
 	path = vendor/github.com/tpope/vim-rails
 	url = https://github.com/tpope/vim-rails.git
+[submodule "vendor/github.com/tpope/vim-fugitive"]
+	path = vendor/github.com/tpope/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git

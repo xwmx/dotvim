@@ -361,8 +361,8 @@ call janus#disable_plugin('ctrlp')
 call add(g:pathogen_disabled, 'endwise')
 call janus#disable_plugin('endwise')
 
-" call add(g:pathogen_disabled, 'fugitive')
-" call janus#disable_plugin('fugitive')
+call add(g:pathogen_disabled, 'fugitive')
+call janus#disable_plugin('fugitive')
 
 " NOTE: Disable Janus pathogen-installed nerdcommenter.
 " TODO: Remove this call when Janus has been removed.
@@ -1005,6 +1005,24 @@ function! SetupPluginEndwise()
 
 endfunction
 call SetupPluginEndwise()
+
+" ============================================================================
+" fugitive.vim
+"
+" Git plugin for Vim
+"
+" https://github.com/tpope/vim-fugitive
+" ============================================================================
+
+function! SetupPluginFugitive()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-fugitive
+
+endfunction
+call SetupPluginFugitive()
 
 " ============================================================================
 " FZF
