@@ -2045,13 +2045,6 @@ function! SetupPluginVimVisualStarSearch()
 
 endfunction
 
-" %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-" vim-plug (end)
-" %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-" List ends here. Plugins become visible to Vim after this call.
-call plug#end()
-
 " ============================================================================
 " Load Plugins
 " ============================================================================
@@ -2123,6 +2116,13 @@ else
   call SetupPluginVimVisualMulti()
   call SetupPluginVimVisualStarSearch()
 endif
+
+" %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+" vim-plug (end)
+" %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+" List ends here. Plugins become visible to Vim after this call.
+call plug#end()
 
 " -----------                                                      -----------
 " vimrc • end                                                      end • vimrc
