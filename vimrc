@@ -347,6 +347,7 @@ call janus#disable_plugin('ack')
 "call janus#disable_plugin('vimwiki')
 "call janus#disable_plugin('vroom')
 
+" NOTE: Replaced with vim-css-color
 call add(g:pathogen_disabled, 'css_color')
 call janus#disable_plugin('css_color')
 
