@@ -417,9 +417,8 @@ call add(g:pathogen_disabled, 'vim-polyglot')
 call add(g:pathogen_disabled, 'vim-signify')
 call janus#disable_plugin('vim-signify')
 
-
-" call add(g:pathogen_disabled, 'vim-trailing-whitespace')
-" call janus#disable_plugin('vim-trailing-whitespace')
+call add(g:pathogen_disabled, 'vim-trailing-whitespace')
+call janus#disable_plugin('vim-trailing-whitespace')
 
 " ============================================================================
 " Conditional Plugin Settings
@@ -2053,6 +2052,24 @@ function! SetupPluginVimTextobjUser()
 
 endfunction
 call SetupPluginVimTextobjUser()
+
+" ============================================================================
+" vim-trailing-whitespace
+"
+" Highlights trailing whitespace in red and provides :FixWhitespace to fix it.
+"
+" https://github.com/bronson/vim-trailing-whitespace
+" ============================================================================
+
+function! SetupPluginVimTrailingWhitespace()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-trailing-whitespace
+
+endfunction
+call SetupPluginVimTrailingWhitespace()
 
 " %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 " vim-plug (end)
