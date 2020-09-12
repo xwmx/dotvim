@@ -1259,7 +1259,7 @@ function! SetupPluginNERDTree()
         " Only perform action with NERDTreeMouseMode since otherwise double
         " click is required..
         if g:NERDTreeMouseMode ==# 3
-          call a:node.open({'reuse':'currenttab', 'stay': 1, 'where': 'p', 'keepopen': 1})
+          call a:node.open({'reuse':'currenttab', 'where': 'p', 'keepopen': 1})
         endif
     endf
 
