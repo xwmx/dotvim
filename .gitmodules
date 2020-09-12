@@ -185,3 +185,6 @@
 [submodule "vendor/github.com/bronson/vim-visual-star-search"]
 	path = vendor/github.com/bronson/vim-visual-star-search
 	url = https://github.com/bronson/vim-visual-star-search.git
+[submodule "vendor/github.com/rgarver/Kwbd.vim"]
+	path = vendor/github.com/rgarver/Kwbd.vim
+	url = https://github.com/rgarver/Kwbd.vim.git

@@ -1119,6 +1119,24 @@ call SetupPluginFZF()
 " call SetupPluginImageVim()
 
 " ============================================================================
+" Kwbd.vim
+"
+" Add a buffer close to vim that doesn't close the window
+"
+" https://github.com/rgarver/Kwbd.vim
+" ============================================================================
+
+function! SetupPluginKwbd()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd Kwbd.vim
+
+endfunction
+call SetupPluginKwbd()
+
+" ============================================================================
 " Neoformat
 "
 " ✨ A (Neo)vim plugin for formatting code.
