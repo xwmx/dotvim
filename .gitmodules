@@ -194,3 +194,6 @@
 [submodule "vendor/github.com/jeetsukumaran/vim-buffergator"]
 	path = vendor/github.com/jeetsukumaran/vim-buffergator
 	url = https://github.com/jeetsukumaran/vim-buffergator.git
+[submodule "vendor/github.com/mg979/vim-visual-multi"]
+	path = vendor/github.com/mg979/vim-visual-multi
+	url = https://github.com/mg979/vim-visual-multi.git

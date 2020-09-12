@@ -2224,6 +2224,24 @@ endfunction
 call SetupPluginVimTrailingWhitespace()
 
 " ============================================================================
+" vim-visual-multi
+"
+" Multiple cursors plugin for vim/neovim
+"
+" https://github.com/mg979/vim-visual-multi
+" ============================================================================
+
+function! SetupPluginVimVisualMulti()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-visual-multi
+
+endfunction
+call SetupPluginVimVisualMulti()
+
+" ============================================================================
 " vim-visual-star-search
 "
 " Start a * or # search from a visual block
