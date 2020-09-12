@@ -327,17 +327,6 @@ let g:pathogen_disabled = []
 "
 " call add(g:pathogen_disabled, '<plugin_name>')
 
-" ============================================================================
-" Conditional Plugin Settings
-" ============================================================================
-
-" git commit messages.
-if expand('%:t:r') == 'COMMIT_EDITMSG'
-  call add(g:pathogen_disabled, 'vim-bufkill')
-  call add(g:pathogen_disabled, 'vim-ctrlspace')
-  set nowrap
-endif
-
 " %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 " vim-plug (begin)
 "
@@ -397,7 +386,6 @@ function! SetupPluginVimDevicons()
   endif
 
 endfunction
-call SetupPluginVimDevicons()
 
 " ============================================================================
 " Tab Completion Plugins
@@ -494,7 +482,6 @@ function! SetupTabCompletionPlugins()
   let g:ycm_auto_hover = ''
 
 endfunction
-call SetupTabCompletionPlugins()
 
 " %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -551,7 +538,6 @@ function! SetupPluginAck()
   endif
 
 endfunction
-call SetupPluginAck()
 
 " ============================================================================
 " ALE (Asynchronous Lint Engine)
@@ -607,7 +593,6 @@ function! SetupPluginAle()
   let g:ale_echo_msg_format = '[%linter%] %s (%severity%)%(code)%'
 
 endfunction
-call SetupPluginAle()
 
 " ============================================================================
 " AsyncRun
@@ -625,7 +610,6 @@ function! SetupPluginAsyncRun()
   packadd asyncrun.vim
 
 endfunction
-call SetupPluginAsyncRun()
 
 " ============================================================================
 " aliou/bats.vim
@@ -643,7 +627,6 @@ function! SetupPluginBatsVim()
   packadd bats.vim
 
 endfunction
-call SetupPluginBatsVim()
 
 " ============================================================================
 " Black
@@ -663,7 +646,6 @@ function! SetupPluginBlack()
   packadd black
 
 endfunction
-call SetupPluginBlack()
 
 " ============================================================================
 " buffergator
@@ -681,7 +663,6 @@ function! SetupPluginBuffergator()
   packadd vim-buffergator
 
 endfunction
-call SetupPluginBuffergator()
 
 " ============================================================================
 " csv
@@ -699,7 +680,6 @@ function! SetupPluginCsvVim()
   packadd csv.vim
 
 endfunction
-call SetupPluginCsvVim()
 
 " ============================================================================
 " ctrlp.vim
@@ -797,7 +777,6 @@ function! SetupPluginCtrlp()
   set wildignore+=*system/development/glyphs*
 
 endfunction
-call SetupPluginCtrlp()
 
 " ============================================================================
 " ctrlfs.vim
@@ -817,7 +796,6 @@ function! SetupPluginCtrlSF()
   packadd ctrlsf.vim
 
 endfunction
-call SetupPluginCtrlSF()
 
 " ============================================================================
 " delimitMate
@@ -836,7 +814,6 @@ function! SetupPluginDelimitMate()
   packadd delimitMate
 
 endfunction
-call SetupPluginDelimitMate()
 
 " ============================================================================
 " Denite.nvim
@@ -858,10 +835,6 @@ function! SetupPluginDeniteNVim()
   packadd denite.nvim
 
 endfunction
-" NOTE: Don't load denite.nvim due to python version errors.
-" TODO: Configure python versions, particularly with MacVim. More information:
-" https://github.com/macvim-dev/macvim/wiki/Python-2.x-and-Python-3.x
-" call SetupPluginDeniteNVim()
 
 " ============================================================================
 " Dockerfile.vim
@@ -879,7 +852,6 @@ function! SetupPluginDockerfileVim()
   packadd Dockerfile.vim
 
 endfunction
-call SetupPluginDockerfileVim()
 
 " ============================================================================
 " Emmet-vim
@@ -911,7 +883,6 @@ function! SetupPluginEmmetVim()
   packadd emmet-vim
 
 endfunction
-call SetupPluginEmmetVim()
 
 " ============================================================================
 " endwise.vim
@@ -929,7 +900,6 @@ function! SetupPluginEndwise()
   packadd vim-endwise
 
 endfunction
-call SetupPluginEndwise()
 
 " ============================================================================
 " fugitive.vim
@@ -957,7 +927,6 @@ function! SetupPluginFugitive()
   " call janus#add_mapping('fugitive', 'nmap', '<leader>gp', ':Git push<CR>')
 
 endfunction
-call SetupPluginFugitive()
 
 " ============================================================================
 " FZF
@@ -983,7 +952,6 @@ function! SetupPluginFZF()
   packadd fzf.vim
 
 endfunction
-call SetupPluginFZF()
 
 " ============================================================================
 " Gundo.vim
@@ -1005,7 +973,6 @@ function! SetupPluginGundoVim()
   let g:gundo_prefer_python3 = 1
 
 endfunction
-call SetupPluginGundoVim()
 
 " ============================================================================
 " image.vim
@@ -1015,17 +982,16 @@ call SetupPluginGundoVim()
 " https://github.com/ashisha/image.vim
 " ============================================================================
 
-" function! SetupPluginImageVim()
-"
-"   " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
-"
-"   if has("gui_macvim") && has("python")
-"     " Native Vim init:
-"     packadd image.vim
-"   endif
-"
-" endfunction
-" call SetupPluginImageVim()
+function! SetupPluginImageVim()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  if has("gui_macvim") && has("python")
+    " Native Vim init:
+    packadd image.vim
+  endif
+
+endfunction
 
 " ============================================================================
 " Kwbd.vim
@@ -1043,7 +1009,6 @@ function! SetupPluginKwbd()
   packadd Kwbd.vim
 
 endfunction
-call SetupPluginKwbd()
 
 " ============================================================================
 " Neoformat
@@ -1064,8 +1029,6 @@ function! SetupPluginNeoformat()
   packadd neoformat
 
 endfunction
-" NOTE: Disable in favor of ALE
-" call SetupPluginNeoformat()
 
 " ============================================================================
 " Neomake
@@ -1105,8 +1068,6 @@ function! SetupPluginNeomake()
     \ }
 
 endfunction
-" NOTE: Disable in favor of ALE
-" call SetupPluginNeomake()
 
 " ============================================================================
 " NERD Commenter
@@ -1150,7 +1111,6 @@ function! SetupPluginNERDCommenter()
   endif
 
 endfunction
-call SetupPluginNERDCommenter()
 
 " ============================================================================
 " NERDTree
@@ -1373,7 +1333,6 @@ function! SetupPluginNERDTree()
   endif
 
 endfunction
-call SetupPluginNERDTree()
 
 " ============================================================================
 " nerdtree-git-plugin
@@ -1393,8 +1352,6 @@ function! SetupPluginNERDTreeGitPlugin()
   source pack/plugins/opt/nerdtree-git-plugin/nerdtree_plugin/git_status.vim
 
 endfunction
-" NOTE: Disable nerdtree-git-plugin due to lag / performance issues.
-" call SetupPluginNERDTreeGitPlugin()
 
 " ============================================================================
 " rails.vim
@@ -1412,7 +1369,6 @@ function! SetupPluginRailsVim()
   packadd vim-rails
 
 endfunction
-call SetupPluginRailsVim()
 
 " ============================================================================
 " surround.vim
@@ -1430,7 +1386,6 @@ function! SetupPluginSurround()
   packadd vim-surround
 
 endfunction
-call SetupPluginSurround()
 
 " ============================================================================
 " syntastic
@@ -1451,7 +1406,6 @@ function! SetupPluginSyntastic()
   " packadd syntastic
 
 endfunction
-call SetupPluginSyntastic()
 
 " ============================================================================
 " tagbar
@@ -1488,7 +1442,6 @@ function! SetupPluginTagbar()
   let g:tagbar_width = 30
 
 endfunction
-call SetupPluginTagbar()
 
 " ============================================================================
 " vim-airline
@@ -1557,7 +1510,6 @@ function! SetupPluginVimAirline()
   endif
 
 endfunction
-call SetupPluginVimAirline()
 
 " ============================================================================
 " vim-bufkill
@@ -1576,7 +1528,6 @@ function! SetupPluginVimBufkill()
   packadd vim-bufkill
 
 endfunction
-call SetupPluginVimBufkill()
 
 " ============================================================================
 " vim-css-color
@@ -1594,9 +1545,6 @@ function! SetupPluginVimCssColor()
   packadd vim-css-color
 
 endfunction
-call SetupPluginVimCssColor()
-
-
 
 " ============================================================================
 " vim-ctrlspace
@@ -1620,7 +1568,6 @@ function! SetupPluginVimCtrlspace()
   " autocmd in `~/.vim/after/plugin/terminal.vim`.
 
 endfunction
-call SetupPluginVimCtrlspace()
 
 " ============================================================================
 " vim-gitgutter
@@ -1646,7 +1593,6 @@ function! SetupPluginVimGitgutter()
   let g:gitgutter_diff_base = 'HEAD'
 
 endfunction
-call SetupPluginVimGitgutter()
 
 " ============================================================================
 " vim-go
@@ -1664,7 +1610,6 @@ function! SetupPluginVimGo()
   packadd vim-go
 
 endfunction
-call SetupPluginVimGo()
 
 " ============================================================================
 " goyo.vim
@@ -1708,7 +1653,6 @@ function! SetupPluginGoyoVim()
   autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 endfunction
-call SetupPluginGoyoVim()
 
 " ============================================================================
 " vim-json
@@ -1737,7 +1681,6 @@ function! SetupPluginVimJson()
   let g:vim_json_syntax_conceal = 0
 
 endfunction
-call SetupPluginVimJson()
 
 " ============================================================================
 " vim-orgmode
@@ -1755,7 +1698,6 @@ function! SetupPluginVimOrgmode()
   packadd vim-orgmode
 
 endfunction
-call SetupPluginVimOrgmode()
 
 " ============================================================================
 " vim-pandoc
@@ -1783,7 +1725,6 @@ function! SetupPluginVimPandoc()
   let g:pandoc#modules#disabled = ["folding"]
 
 endfunction
-call SetupPluginVimPandoc()
 
 " ============================================================================
 " Vim-Startify
@@ -1801,7 +1742,6 @@ function! SetupPluginVimStartify()
   packadd vim-startify
 
 endfunction
-call SetupPluginVimStartify()
 
 " ============================================================================
 " vim-pandoc-syntax
@@ -1833,7 +1773,6 @@ function! SetupPluginVimPandocSyntax()
         \]
 
 endfunction
-call SetupPluginVimPandocSyntax()
 
 " ============================================================================
 " vim-polyglot
@@ -1854,7 +1793,6 @@ function! SetupPluginVimPolyglot()
   packadd vim-polyglot
 
 endfunction
-call SetupPluginVimPolyglot()
 
 " ============================================================================
 " vim-prettier
@@ -1901,7 +1839,6 @@ function! SetupPluginVimPrettier()
   cnoreabbrev P PrettierAsync
 
 endfunction
-call SetupPluginVimPrettier()
 
 " ============================================================================
 " vim-sensible
@@ -1923,7 +1860,6 @@ function! SetupPluginVimSensible()
   packadd vim-sensible
 
 endfunction
-call SetupPluginVimSensible()
 
 " ============================================================================
 " vim-signify
@@ -1975,7 +1911,6 @@ function! SetupPluginVimSignify()
   " endif
 
 endfunction
-call SetupPluginVimSignify()
 
 " ============================================================================
 " vim-sleuth
@@ -2006,8 +1941,6 @@ function! SetupPluginVimSleuth()
   autocmd BufRead,BufNewFile *.yml,*.yaml       let b:sleuth_automatic = 0
 
 endfunction
-" NOTE: Disable vim-sleuth to avoid slowdowns.
-" call SetupPluginVimSleuth()
 
 " ============================================================================
 " vim-speeddating
@@ -2025,7 +1958,6 @@ function! SetupPluginVimSpeeddating()
   packadd vim-speeddating
 
 endfunction
-call SetupPluginVimSpeeddating()
 
 " ============================================================================
 " vim-textobj-line
@@ -2044,7 +1976,6 @@ function! SetupPluginVimTextobjUser()
   packadd vim-textobj-user
 
 endfunction
-call SetupPluginVimTextobjUser()
 
 " ============================================================================
 " vim-textobj-user
@@ -2062,7 +1993,6 @@ function! SetupPluginVimTextobjUser()
   packadd vim-textobj-user
 
 endfunction
-call SetupPluginVimTextobjUser()
 
 " ============================================================================
 " vim-trailing-whitespace
@@ -2080,7 +2010,6 @@ function! SetupPluginVimTrailingWhitespace()
   packadd vim-trailing-whitespace
 
 endfunction
-call SetupPluginVimTrailingWhitespace()
 
 " ============================================================================
 " vim-visual-multi
@@ -2098,7 +2027,6 @@ function! SetupPluginVimVisualMulti()
   packadd vim-visual-multi
 
 endfunction
-call SetupPluginVimVisualMulti()
 
 " ============================================================================
 " vim-visual-star-search
@@ -2116,7 +2044,6 @@ function! SetupPluginVimVisualStarSearch()
   packadd vim-visual-star-search
 
 endfunction
-call SetupPluginVimVisualStarSearch()
 
 " %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 " vim-plug (end)
@@ -2124,6 +2051,78 @@ call SetupPluginVimVisualStarSearch()
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
+
+
+" ============================================================================
+" Load Plugins
+" ============================================================================
+
+" Conditionally load plugins.
+if expand('%:t:r') == 'COMMIT_EDITMSG'
+  " git commit messages.
+  set nowrap
+else
+  call SetupPluginVimDevicons()
+  call SetupTabCompletionPlugins()
+  call SetupPluginAck()
+  call SetupPluginAle()
+  call SetupPluginAsyncRun()
+  call SetupPluginBatsVim()
+  call SetupPluginBlack()
+  call SetupPluginBuffergator()
+  call SetupPluginCsvVim()
+  call SetupPluginCtrlp()
+  call SetupPluginCtrlSF()
+  call SetupPluginDelimitMate()
+  " NOTE: Don't load denite.nvim due to python version errors.
+  " TODO: Configure python versions, particularly with MacVim. More information:
+  " https://github.com/macvim-dev/macvim/wiki/Python-2.x-and-Python-3.x
+  " call SetupPluginDeniteNVim()
+  call SetupPluginDockerfileVim()
+  call SetupPluginEmmetVim()
+  call SetupPluginEndwise()
+  call SetupPluginFugitive()
+  call SetupPluginFZF()
+  call SetupPluginGundoVim()
+  " call SetupPluginImageVim()
+  call SetupPluginKwbd()
+  " NOTE: Disable in favor of ALE
+  " call SetupPluginNeoformat()
+  " NOTE: Disable in favor of ALE
+  " call SetupPluginNeomake()
+  call SetupPluginNERDCommenter()
+  call SetupPluginNERDTree()
+  " NOTE: Disable nerdtree-git-plugin due to lag / performance issues.
+  " call SetupPluginNERDTreeGitPlugin()
+  call SetupPluginRailsVim()
+  call SetupPluginSurround()
+  call SetupPluginSyntastic()
+  call SetupPluginTagbar()
+  call SetupPluginVimAirline()
+  call SetupPluginVimBufkill()
+  call SetupPluginVimCssColor()
+  call SetupPluginVimCtrlspace()
+  call SetupPluginVimGitgutter()
+  call SetupPluginVimGo()
+  call SetupPluginGoyoVim()
+  call SetupPluginVimJson()
+  call SetupPluginVimOrgmode()
+  call SetupPluginVimPandoc()
+  call SetupPluginVimStartify()
+  call SetupPluginVimPandocSyntax()
+  call SetupPluginVimPolyglot()
+  call SetupPluginVimPrettier()
+  call SetupPluginVimSensible()
+  call SetupPluginVimSignify()
+  " NOTE: Disable vim-sleuth to avoid slowdowns.
+  " call SetupPluginVimSleuth()
+  call SetupPluginVimSpeeddating()
+  call SetupPluginVimTextobjUser()
+  call SetupPluginVimTextobjUser()
+  call SetupPluginVimTrailingWhitespace()
+  call SetupPluginVimVisualMulti()
+  call SetupPluginVimVisualStarSearch()
+endif
 
 " -----------                                                      -----------
 " vimrc • end                                                      vimrc • end
