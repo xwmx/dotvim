@@ -397,8 +397,10 @@ call add(g:pathogen_disabled, 'tagbar')
 " call add(g:pathogen_disabled, 'surround')
 " call janus#disable_plugin('surround')
 
-" call add(g:pathogen_disabled, 'unimpaired')
-" call janus#disable_plugin('unimpaired')
+" NOTE: This has note been replaced with a native vim package as it is not
+" in use.
+call add(g:pathogen_disabled, 'unimpaired')
+call janus#disable_plugin('unimpaired')
 
 " NOTE: Disable Janus pathogen-installed vim-gitgutter.
 " TODO: Remove this call when Janus has been removed.
