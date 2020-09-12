@@ -182,3 +182,6 @@
 [submodule "vendor/github.com/tpope/vim-fugitive"]
 	path = vendor/github.com/tpope/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule "vendor/github.com/bronson/vim-visual-star-search"]
+	path = vendor/github.com/bronson/vim-visual-star-search
+	url = https://github.com/bronson/vim-visual-star-search.git

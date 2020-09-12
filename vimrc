@@ -421,6 +421,9 @@ call janus#disable_plugin('vim-signify')
 call add(g:pathogen_disabled, 'vim-trailing-whitespace')
 call janus#disable_plugin('vim-trailing-whitespace')
 
+call add(g:pathogen_disabled, 'visualstar')
+call janus#disable_plugin('visualstar')
+
 " ============================================================================
 " Conditional Plugin Settings
 " ============================================================================
@@ -2107,6 +2110,24 @@ function! SetupPluginVimTrailingWhitespace()
 
 endfunction
 call SetupPluginVimTrailingWhitespace()
+
+" ============================================================================
+" vim-visual-star-search
+"
+" Start a * or # search from a visual block
+"
+" https://github.com/bronson/vim-visual-star-search
+" ============================================================================
+
+function! SetupPluginVimVisualStarSearch()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-visual-star-search
+
+endfunction
+call SetupPluginVimVisualStarSearch()
 
 " %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 " vim-plug (end)
