@@ -354,7 +354,7 @@ call janus#disable_plugin('css_color')
 call add(g:pathogen_disabled, 'csv')
 call janus#disable_plugin('csv')
 
-" NOTE: Disable Janus pathogen-installed vim-polyglot.
+" NOTE: Disable Janus pathogen-installed ctrlp.
 " TODO: Remove this call when Janus has been removed.
 call add(g:pathogen_disabled, 'ctrlp')
 call janus#disable_plugin('ctrlp')
