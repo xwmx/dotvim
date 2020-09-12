@@ -916,13 +916,14 @@ function! SetupPluginFugitive()
 
   " After: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
-  " Janus mappings. TODO: adapt
-  " call janus#add_mapping('fugitive', 'nmap', '<leader>gb', ':Gblame<CR>')
-  " call janus#add_mapping('fugitive', 'nmap', '<leader>gs', ':Gstatus<CR>')
-  " call janus#add_mapping('fugitive', 'nmap', '<leader>gd', ':Gdiff<CR>')
-  " call janus#add_mapping('fugitive', 'nmap', '<leader>gl', ':Glog<CR>')
-  " call janus#add_mapping('fugitive', 'nmap', '<leader>gc', ':Gcommit<CR>')
-  " call janus#add_mapping('fugitive', 'nmap', '<leader>gp', ':Git push<CR>')
+  " Mappings via:
+  " https://github.com/carlhuda/janus/blob/master/janus/vim/tools/janus/after/plugin/fugitive.vim
+  nmap <leader>gb :Gblame<CR>
+  nmap <leader>gs :Gstatus<CR>
+  nmap <leader>gd :Gdiff<CR>
+  nmap <leader>gl :Glog<CR>
+  nmap <leader>gc :Gcommit<CR>
+  nmap <leader>gp :Git push<CR>
 
 endfunction
 
