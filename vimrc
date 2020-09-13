@@ -362,6 +362,18 @@ function! SetupPluginVimDevicons()
 
   " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
+  " Disable g:NERDTreeUpdateOnCursorHold
+  "
+  " This setting appears to cause ALE warnings in the statusline /
+  " command-line / cmdline to show and immediately disappear in some cases.
+  " This is confirmed to happen when NERDTree is open and the focus goes from
+  " an embedded terminal window to the window with the file that has errors.
+  " This does not happen when when focus comes from a normal buffer window.
+  "
+  " Search for this variable in the devicons project on GitHub:
+  " https://git.io/JUlFr
+  let g:NERDTreeUpdateOnCursorHold = 0
+
   " enable folder/directory glyph flag (disabled by default with 0)
   let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 
