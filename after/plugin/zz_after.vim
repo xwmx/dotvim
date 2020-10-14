@@ -99,6 +99,16 @@ autocmd BufRead,BufNewFile Baskfile call dist#ft#SetFileTypeSH("bash")
 " Associate .cson files with CoffeeScript.
 autocmd BufRead,BufNewFile *.cson set filetype=coffee
 
+" ===================
+" Git Commit Messages
+" ===================
+
+" Always start on the first line in a git commit message.
+"
+" More info:
+" https://vim.fandom.com/wiki/Always_start_on_first_line_of_git_commit_message
+autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
+
 " ==========
 " JavaScript
 " ==========
