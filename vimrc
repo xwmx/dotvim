@@ -2108,7 +2108,7 @@ else
   call SetupPluginVimAirline()
   call SetupPluginVimBufkill()
   call SetupPluginVimCssColor()
-  call SetupPluginVimCtrlspace()
+  " call SetupPluginVimCtrlspace()
   call SetupPluginVimGitgutter()
   call SetupPluginVimGo()
   call SetupPluginGoyoVim()
