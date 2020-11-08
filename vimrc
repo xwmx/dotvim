@@ -2111,7 +2111,7 @@ else
   " call SetupPluginVimCtrlspace()
   call SetupPluginVimGitgutter()
   call SetupPluginVimGo()
-  call SetupPluginGoyoVim()
+  " call SetupPluginGoyoVim()
   " call SetupPluginVimJson()
   " call SetupPluginVimOrgmode()
   " call SetupPluginVimPandoc()
