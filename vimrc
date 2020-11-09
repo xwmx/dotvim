@@ -986,6 +986,23 @@ function! SetupPluginGundoVim()
 endfunction
 
 " ============================================================================
+" html5.vim
+"
+" HTML5 omnicomplete and syntax.
+"
+" https://github.com/othree/html5.vim
+" ============================================================================
+
+function! SetupPluginHtml5Vim()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd html5.vim
+
+endfunction
+
+" ============================================================================
 " image.vim
 "
 " View images in Vim
@@ -2142,6 +2159,7 @@ else
   " call SetupPluginFugitive()
   call SetupPluginFZF()
   " call SetupPluginGundoVim()
+  cal SetupPluginHtml5Vim()
   " call SetupPluginImageVim()
   call SetupPluginKwbd()
   " NOTE: Disable in favor of ALE
