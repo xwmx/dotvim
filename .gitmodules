@@ -200,3 +200,6 @@
 [submodule "vendor/github.com/vim-ruby/vim-ruby"]
 	path = vendor/github.com/vim-ruby/vim-ruby
 	url = https://github.com/vim-ruby/vim-ruby.git
+[submodule "vendor/github.com/pangloss/vim-javascript"]
+	path = vendor/github.com/pangloss/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git

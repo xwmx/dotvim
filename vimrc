@@ -1667,6 +1667,23 @@ function! SetupPluginGoyoVim()
 endfunction
 
 " ============================================================================
+" vim-javascript
+"
+" Vastly improved Javascript indentation and syntax support in Vim.
+"
+" https://github.com/pangloss/vim-javascript
+" ============================================================================
+
+function! SetupPluginVimJavaScript()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-javascript
+
+endfunction
+
+" ============================================================================
 " vim-json
 "
 " A better JSON for Vim: distinct highlighting of keywords vs values,
@@ -2129,7 +2146,8 @@ else
   call SetupPluginVimGitgutter()
   call SetupPluginVimGo()
   " call SetupPluginGoyoVim()
-  " call SetupPluginVimJson()
+  call SetupPluginVimJavaScript()
+  call SetupPluginVimJson()
   " call SetupPluginVimOrgmode()
   " call SetupPluginVimPandoc()
   call SetupPluginVimRuby()
