@@ -197,3 +197,6 @@
 [submodule "vendor/github.com/mg979/vim-visual-multi"]
 	path = vendor/github.com/mg979/vim-visual-multi
 	url = https://github.com/mg979/vim-visual-multi.git
+[submodule "vendor/github.com/vim-ruby/vim-ruby"]
+	path = vendor/github.com/vim-ruby/vim-ruby
+	url = https://github.com/vim-ruby/vim-ruby.git

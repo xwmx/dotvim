@@ -1772,7 +1772,7 @@ function! SetupPluginVimPandocSyntax()
   " Plug 'https://github.com/vim-pandoc/vim-pandoc-syntax'
 
   " Native Vim init:
-  " packadd vim-pandoc-syntax
+  packadd vim-pandoc-syntax
 
   " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
@@ -1849,6 +1849,23 @@ function! SetupPluginVimPrettier()
   " More Information:
   " https://stackoverflow.com/a/3879737
   cnoreabbrev P PrettierAsync
+
+endfunction
+
+" ============================================================================
+" vim-ruby
+"
+" Vim/Ruby Configuration Files.
+"
+" https://github.com/vim-ruby/vim-ruby
+" ============================================================================
+
+function! SetupPluginVimRuby()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-ruby
 
 endfunction
 
@@ -2115,9 +2132,10 @@ else
   " call SetupPluginVimJson()
   " call SetupPluginVimOrgmode()
   " call SetupPluginVimPandoc()
+  call SetupPluginVimRuby()
   call SetupPluginVimStartify()
   " call SetupPluginVimPandocSyntax()
-  call SetupPluginVimPolyglot()
+  " call SetupPluginVimPolyglot()
   call SetupPluginVimPrettier()
   call SetupPluginVimSensible()
   call SetupPluginVimSignify()
