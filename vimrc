@@ -1712,6 +1712,23 @@ function! SetupPluginVimJson()
 endfunction
 
 " ============================================================================
+" vim-jsx-pretty
+"
+" 🔦 [Vim script] JSX and TSX syntax pretty highlighting for vim.
+"
+" https://github.com/MaxMEllon/vim-jsx-pretty
+" ============================================================================
+
+function! SetupPluginVimJSXPretty()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-jsx-pretty
+
+endfunction
+
+" ============================================================================
 " vim-orgmode
 "
 " Text outlining and task management for Vim based on Emacs' Org-Mode
@@ -2148,6 +2165,7 @@ else
   " call SetupPluginGoyoVim()
   call SetupPluginVimJavaScript()
   call SetupPluginVimJson()
+  call SetupPluginVimJSXPretty()
   " call SetupPluginVimOrgmode()
   " call SetupPluginVimPandoc()
   call SetupPluginVimRuby()
