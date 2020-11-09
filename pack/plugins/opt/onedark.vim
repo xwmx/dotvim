@@ -1,0 +1,1 @@
+../../../vendor/github.com/joshdick/onedark.vim

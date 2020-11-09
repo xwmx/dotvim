@@ -59,6 +59,26 @@ endfunction
 call SetupPluginDraculaThemeVim()
 
 " ============================================================================
+" onedark.vim
+"
+" A dark Vim/Neovim color scheme inspired by Atom's One Dark syntax theme.
+"
+" https://github.com/joshdick/onedark.vim
+" ============================================================================
+
+function! SetupPluginOneDarkVim()
+
+  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd onedark.vim
+
+  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+endfunction
+call SetupPluginOneDarkVim()
+
+" ============================================================================
 " seti.vim
 "
 " The Seti colorscheme for vim.

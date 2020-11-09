@@ -215,3 +215,6 @@
 [submodule "vendor/github.com/plasticboy/vim-markdown"]
 	path = vendor/github.com/plasticboy/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown.git
+[submodule "vendor/github.com/joshdick/onedark.vim"]
+	path = vendor/github.com/joshdick/onedark.vim
+	url = https://github.com/joshdick/onedark.vim.git
