@@ -212,3 +212,6 @@
 [submodule "vendor/github.com/cakebaker/scss-syntax.vim"]
 	path = vendor/github.com/cakebaker/scss-syntax.vim
 	url = https://github.com/cakebaker/scss-syntax.vim.git
+[submodule "vendor/github.com/plasticboy/vim-markdown"]
+	path = vendor/github.com/plasticboy/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown.git

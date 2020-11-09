@@ -1763,6 +1763,24 @@ function! SetupPluginVimJSXPretty()
 endfunction
 
 " ============================================================================
+" vim-markdown
+"
+" Syntax highlighting, matching rules and mappings for the original Markdown
+" and extensions.
+"
+" https://github.com/plasticboy/vim-markdown
+" ============================================================================
+
+function! SetupPluginVimMarkdown()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-markdown
+
+endfunction
+
+" ============================================================================
 " vim-orgmode
 "
 " Text outlining and task management for Vim based on Emacs' Org-Mode
@@ -2202,13 +2220,14 @@ else
   call SetupPluginVimJavaScript()
   call SetupPluginVimJson()
   call SetupPluginVimJSXPretty()
+  call SetupPluginVimMarkdown()
   " call SetupPluginVimOrgmode()
   " call SetupPluginVimPandoc()
-  call SetupPluginVimRuby()
-  call SetupPluginVimStartify()
   " call SetupPluginVimPandocSyntax()
   " call SetupPluginVimPolyglot()
   call SetupPluginVimPrettier()
+  call SetupPluginVimRuby()
+  call SetupPluginVimStartify()
   call SetupPluginVimSensible()
   call SetupPluginVimSignify()
   " NOTE: Disable vim-sleuth to avoid slowdowns.
