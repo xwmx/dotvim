@@ -175,6 +175,26 @@ endfunction
 call SetupPluginVimMonochrome()
 
 " ============================================================================
+" onedark.vim
+"
+" Adaptation of one-light and one-dark colorschemes for Vim.
+"
+" https://github.com/rakr/vim-one
+" ============================================================================
+
+function! SetupPluginVimOne()
+
+  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-one
+
+  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+endfunction
+call SetupPluginVimOne()
+
+" ============================================================================
 " vim-snazzy
 "
 " Elegant vim theme with bright colors.

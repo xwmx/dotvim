@@ -218,3 +218,6 @@
 [submodule "vendor/github.com/joshdick/onedark.vim"]
 	path = vendor/github.com/joshdick/onedark.vim
 	url = https://github.com/joshdick/onedark.vim.git
+[submodule "vendor/github.com/rakr/vim-one"]
+	path = vendor/github.com/rakr/vim-one
+	url = https://github.com/rakr/vim-one.git
