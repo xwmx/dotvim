@@ -1399,6 +1399,23 @@ function! SetupPluginRailsVim()
 endfunction
 
 " ============================================================================
+" scss-syntax.vim
+"
+" Vim Syntax File for SCSS (Sassy CSS).
+"
+" https://github.com/cakebaker/scss-syntax.vim
+" ============================================================================
+
+function! SetupPluginScssSyntaxVim()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd scss-syntax.vim
+
+endfunction
+
+" ============================================================================
 " surround.vim
 "
 " mappings to easily delete, change and add such surroundings in pair
@@ -2171,6 +2188,7 @@ else
   " NOTE: Disable nerdtree-git-plugin due to lag / performance issues.
   " call SetupPluginNERDTreeGitPlugin()
   call SetupPluginRailsVim()
+  call SetupPluginScssSyntaxVim()
   call SetupPluginSurround()
   call SetupPluginSyntastic()
   " call SetupPluginTagbar()

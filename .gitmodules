@@ -209,3 +209,6 @@
 [submodule "vendor/github.com/othree/html5.vim"]
 	path = vendor/github.com/othree/html5.vim
 	url = https://github.com/othree/html5.vim.git
+[submodule "vendor/github.com/cakebaker/scss-syntax.vim"]
+	path = vendor/github.com/cakebaker/scss-syntax.vim
+	url = https://github.com/cakebaker/scss-syntax.vim.git
