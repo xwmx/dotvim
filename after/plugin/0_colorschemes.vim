@@ -33,7 +33,7 @@ function! SetupPluginAnderson()
   " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
 endfunction
-call SetupPluginAnderson()
+" call SetupPluginAnderson()
 
 " ============================================================================
 " dracula-theme-vim
@@ -118,7 +118,7 @@ function! SetupPluginECLMWombatVim()
   " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
 endfunction
-call SetupPluginECLMWombatVim()
+" call SetupPluginECLMWombatVim()
 
 " ============================================================================
 " vim-eclipse3remix
@@ -152,7 +152,7 @@ function! SetupPluginVimHybrid()
   " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
 endfunction
-call SetupPluginVimHybrid()
+" call SetupPluginVimHybrid()
 
 " ============================================================================
 " vim-monochrome
@@ -172,7 +172,7 @@ function! SetupPluginVimMonochrome()
   " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
 endfunction
-call SetupPluginVimMonochrome()
+" call SetupPluginVimMonochrome()
 
 " ============================================================================
 " onedark.vim
@@ -214,8 +214,6 @@ function! SetupPluginVimSnazzy()
 endfunction
 call SetupPluginVimSnazzy()
 
-
-
 " ============================================================================
 " vim-vwilight
 "
@@ -233,7 +231,7 @@ function! SetupPluginVimVwilight()
   " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
 endfunction
-call SetupPluginVimVwilight()
+" call SetupPluginVimVwilight()
 
 " ============================================================================
 " vwilight-original
@@ -249,7 +247,7 @@ function! SetupPluginVwilightOriginal()
   " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
 endfunction
-call SetupPluginVwilightOriginal()
+" call SetupPluginVwilightOriginal()
 
 " ============================================================================
 " Set Colorscheme
