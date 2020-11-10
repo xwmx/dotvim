@@ -767,13 +767,15 @@ function! SetupPluginCtrlp()
     hi CtrlParrow1    ctermfg=0   ctermbg=0   guifg=#151718 guibg=#151718
     hi CtrlParrow2    ctermfg=0   ctermbg=0   guifg=#151718 guibg=#151718
     hi CtrlParrow3    ctermfg=0   ctermbg=0   guifg=#151718 guibg=#151718
+    hi Normal         ctermfg=0   ctermbg=0   cterm=NONE guifg=#151718 guibg=#151718 gui=NONE
 
-    let g:ctrlp_match_window = 'max:0'
+    let g:ctrlp_match_window = 'max:0,results:1'
     CtrlPClearCache
     CtrlP
     exec "normal \<ESC>"
-    let g:ctrlp_match_window = 'max:10'
+    let g:ctrlp_match_window = 'max:10,results:10'
 
+    hi Normal         ctermfg=188 ctermbg=16  cterm=NONE guifg=#d4d7d6 guibg=#151718 gui=NONE
     hi CtrlPlight     ctermfg=231 ctermbg=98  guifg=#ffffff guibg=#875fd7
     hi CtrlPdark      ctermfg=189 ctermbg=55  guifg=#d7d7ff guibg=#5f00af
     hi CtrlParrow1    ctermfg=98  ctermbg=231 guifg=#875fd7 guibg=#ffffff
