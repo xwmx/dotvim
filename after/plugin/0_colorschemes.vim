@@ -278,6 +278,7 @@ if has("gui_running") && has("gui_macvim") || has("gui_vimr")
   " colorscheme base16-default
   " colorscheme dracula
   colorscheme seti
+  " colorscheme onedark
   " colorscheme vwilight
   " colorscheme Tomorrow-Night
 

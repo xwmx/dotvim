@@ -761,6 +761,14 @@ function! SetupPluginCtrlp()
     let g:ctrlp_use_caching = 0
   endif
 
+  function! CtrlPCacheRebuildOnBlur()
+    let g:ctrlp_match_window = 'max:0'
+    CtrlPClearCache
+    CtrlP
+    exec "normal \<ESC>"
+    let g:ctrlp_match_window = 'max:10'
+  endfunction
+
   " CtrlP auto cache clearing.
   "
   " More information:
@@ -769,7 +777,8 @@ function! SetupPluginCtrlp()
     if exists("g:loaded_ctrlp") && g:loaded_ctrlp
       augroup CtrlPExtension
         autocmd!
-        autocmd FocusGained  * CtrlPClearCache
+        " autocmd FocusGained  * CtrlPClearCache
+        autocmd FocusLost  * :call CtrlPCacheRebuildOnBlur()
         " autocmd BufWritePost * CtrlPClearCache
       augroup END
     endif
@@ -1555,6 +1564,25 @@ function! SetupPluginVimAirline()
 endfunction
 
 " ============================================================================
+" vim-airline-themes
+"
+" A collection of themes for vim-airline
+"
+" https://github.com/vim-airline/vim-airline-themes
+" ============================================================================
+
+function! SetupPluginVimAirlineThemes()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-airline-themes
+
+  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+endfunction
+
+" ============================================================================
 " vim-bufkill
 "
 " In Vim, trying to unload, delete or wipe a buffer without closing the window
@@ -2212,6 +2240,7 @@ else
   call SetupPluginSyntastic()
   " call SetupPluginTagbar()
   call SetupPluginVimAirline()
+  " call SetupPluginVimAirlineThemes()
   call SetupPluginVimBufkill()
   call SetupPluginVimCssColor()
   " call SetupPluginVimCtrlspace()

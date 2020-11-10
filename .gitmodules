@@ -221,3 +221,6 @@
 [submodule "vendor/github.com/rakr/vim-one"]
 	path = vendor/github.com/rakr/vim-one
 	url = https://github.com/rakr/vim-one.git
+[submodule "vendor/github.com/vim-airline/vim-airline-themes"]
+	path = vendor/github.com/vim-airline/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
