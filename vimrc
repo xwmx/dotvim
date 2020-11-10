@@ -762,11 +762,23 @@ function! SetupPluginCtrlp()
   endif
 
   function! CtrlPCacheRebuildOnBlur()
+    hi CtrlPlight     ctermfg=0   ctermbg=0   guifg=#151718 guibg=#151718
+    hi CtrlPdark      ctermfg=0   ctermbg=0   guifg=#151718 guibg=#151718
+    hi CtrlParrow1    ctermfg=0   ctermbg=0   guifg=#151718 guibg=#151718
+    hi CtrlParrow2    ctermfg=0   ctermbg=0   guifg=#151718 guibg=#151718
+    hi CtrlParrow3    ctermfg=0   ctermbg=0   guifg=#151718 guibg=#151718
+
     let g:ctrlp_match_window = 'max:0'
     CtrlPClearCache
     CtrlP
     exec "normal \<ESC>"
     let g:ctrlp_match_window = 'max:10'
+
+    hi CtrlPlight     ctermfg=231 ctermbg=98  guifg=#ffffff guibg=#875fd7
+    hi CtrlPdark      ctermfg=189 ctermbg=55  guifg=#d7d7ff guibg=#5f00af
+    hi CtrlParrow1    ctermfg=98  ctermbg=231 guifg=#875fd7 guibg=#ffffff
+    hi CtrlParrow2    ctermfg=231 ctermbg=98  guifg=#ffffff guibg=#875fd7
+    hi CtrlParrow3    ctermfg=98  ctermbg=55  guifg=#875fd7 guibg=#5f00af
   endfunction
 
   " CtrlP auto cache clearing.
