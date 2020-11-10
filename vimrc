@@ -731,9 +731,6 @@ function! SetupPluginCtrlp()
   " Include the current file in the file list.
   let g:ctrlp_match_current_file = 1
 
-  " Ignore version control directories.
-  let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-
   " Don't switch to the existing window when the file is already open.
   let g:ctrlp_switch_buffer = 0
 
@@ -773,7 +770,7 @@ function! SetupPluginCtrlp()
       augroup CtrlPExtension
         autocmd!
         autocmd FocusGained  * CtrlPClearCache
-        autocmd BufWritePost * CtrlPClearCache
+        " autocmd BufWritePost * CtrlPClearCache
       augroup END
     endif
   endfunction
