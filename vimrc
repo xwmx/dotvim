@@ -781,6 +781,8 @@ function! SetupPluginCtrlp()
 
   function! CtrlPCacheRebuildOnBlurFocus(...)
     let g:ctrlp_is_focused = 1
+
+    call timer_stopall()
   endfunction
 
   function! CtrlPCacheRebuildOnBlurUnfocus(...)
@@ -789,10 +791,11 @@ function! SetupPluginCtrlp()
     call CtrlPCacheRebuildOnBlurStartTimer()
   endfunction
 
+  " https://vimhelp.org/eval.txt.html#timer_start%28%29
   function! CtrlPCacheRebuildOnBlurStartTimer(...)
-    if ! exists("g:ctrlp_cache_timer") || empty(timer_info(g:ctrlp_cache_timer))
-      let g:ctrlp_cache_timer = timer_start(5000, function('CtrlPCacheRebuildOnBlur'))
-    endif
+    call timer_stopall()
+
+    let g:ctrlp_cache_timer = timer_start(5000, function('CtrlPCacheRebuildOnBlur'))
   endfunction
 
   function! ReturnHighlightGroup(group)
