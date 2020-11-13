@@ -752,22 +752,38 @@ function! SetupPluginCtrlp()
   " https://elliotekj.com/2016/11/22/setup-ctrlp-to-use-ripgrep-in-vim/
   if executable('rg')
     set grepprg=rg\ --color=never\ --hidden
+
     let g:ctrlp_user_command =
       \ 'rg %s --files --color=never --hidden --glob "!.git/*"'
+
     let g:ctrlp_use_caching = 1
   elseif executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor\ --hidden
-    let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
-    let g:ctrlp_use_caching = 0
+
+    let g:ctrlp_user_command =
+      \ 'ag %s -l --nocolor --hidden -g ""'
+
+    let g:ctrlp_use_caching = 1
   endif
 
+  " Ignore local glyph directory in project since it slows down cache building.
+  "
+  " TODO: remove when this directory no longer exists locally.
+  set wildignore+=*system/development/glyphs*
+
+  " CtrlPCacheRebuildOnBlur
+  "
+  " Rebuild the CtrlP cache after a delay if the window is unfocused.
+  "
+  " More information:
+  " https://github.com/kien/ctrlp.vim/issues/305#issuecomment-9802791
   let g:ctrlp_is_focused = 1
 
-  function! CtrlPFocus(...)
+  function! CtrlPCacheRebuildOnBlurFocus(...)
     let g:ctrlp_is_focused = 1
   endfunction
 
-  function! CtrlPUnfocus(...)
+  function! CtrlPCacheRebuildOnBlurUnfocus(...)
     let g:ctrlp_is_focused = 0
   endfunction
 
@@ -793,28 +809,20 @@ function! SetupPluginCtrlp()
     endif
   endfunction
 
-  " CtrlP auto cache clearing.
-  "
-  " More information:
-  " https://github.com/kien/ctrlp.vim/issues/305#issuecomment-9802791
-  function! CustomClearCtrlPCache()
+  function! CtrlPCacheRebuildOnBlurAutocommands()
     if exists("g:loaded_ctrlp") && g:loaded_ctrlp
       augroup CtrlPExtension
         autocmd!
-        autocmd FocusGained * :call CtrlPFocus()
-        autocmd FocusLost   * :call CtrlPUnfocus()
+        autocmd FocusGained * :call CtrlPCacheRebuildOnBlurFocus()
+        autocmd FocusLost   * :call CtrlPCacheRebuildOnBlurUnfocus()
         autocmd FocusLost   * call timer_start(5000, function('CtrlPCacheRebuildOnBlur'))
       augroup END
     endif
   endfunction
-  if has("autocmd")
-    autocmd VimEnter * :call CustomClearCtrlPCache()
-  endif
 
-  " Ignore local glyph directory in project since it slows down cache building.
-  "
-  " TODO: remove when this directory no longer exists locally.
-  set wildignore+=*system/development/glyphs*
+  if has("autocmd")
+    autocmd VimEnter * :call CtrlPCacheRebuildOnBlurAutocommands()
+  endif
 
 endfunction
 
