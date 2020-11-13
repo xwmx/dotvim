@@ -811,6 +811,11 @@ function! SetupPluginCtrlp()
       let CtrlParrow3_original  = CtrlPCacheRefreshGetHighlightGroup('CtrlParrow3')
 
       let normal_ctermbg        = CtrlPCacheRefreshGetHighlightTerm('Normal', 'ctermbg')
+
+      if empty(normal_ctermbg)
+        let normal_ctermbg = 0
+      endif
+
       let normal_guibg          = CtrlPCacheRefreshGetHighlightTerm('Normal', 'guibg')
 
       execute printf(
