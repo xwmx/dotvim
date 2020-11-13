@@ -777,41 +777,41 @@ function! SetupPluginCtrlp()
   "
   " More information:
   " https://github.com/kien/ctrlp.vim/issues/305#issuecomment-9802791
-  let g:ctrlp_is_focused  = 1
+  let g:ctrlp_cache_refresh_is_focused  = 1
 
-  function! CtrlPCacheRebuildOnBlurFocus(...)
-    let g:ctrlp_is_focused = 1
+  function! CtrlPCacheRefreshFocus(...)
+    let g:ctrlp_cache_refresh_is_focused = 1
 
     call timer_stopall()
   endfunction
 
-  function! CtrlPCacheRebuildOnBlurUnfocus(...)
-    let g:ctrlp_is_focused = 0
+  function! CtrlPCacheRefreshUnfocus(...)
+    let g:ctrlp_cache_refresh_is_focused = 0
 
     call timer_stopall()
 
     " https://vimhelp.org/eval.txt.html#timer_start%28%29
-    let g:ctrlp_cache_timer = timer_start(10000, function('CtrlPCacheRebuildOnBlur'))
+    let g:ctrlp_cache_refresh_timer = timer_start(10000, function('CtrlPCacheRefreshOnBlur'))
   endfunction
 
-  function! ReturnHighlightGroup(group)
+  function! CtrlPCacheRefreshGetHighlightGroup(group)
      return matchstr(execute('hi ' . a:group), '\vxxx\zs(.*)')
   endfunction
 
-  function! ReturnHighlightTerm(group, term)
+  function! CtrlPCacheRefreshGetHighlightTerm(group, term)
      return matchstr(execute('hi ' . a:group), a:term.'=\zs\S*')
   endfunction
 
-  function! CtrlPCacheRebuildOnBlur(...)
-    if ! g:ctrlp_is_focused
-      let CtrlPlight_original   = ReturnHighlightGroup('CtrlPlight')
-      let CtrlPdark_original    = ReturnHighlightGroup('CtrlPdark')
-      let CtrlParrow1_original  = ReturnHighlightGroup('CtrlParrow1')
-      let CtrlParrow2_original  = ReturnHighlightGroup('CtrlParrow2')
-      let CtrlParrow3_original  = ReturnHighlightGroup('CtrlParrow3')
+  function! CtrlPCacheRefreshOnBlur(...)
+    if ! g:ctrlp_cache_refresh_is_focused
+      let CtrlPlight_original   = CtrlPCacheRefreshGetHighlightGroup('CtrlPlight')
+      let CtrlPdark_original    = CtrlPCacheRefreshGetHighlightGroup('CtrlPdark')
+      let CtrlParrow1_original  = CtrlPCacheRefreshGetHighlightGroup('CtrlParrow1')
+      let CtrlParrow2_original  = CtrlPCacheRefreshGetHighlightGroup('CtrlParrow2')
+      let CtrlParrow3_original  = CtrlPCacheRefreshGetHighlightGroup('CtrlParrow3')
 
-      let normal_ctermbg        = ReturnHighlightTerm('Normal', 'ctermbg')
-      let normal_guibg          = ReturnHighlightTerm('Normal', 'guibg')
+      let normal_ctermbg        = CtrlPCacheRefreshGetHighlightTerm('Normal', 'ctermbg')
+      let normal_guibg          = CtrlPCacheRefreshGetHighlightTerm('Normal', 'guibg')
 
       execute printf(
         \ 'highlight CtrlPlight ctermfg=%s ctermbg=%s guifg=%s guibg=%s',
@@ -845,23 +845,21 @@ function! SetupPluginCtrlp()
       execute printf('highlight CtrlParrow1 %s', CtrlParrow1_original)
       execute printf('highlight CtrlParrow2 %s', CtrlParrow2_original)
       execute printf('highlight CtrlParrow3 %s', CtrlParrow3_original)
-
-      let g:ctrlp_cache_timer = 0
     endif
   endfunction
 
-  function! CtrlPCacheRebuildOnBlurAutocommands()
+  function! CtrlPCacheRefreshAutocommands()
     if exists("g:loaded_ctrlp") && g:loaded_ctrlp
       augroup CtrlPExtension
         autocmd!
-        autocmd FocusGained * call CtrlPCacheRebuildOnBlurFocus()
-        autocmd FocusLost   * call CtrlPCacheRebuildOnBlurUnfocus()
+        autocmd FocusGained * call CtrlPCacheRefreshFocus()
+        autocmd FocusLost   * call CtrlPCacheRefreshUnfocus()
       augroup END
     endif
   endfunction
 
   if has("autocmd")
-    autocmd VimEnter * call CtrlPCacheRebuildOnBlurAutocommands()
+    autocmd VimEnter * call CtrlPCacheRefreshAutocommands()
   endif
 
 endfunction
