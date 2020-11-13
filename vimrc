@@ -777,7 +777,8 @@ function! SetupPluginCtrlp()
   "
   " More information:
   " https://github.com/kien/ctrlp.vim/issues/305#issuecomment-9802791
-  let g:ctrlp_is_focused = 1
+  let g:ctrlp_is_focused  = 1
+  let g:ctrlp_cache_timer = 0
 
   function! CtrlPCacheRebuildOnBlurFocus(...)
     let g:ctrlp_is_focused = 1
@@ -785,6 +786,16 @@ function! SetupPluginCtrlp()
 
   function! CtrlPCacheRebuildOnBlurUnfocus(...)
     let g:ctrlp_is_focused = 0
+
+    call CtrlPCacheRebuildOnBlurStartTimer()
+  endfunction
+
+  function! CtrlPCacheRebuildOnBlurStartTimer(...)
+    if ! g:ctrlp_cache_timer
+      let g:ctrlp_cache_timer = 1
+
+      call timer_start(5000, function('CtrlPCacheRebuildOnBlur'))
+    endif
   endfunction
 
   function! ReturnHighlightGroup(group)
@@ -850,6 +861,8 @@ function! SetupPluginCtrlp()
       execute printf('highlight CtrlParrow1 %s', CtrlParrow1_original)
       execute printf('highlight CtrlParrow2 %s', CtrlParrow2_original)
       execute printf('highlight CtrlParrow3 %s', CtrlParrow3_original)
+
+      let g:ctrlp_cache_timer = 0
     endif
   endfunction
 
@@ -857,15 +870,15 @@ function! SetupPluginCtrlp()
     if exists("g:loaded_ctrlp") && g:loaded_ctrlp
       augroup CtrlPExtension
         autocmd!
-        autocmd FocusGained * :call CtrlPCacheRebuildOnBlurFocus()
-        autocmd FocusLost   * :call CtrlPCacheRebuildOnBlurUnfocus()
-        autocmd FocusLost   * call timer_start(5000, function('CtrlPCacheRebuildOnBlur'))
+        autocmd FocusGained * call CtrlPCacheRebuildOnBlurFocus()
+        autocmd FocusLost   * call CtrlPCacheRebuildOnBlurUnfocus()
+        " autocmd FocusLost   * call timer_start(5000, function('CtrlPCacheRebuildOnBlur'))
       augroup END
     endif
   endfunction
 
   if has("autocmd")
-    autocmd VimEnter * :call CtrlPCacheRebuildOnBlurAutocommands()
+    autocmd VimEnter * call CtrlPCacheRebuildOnBlurAutocommands()
   endif
 
 endfunction
