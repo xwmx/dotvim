@@ -795,7 +795,7 @@ function! SetupPluginCtrlp()
   function! CtrlPCacheRebuildOnBlurStartTimer(...)
     call timer_stopall()
 
-    let g:ctrlp_cache_timer = timer_start(5000, function('CtrlPCacheRebuildOnBlur'))
+    let g:ctrlp_cache_timer = timer_start(10000, function('CtrlPCacheRebuildOnBlur'))
   endfunction
 
   function! ReturnHighlightGroup(group)
