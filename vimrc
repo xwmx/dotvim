@@ -778,7 +778,6 @@ function! SetupPluginCtrlp()
   " More information:
   " https://github.com/kien/ctrlp.vim/issues/305#issuecomment-9802791
   let g:ctrlp_is_focused  = 1
-  let g:ctrlp_cache_timer = 0
 
   function! CtrlPCacheRebuildOnBlurFocus(...)
     let g:ctrlp_is_focused = 1
@@ -791,10 +790,8 @@ function! SetupPluginCtrlp()
   endfunction
 
   function! CtrlPCacheRebuildOnBlurStartTimer(...)
-    if ! g:ctrlp_cache_timer
-      let g:ctrlp_cache_timer = 1
-
-      call timer_start(5000, function('CtrlPCacheRebuildOnBlur'))
+    if ! exists("g:ctrlp_cache_timer") || empty(timer_info(g:ctrlp_cache_timer))
+      let g:ctrlp_cache_timer = timer_start(5000, function('CtrlPCacheRebuildOnBlur'))
     endif
   endfunction
 
