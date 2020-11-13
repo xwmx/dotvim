@@ -761,24 +761,36 @@ function! SetupPluginCtrlp()
     let g:ctrlp_use_caching = 0
   endif
 
-  function! CtrlPCacheRebuildOnBlur()
-    hi CtrlPlight     ctermfg=0   ctermbg=0   guifg=#151718 guibg=#151718
-    hi CtrlPdark      ctermfg=0   ctermbg=0   guifg=#151718 guibg=#151718
-    hi CtrlParrow1    ctermfg=0   ctermbg=0   guifg=#151718 guibg=#151718
-    hi CtrlParrow2    ctermfg=0   ctermbg=0   guifg=#151718 guibg=#151718
-    hi CtrlParrow3    ctermfg=0   ctermbg=0   guifg=#151718 guibg=#151718
+  let g:ctrlp_is_focused = 1
 
-    let g:ctrlp_match_window = 'max:0,results:1'
-    CtrlPClearCache
-    CtrlP
-    exec "normal \<ESC>"
-    let g:ctrlp_match_window = 'max:10,results:10'
+  function! CtrlPFocus(...)
+    let g:ctrlp_is_focused = 1
+  endfunction
 
-    hi CtrlPlight     ctermfg=231 ctermbg=98  guifg=#ffffff guibg=#875fd7
-    hi CtrlPdark      ctermfg=189 ctermbg=55  guifg=#d7d7ff guibg=#5f00af
-    hi CtrlParrow1    ctermfg=98  ctermbg=231 guifg=#875fd7 guibg=#ffffff
-    hi CtrlParrow2    ctermfg=231 ctermbg=98  guifg=#ffffff guibg=#875fd7
-    hi CtrlParrow3    ctermfg=98  ctermbg=55  guifg=#875fd7 guibg=#5f00af
+  function! CtrlPUnfocus(...)
+    let g:ctrlp_is_focused = 0
+  endfunction
+
+  function! CtrlPCacheRebuildOnBlur(...)
+    if ! g:ctrlp_is_focused
+      hi CtrlPlight     ctermfg=0   ctermbg=0   guifg=#151718 guibg=#151718
+      hi CtrlPdark      ctermfg=0   ctermbg=0   guifg=#151718 guibg=#151718
+      hi CtrlParrow1    ctermfg=0   ctermbg=0   guifg=#151718 guibg=#151718
+      hi CtrlParrow2    ctermfg=0   ctermbg=0   guifg=#151718 guibg=#151718
+      hi CtrlParrow3    ctermfg=0   ctermbg=0   guifg=#151718 guibg=#151718
+
+      let g:ctrlp_match_window = 'max:0,results:1'
+      CtrlPClearCache
+      CtrlP
+      exec "normal \<ESC>"
+      let g:ctrlp_match_window = 'max:10,results:10'
+
+      hi CtrlPlight     ctermfg=231 ctermbg=98  guifg=#ffffff guibg=#875fd7
+      hi CtrlPdark      ctermfg=189 ctermbg=55  guifg=#d7d7ff guibg=#5f00af
+      hi CtrlParrow1    ctermfg=98  ctermbg=231 guifg=#875fd7 guibg=#ffffff
+      hi CtrlParrow2    ctermfg=231 ctermbg=98  guifg=#ffffff guibg=#875fd7
+      hi CtrlParrow3    ctermfg=98  ctermbg=55  guifg=#875fd7 guibg=#5f00af
+    endif
   endfunction
 
   " CtrlP auto cache clearing.
@@ -789,9 +801,9 @@ function! SetupPluginCtrlp()
     if exists("g:loaded_ctrlp") && g:loaded_ctrlp
       augroup CtrlPExtension
         autocmd!
-        " autocmd FocusGained  * CtrlPClearCache
-        autocmd FocusLost  * :call CtrlPCacheRebuildOnBlur()
-        " autocmd BufWritePost * CtrlPClearCache
+        autocmd FocusGained * :call CtrlPFocus()
+        autocmd FocusLost   * :call CtrlPUnfocus()
+        autocmd FocusLost   * call timer_start(5000, function('CtrlPCacheRebuildOnBlur'))
       augroup END
     endif
   endfunction
