@@ -788,13 +788,9 @@ function! SetupPluginCtrlp()
   function! CtrlPCacheRebuildOnBlurUnfocus(...)
     let g:ctrlp_is_focused = 0
 
-    call CtrlPCacheRebuildOnBlurStartTimer()
-  endfunction
-
-  " https://vimhelp.org/eval.txt.html#timer_start%28%29
-  function! CtrlPCacheRebuildOnBlurStartTimer(...)
     call timer_stopall()
 
+    " https://vimhelp.org/eval.txt.html#timer_start%28%29
     let g:ctrlp_cache_timer = timer_start(10000, function('CtrlPCacheRebuildOnBlur'))
   endfunction
 
