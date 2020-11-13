@@ -787,13 +787,51 @@ function! SetupPluginCtrlp()
     let g:ctrlp_is_focused = 0
   endfunction
 
+  function! ReturnHighlightGroup(group)
+     return matchstr(execute('hi ' . a:group), '\vxxx\zs(.*)')
+  endfunction
+
+  function! ReturnHighlightTerm(group, term)
+     return matchstr(execute('hi ' . a:group), a:term.'=\zs\S*')
+  endfunction
+
   function! CtrlPCacheRebuildOnBlur(...)
     if ! g:ctrlp_is_focused
-      hi CtrlPlight     ctermfg=0   ctermbg=0   guifg=#151718 guibg=#151718
-      hi CtrlPdark      ctermfg=0   ctermbg=0   guifg=#151718 guibg=#151718
-      hi CtrlParrow1    ctermfg=0   ctermbg=0   guifg=#151718 guibg=#151718
-      hi CtrlParrow2    ctermfg=0   ctermbg=0   guifg=#151718 guibg=#151718
-      hi CtrlParrow3    ctermfg=0   ctermbg=0   guifg=#151718 guibg=#151718
+      let CtrlPlight_original   = ReturnHighlightGroup('CtrlPlight')
+      let CtrlPdark_original    = ReturnHighlightGroup('CtrlPdark')
+      let CtrlParrow1_original  = ReturnHighlightGroup('CtrlParrow1')
+      let CtrlParrow2_original  = ReturnHighlightGroup('CtrlParrow2')
+      let CtrlParrow3_original  = ReturnHighlightGroup('CtrlParrow3')
+
+      let normal_ctermbg        = ReturnHighlightTerm('Normal', 'ctermbg')
+      let normal_guibg          = ReturnHighlightTerm('Normal', 'guibg')
+
+      execute printf(
+        \ 'highlight CtrlPlight ctermfg=%s ctermbg=%s guifg=%s guibg=%s',
+        \ normal_ctermbg, normal_ctermbg, normal_guibg, normal_guibg
+        \ )
+      execute printf(
+        \ 'highlight CtrlPdark ctermfg=%s ctermbg=%s guifg=%s guibg=%s',
+        \ normal_ctermbg, normal_ctermbg, normal_guibg, normal_guibg
+        \ )
+      execute printf(
+        \ 'highlight CtrlParrow1 ctermfg=%s ctermbg=%s guifg=%s guibg=%s',
+        \ normal_ctermbg, normal_ctermbg, normal_guibg, normal_guibg
+        \ )
+      execute printf(
+        \ 'highlight CtrlParrow2 ctermfg=%s ctermbg=%s guifg=%s guibg=%s',
+        \ normal_ctermbg, normal_ctermbg, normal_guibg, normal_guibg
+        \ )
+      execute printf(
+        \ 'highlight CtrlParrow3 ctermfg=%s ctermbg=%s guifg=%s guibg=%s',
+        \ normal_ctermbg, normal_ctermbg, normal_guibg, normal_guibg
+        \ )
+
+      " hi CtrlPlight     ctermfg=0   ctermbg=0   guifg=#151718 guibg=#151718
+      " hi CtrlPdark      ctermfg=0   ctermbg=0   guifg=#151718 guibg=#151718
+      " hi CtrlParrow1    ctermfg=0   ctermbg=0   guifg=#151718 guibg=#151718
+      " hi CtrlParrow2    ctermfg=0   ctermbg=0   guifg=#151718 guibg=#151718
+      " hi CtrlParrow3    ctermfg=0   ctermbg=0   guifg=#151718 guibg=#151718
 
       let g:ctrlp_match_window = 'max:0,results:1'
       CtrlPClearCache
@@ -801,11 +839,17 @@ function! SetupPluginCtrlp()
       exec "normal \<ESC>"
       let g:ctrlp_match_window = 'max:10,results:10'
 
-      hi CtrlPlight     ctermfg=231 ctermbg=98  guifg=#ffffff guibg=#875fd7
-      hi CtrlPdark      ctermfg=189 ctermbg=55  guifg=#d7d7ff guibg=#5f00af
-      hi CtrlParrow1    ctermfg=98  ctermbg=231 guifg=#875fd7 guibg=#ffffff
-      hi CtrlParrow2    ctermfg=231 ctermbg=98  guifg=#ffffff guibg=#875fd7
-      hi CtrlParrow3    ctermfg=98  ctermbg=55  guifg=#875fd7 guibg=#5f00af
+      " hi CtrlPlight     ctermfg=231 ctermbg=98  guifg=#ffffff guibg=#875fd7
+      " hi CtrlPdark      ctermfg=189 ctermbg=55  guifg=#d7d7ff guibg=#5f00af
+      " hi CtrlParrow1    ctermfg=98  ctermbg=231 guifg=#875fd7 guibg=#ffffff
+      " hi CtrlParrow2    ctermfg=231 ctermbg=98  guifg=#ffffff guibg=#875fd7
+      " hi CtrlParrow3    ctermfg=98  ctermbg=55  guifg=#875fd7 guibg=#5f00af
+
+      execute printf('highlight CtrlPlight  %s', CtrlPlight_original)
+      execute printf('highlight CtrlPdark   %s', CtrlPdark_original)
+      execute printf('highlight CtrlParrow1 %s', CtrlParrow1_original)
+      execute printf('highlight CtrlParrow2 %s', CtrlParrow2_original)
+      execute printf('highlight CtrlParrow3 %s', CtrlParrow3_original)
     endif
   endfunction
 
