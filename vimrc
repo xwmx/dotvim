@@ -771,13 +771,35 @@ function! SetupPluginCtrlp()
   " TODO: remove when this directory no longer exists locally.
   set wildignore+=*system/development/glyphs*
 
-  " CtrlPCacheRebuildOnBlur
+  " CtrlPCacheRefresh
   "
-  " Rebuild the CtrlP cache after a delay if the window is unfocused.
+  " Rebuild the CtrlP cache after a delay when the window is unfocused.
+  " CtrlP briefly pops open during indexing. The status bar colors are set
+  " to the Normal highlight group background colors in order to minimize
+  " flashing when this happens.
   "
-  " More information:
+  " Configure delay:
+  "
+  "   let g:ctrlp_cache_refresh_timer = 10000
+  "
+  " TODO: Find or implement a way to refresh the cache without opening CtrlP.
+  " The CtrlP ctrlp#files() function is where the indexing appears to occur:
+  "
+  " https://github.com/ctrlpvim/ctrlp.vim/blob/master/autoload/ctrlp.vim#L381
+  "
+  " ctrlp#files() appears to rely on initialization that happens during
+  " s:Open():
+  "
+  " https://github.com/ctrlpvim/ctrlp.vim/blob/master/autoload/ctrlp.vim#L309
+  "
+  " Resources:
   " https://github.com/kien/ctrlp.vim/issues/305#issuecomment-9802791
+  " https://vimhelp.org/eval.txt.html#timer_start%28%29
   let g:ctrlp_cache_refresh_is_focused  = 1
+
+  if ! exists('g:ctrlp_cache_refresh_timer')
+    let g:ctrlp_cache_refresh_timer = 10000
+  endif
 
   function! CtrlPCacheRefreshFocus(...)
     let g:ctrlp_cache_refresh_is_focused = 1
@@ -790,8 +812,7 @@ function! SetupPluginCtrlp()
 
     call timer_stopall()
 
-    " https://vimhelp.org/eval.txt.html#timer_start%28%29
-    let g:ctrlp_cache_refresh_timer = timer_start(10000, function('CtrlPCacheRefreshOnBlur'))
+    call timer_start(g:ctrlp_cache_refresh_timer, function('CtrlPCacheRefreshOnBlur'))
   endfunction
 
   function! CtrlPCacheRefreshGetHighlightGroup(group)
@@ -811,12 +832,9 @@ function! SetupPluginCtrlp()
       let CtrlParrow3_original  = CtrlPCacheRefreshGetHighlightGroup('CtrlParrow3')
 
       let normal_ctermbg        = CtrlPCacheRefreshGetHighlightTerm('Normal', 'ctermbg')
-
-      if empty(normal_ctermbg)
-        let normal_ctermbg = 0
-      endif
-
       let normal_guibg          = CtrlPCacheRefreshGetHighlightTerm('Normal', 'guibg')
+
+      if empty(normal_ctermbg) | let normal_ctermbg = 0 | endif
 
       execute printf(
         \ 'highlight CtrlPlight ctermfg=%s ctermbg=%s guifg=%s guibg=%s',
