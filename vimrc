@@ -798,7 +798,7 @@ function! SetupPluginCtrlp()
   let g:ctrlp_cache_refresh_is_focused  = 1
 
   if ! exists('g:ctrlp_cache_refresh_timer')
-    let g:ctrlp_cache_refresh_timer = 10000
+    let g:ctrlp_cache_refresh_timer = 30000
   endif
 
   function! CtrlPCacheRefreshFocus(...)
