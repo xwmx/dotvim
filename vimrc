@@ -591,11 +591,26 @@ function! SetupPluginAle()
     let g:ale_set_highlights = 0
   endif
 
-  " Use ESLint for JavaScript
+  " Configure Linters
+  "
+  " golang: revive
+  "
+  " https://revive.run/docs
+  " https://github.com/mgechev/revive
+  "
+  " More information:
+  " https://github.com/golang/go/issues/38968
+  " https://github.com/golang/lint/issues/263
+  " https://github.com/golangci/golangci-lint/issues/238
+  "
+  " javascript: ESLint
   "
   " https://eslint.org/
   " https://github.com/eslint/eslint/
-  let g:ale_linters = {'javascript': ['eslint']}
+  let g:ale_linters = {
+  \ 'go': ['revive'],
+  \ 'javascript': ['eslint']
+  \}
 
   " Display additional linter information.
   "
@@ -1772,6 +1787,14 @@ function! SetupPluginVimGo()
 
   " Native Vim init:
   packadd vim-go
+
+  " Use Revive via ALE instead of golint.
+  "
+  " More information:
+  " https://github.com/golang/go/issues/38968
+  " https://github.com/golang/lint/issues/263
+  " https://github.com/mgechev/revive
+  let g:go_metalinter_enabled = ['errcheck', 'vet']
 
 endfunction
 
