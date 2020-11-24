@@ -128,8 +128,18 @@ set listchars+=space:·
 
 " Disable the 'u' undo key in favor of macOS-standard <D-z>.
 if has("gui_macvim")
-   nmap  u <Nop>
+   nmap u <Nop>
 endif
+
+" ============================================================================
+" Disable 'cmd-w' (close window) mapping
+" ============================================================================
+
+" Disable the 'cmd-w' (close window) and only use :q
+" if has("gui_macvim")
+"   # https://stackoverflow.com/a/8103117
+"   macm File.Close key=<nop>
+" endif
 
 " ============================================================================
 " MacVim macmenu
