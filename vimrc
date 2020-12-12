@@ -1128,7 +1128,7 @@ function! SetupPluginImageVim()
 
   " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
-  if has("gui_macvim") && has("python")
+  if has("gui_macvim") && has("py3")
     " Native Vim init:
     packadd image.vim
   endif
