@@ -123,12 +123,13 @@ set listchars+=tab:»\  " trailing space is intended.
 set listchars+=space:·
 
 " ============================================================================
-" Disable 'u' (undo) key
+" Turn off 'u' (undo) and 'q' (recording) key mappings
 " ============================================================================
 
-" Disable the 'u' undo key in favor of macOS-standard <D-z>.
 if has("gui_macvim")
-   nmap u <Nop>
+  nmap q <Nop>
+  " Turn off the 'u' (undo) key mapping in favor of macOS-standard <D-z>.
+  nmap u <Nop>
 endif
 
 " ============================================================================
