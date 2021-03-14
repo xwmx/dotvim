@@ -28,10 +28,10 @@
 "
 " https://www.vim.org/
 "
-" -----------------------
-" TODO: Perfomance Issues
+" ----------
+" Perfomance
 "
-" Startup can slow, depending on the settings. To log startup timing:
+" To log startup timing:
 "
 " vim --startuptime vim-startup.log test.md
 "
