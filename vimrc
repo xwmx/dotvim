@@ -1709,6 +1709,23 @@ function! SetupPluginVimBufkill()
 endfunction
 
 " ============================================================================
+" vim-coffee-script
+"
+" CoffeeScript support for vim.
+"
+" https://github.com/kchmck/vim-coffee-script
+" ============================================================================
+
+function! SetupPluginVimCoffeeScript()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-coffee-script
+
+endfunction
+
+" ============================================================================
 " vim-css-color
 "
 " A very fast, multi-syntax context-sensitive color name highlighter.
@@ -2358,6 +2375,7 @@ else
   call SetupPluginVimAirline()
   " call SetupPluginVimAirlineThemes()
   call SetupPluginVimBufkill()
+  call SetupPluginVimCoffeeScript()
   call SetupPluginVimCssColor()
   " call SetupPluginVimCtrlspace()
   call SetupPluginVimGitgutter()

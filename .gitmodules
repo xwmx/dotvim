@@ -224,3 +224,6 @@
 [submodule "vendor/github.com/vim-airline/vim-airline-themes"]
 	path = vendor/github.com/vim-airline/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "vendor/github.com/kchmck/vim-coffee-script"]
+	path = vendor/github.com/kchmck/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
