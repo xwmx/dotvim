@@ -564,6 +564,14 @@ endfunction
 
 function! SetupPluginAle()
 
+  " Before: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Only lint on save. More info:
+  " https://github.com/dense-analysis/ale/issues/38#issuecomment-251504769
+  let g:ale_lint_on_text_changed  = 0
+  let g:ale_lint_on_enter         = 0
+  let g:ale_lint_on_save          = 1
+
   " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Native Vim init:
@@ -616,12 +624,6 @@ function! SetupPluginAle()
   "
   " https://github.com/w0rp/ale/blob/master/doc/ale.txt#L1085
   let g:ale_echo_msg_format = '[%linter%] %s (%severity%)%(code)%'
-
-  " Only lint on save. More info:
-  " https://github.com/dense-analysis/ale/issues/38#issuecomment-251504769
-  let g:ale_lint_on_text_changed = 0
-  let g:ale_lint_on_enter = 0
-  let g:ale_lint_on_save = 1
 
 endfunction
 
