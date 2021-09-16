@@ -583,16 +583,16 @@ function! SetupPluginAle()
 
   " Do not lint or fix minified files.
   let g:ale_pattern_options = {
-  \ '\.min\.js$': {'ale_linters': [], 'ale_fixers': []},
-  \ '\.min\.css$': {'ale_linters': [], 'ale_fixers': []},
+  \ '\.min\.js$':   {'ale_linters': [], 'ale_fixers': []},
+  \ '\.min\.css$':  {'ale_linters': [], 'ale_fixers': []},
   \}
 
   " Use more subtle symbols.
   "
   " NOTE: Color overrides can be found in the 'colorschemes' section of
   " after/plugin/dotvim.vim
-  let g:ale_sign_warning = '›'
-  let g:ale_sign_error = '›'
+  let g:ale_sign_warning  = '›'
+  let g:ale_sign_error    = '›'
 
   " Only use highlights in MacVim.
   if ! has("gui_macvim")
@@ -616,7 +616,7 @@ function! SetupPluginAle()
   " https://eslint.org/
   " https://github.com/eslint/eslint/
   let g:ale_linters = {
-  \ 'go': ['revive'],
+  \ 'go':         ['revive'],
   \ 'javascript': ['eslint']
   \}
 
