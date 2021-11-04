@@ -42,6 +42,6 @@ else
   " `:bn` / `:bp`. More info: https://www.reddit.com/r/vim/comments/8njgul
   autocmd TerminalOpen * if bufwinnr('') > 0 | setlocal nobuflisted | endif
 
-  " Reduce scrollback.
-  set termwinscroll=1000
+  " Set scrollback.
+  set termwinscroll=5000
 endif
