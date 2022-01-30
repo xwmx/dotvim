@@ -134,6 +134,11 @@ map <C-Tab> :BD<cr>
 map <C-[><C-[> :bprevious<cr>
 map <C-]><C-]> :bnext<cr>
 
+" command-[ and command-] for buffer cycling
+
+map <D-[> :bprevious<cr>
+map <D-]> :bnext<cr>
+
 " alt / option key buffer management mappings.
 "
 " Specify alt / option key combinations by setting to the character generated

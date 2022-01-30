@@ -313,16 +313,23 @@ if exists("custom_macvim_hig_movement")
   no   <D-Left>       <Home>
   no!  <D-Left>       <Home>
 
-  " ##################
+  " #################
   " Option-Left Arrow
-  " ##################
+  " #################
 
   no   <M-Left>       <C-Left>
   no!  <M-Left>       <C-Left>
 
   " ##################
-  " Command-Right Arrow
+  " Control-Left Arrow
   " ##################
+
+  no   <C-Left>       <C-Left>
+  no!  <C-Left>       <C-Left>
+
+  " ###################
+  " Command-Right Arrow
+  " ###################
 
   no   <D-Right>      <End>
   no!  <D-Right>      <End>
@@ -340,19 +347,36 @@ if exists("custom_macvim_hig_movement")
   no!  <M-Right>      e
   ino  <M-Right>      <C-O>e<Right>
 
-  " ##################
+  " ###################
+  " Control-Right Arrow
+  " ###################
+
+  " These mappings:
+  "   Move to end of current word.
+  no   <C-Right>      e
+  no!  <C-Right>      e
+  ino  <C-Right>      <C-O>e<Right>
+
+  " ################
   " Command-Up Arrow
-  " ##################
+  " ################
 
   no   <D-Up>         <C-Home>
   ino  <D-Up>         <C-Home>
 
-  " ##################
+  " ###############
   " Option-Up Arrow
-  " ##################
+  " ###############
 
   no   <M-Up>         {
   ino  <M-Up>         <C-o>{
+
+  " ################
+  " Control-Up Arrow
+  " ################
+
+  no   <C-Up>         {
+  ino  <C-Up>         <C-o>{
 
   " ##################
   " Command-Down Arrow
@@ -361,12 +385,19 @@ if exists("custom_macvim_hig_movement")
   no   <D-Down>       <C-End>
   ino  <D-Down>       <C-End>
 
-  " ##################
+  " #################
   " Option-Down Arrow
-  " ##################
+  " #################
 
   no   <M-Down>       }
   ino  <M-Down>       <C-o>}
+
+  " ##################
+  " Control-Down Arrow
+  " ##################
+
+  no   <C-Down>       }
+  ino  <C-Down>       <C-o>}
 
   " ##########################################################################
   " Backspace / Delete Mappings
@@ -438,9 +469,9 @@ if exists("custom_macvim_hig_movement")
   "   Cursor is not at end of line: select character after cursor.
   ino  <S-D-Left>     <ESC>v0
 
-  " #########################
-  " Option-Shift-Left Arrow
-  " #########################
+  " ###################################################
+  " Option-Shift-Left Arrow / Control-Shift-Right Arrow
+  " ###################################################
 
   " OnlyWhiteSpaceBeforeCursor()
   "
@@ -455,7 +486,7 @@ if exists("custom_macvim_hig_movement")
       \ )
   endfunction
 
-  " OptionShiftLeftArrowMovement()
+  " ShiftLeftArrowMovement()
   "
   " Description:
   "   Move the cursor back.
@@ -466,7 +497,7 @@ if exists("custom_macvim_hig_movement")
   "   'o'   When there is only whitespace before the cursor, move the cursor to
   "         the beginning of the current line.
   "   'b'   Move the cursor to the beginning of the preceeding word.
-  function! OptionShiftLeftArrowMovement()
+  function! ShiftLeftArrowMovement()
     if col('.') == 1
       return 'b$'
     elseif OnlyWhiteSpaceBeforeCursor()
@@ -476,49 +507,81 @@ if exists("custom_macvim_hig_movement")
     endif
   endfunction
 
+  " Option-Shift-Left Arrow
+
   " These mappings:
   "   Enter visual mode and move the cursor left.
-  nn   <expr> <S-M-Left> 'v'      . OptionShiftLeftArrowMovement()
-  vn   <expr> <S-M-Left>            OptionShiftLeftArrowMovement()
+  nn   <expr> <S-M-Left> 'v'      . ShiftLeftArrowMovement()
+  vn   <expr> <S-M-Left>            ShiftLeftArrowMovement()
   " NOTE: Use `<ESC>` for more natural selection behavior.
   " - `<ESC>`:
   "   Always select the character before the cursor.
   " - `<C-O>` (ctrl-O):
   "   Cursor is at end of line: select character before cursor.
   "   Cursor is not at end of line: select character after cursor.
-  ino  <expr> <S-M-Left> '<ESC>v' . OptionShiftLeftArrowMovement()
+  ino  <expr> <S-M-Left> '<ESC>v' . ShiftLeftArrowMovement()
 
-  " #########################
+  " Control-Shift-Right Arrow
+
+  " These mappings:
+  "   Enter visual mode and move the cursor left.
+  nn   <expr> <S-C-Left> 'v'      . ShiftLeftArrowMovement()
+  vn   <expr> <S-C-Left>            ShiftLeftArrowMovement()
+  " NOTE: Use `<ESC>` for more natural selection behavior.
+  " - `<ESC>`:
+  "   Always select the character before the cursor.
+  " - `<C-O>` (ctrl-O):
+  "   Cursor is at end of line: select character before cursor.
+  "   Cursor is not at end of line: select character after cursor.
+  ino  <expr> <S-C-Left> '<ESC>v' . ShiftLeftArrowMovement()
+
+  " ######################
   " Command-Shift-Up Arrow
-  " #########################
+  " ######################
 
   nn   <S-D-Up>       vgg
   vn   <S-D-Up>       gg
   ino  <S-D-Up>       <C-O>vgg
 
-  " #########################
+  " #####################
   " Option-Shift-Up Arrow
-  " #########################
+  " #####################
 
   no   <S-M-Up>         v{
   vm   <S-M-Up>         {
   ino  <S-M-Up>         <ESC>v{
 
-  " #########################
+  " ######################
+  " Control-Shift-Up Arrow
+  " ######################
+
+  no   <S-C-Up>         v{
+  vm   <S-C-Up>         {
+  ino  <S-C-Up>         <ESC>v{
+
+  " ########################
   " Command-Shift-Down Arrow
-  " #########################
+  " ########################
 
   nn   <S-D-Down>     vG
   vn   <S-D-Down>     G
   ino  <S-D-Down>     <C-O>vG
 
-  " #########################
-  " Options-Shift-Down Arrow
-  " #########################
+  " #######################
+  " Option-Shift-Down Arrow
+  " #######################
 
   no   <S-M-Down>       v}
   vn   <S-M-Down>       }
   ino  <S-M-Down>       <ESC>v}
+
+  " ########################
+  " Control-Shift-Down Arrow
+  " ########################
+
+  no   <S-C-Down>       v}
+  vn   <S-C-Down>       }
+  ino  <S-C-Down>       <ESC>v}
 
   " #########################
   " Command-Shift-Right Arrow
@@ -533,9 +596,9 @@ if exists("custom_macvim_hig_movement")
   vn   <S-D-Right>    g_
   ino  <S-D-Right>    <C-O>vg_
 
-  " ########################
-  " Option-Shift-Right Arrow
-  " ########################
+  " ####################################################
+  " Option-Shift-Right Arrow / Control-Shift-Right Arrow
+  " ####################################################
 
   " OnlyWhiteSpaceAfterCursor()
   "
@@ -553,7 +616,7 @@ if exists("custom_macvim_hig_movement")
       \ )) && l:column <= l:line_length
   endfunction
 
-  " OptionShiftRightArrowMovement()
+  " ShiftRightArrowMovement()
   "
   " Description:
   "   Move the cursor forward.
@@ -562,7 +625,7 @@ if exists("custom_macvim_hig_movement")
   "   '$'   When there is only whitespace after the cursor, move the cursor to
   "         the end of the line.
   "   'e'   Move the cursor to the end of the next word.
-  function! OptionShiftRightArrowMovement()
+  function! ShiftRightArrowMovement()
     if OnlyWhiteSpaceAfterCursor()
       return '$'
     else
@@ -575,8 +638,17 @@ if exists("custom_macvim_hig_movement")
   "
   " Overrides MacVim Default mappings:
   "   Enter select mode and select to beginning of next word.
-  nn   <expr> <S-M-Right> 'v'       . OptionShiftRightArrowMovement()
-  vn   <expr> <S-M-Right>             OptionShiftRightArrowMovement()
-  ino  <expr> <S-M-Right> '<C-O>v'  . OptionShiftRightArrowMovement()
+
+  " Option-Shift-Right Arrow
+
+  nn   <expr> <S-M-Right> 'v'       . ShiftRightArrowMovement()
+  vn   <expr> <S-M-Right>             ShiftRightArrowMovement()
+  ino  <expr> <S-M-Right> '<C-O>v'  . ShiftRightArrowMovement()
+
+  " Control-Shift-Right Arrow
+
+  nn   <expr> <S-C-Right> 'v'       . ShiftRightArrowMovement()
+  vn   <expr> <S-C-Right>             ShiftRightArrowMovement()
+  ino  <expr> <S-C-Right> '<C-O>v'  . ShiftRightArrowMovement()
 
 endif " exists("custom_macvim_hig_movement")
