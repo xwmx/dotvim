@@ -227,6 +227,6 @@
 [submodule "vendor/github.com/kchmck/vim-coffee-script"]
 	path = vendor/github.com/kchmck/vim-coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
-[submodule "pack/plugins/opt/vim-fish-syntax"]
-	path = pack/plugins/opt/vim-fish-syntax
+[submodule "vendor/github.com/khaveesh/vim-fish-syntax"]
+	path = vendor/github.com/khaveesh/vim-fish-syntax
 	url = https://github.com/khaveesh/vim-fish-syntax.git

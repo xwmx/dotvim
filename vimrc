@@ -1774,6 +1774,26 @@ function! SetupPluginVimCtrlspace()
 endfunction
 
 " ============================================================================
+" vim-fish-syntax
+"
+" Syntax and ftplugin files for fish shell scripts.
+"
+" https://github.com/khaveesh/vim-fish-syntax
+" ============================================================================
+
+function! SetupPluginVimFishSyntax()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Plug init:
+  " Plug 'https://github.com/khaveesh/vim-fish-syntax'
+
+  " Native Vim init:
+  packadd vim-fish-syntax
+
+endfunction
+
+" ============================================================================
 " vim-gitgutter
 "
 " A Vim plugin which shows a git diff in the gutter (sign column) and
@@ -2386,6 +2406,7 @@ else
   call SetupPluginVimCoffeeScript()
   call SetupPluginVimCssColor()
   " call SetupPluginVimCtrlspace()
+  call SetupPluginVimFishSyntax()
   call SetupPluginVimGitgutter()
   call SetupPluginVimGo()
   " call SetupPluginGoyoVim()
