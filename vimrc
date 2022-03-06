@@ -2300,6 +2300,23 @@ function! SetupPluginVimTextobjUser()
 endfunction
 
 " ============================================================================
+" vim-toml
+"
+" Vim syntax for TOML.
+"
+" https://github.com/cespare/vim-toml
+" ============================================================================
+
+function! SetupPluginVimToml()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-toml
+
+endfunction
+
+" ============================================================================
 " vim-trailing-whitespace
 "
 " Highlights trailing whitespace in red and provides :FixWhitespace to fix it.
@@ -2398,7 +2415,7 @@ else
   call SetupPluginRailsVim()
   call SetupPluginScssSyntaxVim()
   call SetupPluginSurround()
-  call SetupPluginSyntastic()
+  " call SetupPluginSyntastic()
   " call SetupPluginTagbar()
   call SetupPluginVimAirline()
   " call SetupPluginVimAirlineThemes()
@@ -2428,6 +2445,7 @@ else
   " call SetupPluginVimSpeeddating()
   " call SetupPluginVimTextobjUser()
   " call SetupPluginVimTextobjUser()
+  call SetupPluginVimToml()
   call SetupPluginVimTrailingWhitespace()
   " call SetupPluginVimVisualMulti()
   call SetupPluginVimVisualStarSearch()
