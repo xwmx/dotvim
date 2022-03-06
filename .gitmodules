@@ -233,3 +233,6 @@
 [submodule "vendor/github.com/cespare/vim-toml"]
 	path = vendor/github.com/cespare/vim-toml
 	url = https://github.com/cespare/vim-toml.git
+[submodule "vendor/github.com/rust-lang/rust.vim"]
+	path = vendor/github.com/rust-lang/rust.vim
+	url = https://github.com/rust-lang/rust.vim.git

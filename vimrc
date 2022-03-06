@@ -1521,6 +1521,23 @@ function! SetupPluginRailsVim()
 endfunction
 
 " ============================================================================
+" rust.vim
+"
+" Vim configuration for Rust.
+"
+" https://github.com/rust-lang/rust.vim
+" ============================================================================
+
+function! SetupPluginRustVim()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd rust.vim
+
+endfunction
+
+" ============================================================================
 " scss-syntax.vim
 "
 " Vim Syntax File for SCSS (Sassy CSS).
@@ -2413,6 +2430,7 @@ else
   " NOTE: Disable nerdtree-git-plugin due to lag / performance issues.
   " call SetupPluginNERDTreeGitPlugin()
   call SetupPluginRailsVim()
+  call SetupPluginRustVim()
   call SetupPluginScssSyntaxVim()
   call SetupPluginSurround()
   " call SetupPluginSyntastic()
@@ -2436,7 +2454,7 @@ else
   " call SetupPluginVimPandocSyntax()
   " call SetupPluginVimPolyglot()
   call SetupPluginVimPrettier()
-  call SetupPluginVimRuby()
+  call SetupPluginVimRust()
   call SetupPluginVimStartify()
   call SetupPluginVimSensible()
   call SetupPluginVimSignify()
