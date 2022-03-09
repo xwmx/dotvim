@@ -2454,7 +2454,6 @@ else
   " call SetupPluginVimPandocSyntax()
   " call SetupPluginVimPolyglot()
   call SetupPluginVimPrettier()
-  call SetupPluginVimRust()
   call SetupPluginVimStartify()
   call SetupPluginVimSensible()
   call SetupPluginVimSignify()
