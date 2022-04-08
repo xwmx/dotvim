@@ -236,3 +236,6 @@
 [submodule "vendor/github.com/rust-lang/rust.vim"]
 	path = vendor/github.com/rust-lang/rust.vim
 	url = https://github.com/rust-lang/rust.vim.git
+[submodule "vendor/github.com/RRethy/vim-hexokinase"]
+	path = vendor/github.com/RRethy/vim-hexokinase
+	url = https://github.com/RRethy/vim-hexokinase.git

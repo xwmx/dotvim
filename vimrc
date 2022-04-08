@@ -1087,6 +1087,49 @@ function! SetupPluginFZF()
 endfunction
 
 " ============================================================================
+" goyo.vim
+"
+" Distraction-free writing in Vim.
+"
+" https://github.com/junegunn/goyo.vim
+" ============================================================================
+
+function! SetupPluginGoyoVim()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd goyo.vim
+
+  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Add :Zen command, mirroring :Goyo. Derived from:
+  " https://github.com/junegunn/goyo.vim/blob/master/plugin/goyo.vim#L24
+  command! -nargs=? -bar -bang Zen call goyo#execute(<bang>0, <q-args>)
+
+  " Callbacks. More information:
+  " https://github.com/junegunn/goyo.vim#callbacks
+  " https://github.com/junegunn/goyo.vim/wiki/Customization
+  function! s:goyo_enter()
+    if has('gui_macvim')
+      " Set larger font size when enabling Goyo.
+      set guifont=MesloLGMDZ\ Nerd\ Font:h16
+    endif
+  endfunction
+
+  function! s:goyo_leave()
+    if has('gui_macvim')
+      " Reset font size when exiting Goyo.
+      call SetGuiFont()
+    endif
+  endfunction
+
+  autocmd! User GoyoEnter nested call <SID>goyo_enter()
+  autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
+endfunction
+
+" ============================================================================
 " Gundo.vim
 "
 " Gundo.vim is Vim plugin to visualize your Vim undo tree.
@@ -1861,45 +1904,31 @@ function! SetupPluginVimGo()
 endfunction
 
 " ============================================================================
-" goyo.vim
+" vim-hexokinase
 "
-" Distraction-free writing in Vim.
+" hexokinase.vim - (Neo)Vim plugin for asynchronously displaying the colours
+" in the file (#rrggbb, #rgb, rgb(a)? functions, hsl(a)? functions, web
+" colours, custom patterns)
 "
-" https://github.com/junegunn/goyo.vim
+" https://github.com/RRethy/vim-hexokinase
 " ============================================================================
 
-function! SetupPluginGoyoVim()
+function! SetupPluginVimHexokinase()
 
   " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
+  let vim_hexokinase_init = '
+    \ cd "${HOME}/.vim/pack/plugins/opt/vim-hexokinase" &&
+    \ [ ! -f "hexokinase/main.go" ]                     &&
+    \ make hexokinase || :
+    \ )'
+
+  call system(shellescape(vim_hexokinase_init))
+
+  let g:Hexokinase_highlighters = ['backgroundfull']
+
   " Native Vim init:
-  packadd goyo.vim
-
-  " After: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
-
-  " Add :Zen command, mirroring :Goyo. Derived from:
-  " https://github.com/junegunn/goyo.vim/blob/master/plugin/goyo.vim#L24
-  command! -nargs=? -bar -bang Zen call goyo#execute(<bang>0, <q-args>)
-
-  " Callbacks. More information:
-  " https://github.com/junegunn/goyo.vim#callbacks
-  " https://github.com/junegunn/goyo.vim/wiki/Customization
-  function! s:goyo_enter()
-    if has('gui_macvim')
-      " Set larger font size when enabling Goyo.
-      set guifont=MesloLGMDZ\ Nerd\ Font:h16
-    endif
-  endfunction
-
-  function! s:goyo_leave()
-    if has('gui_macvim')
-      " Reset font size when exiting Goyo.
-      call SetGuiFont()
-    endif
-  endfunction
-
-  autocmd! User GoyoEnter nested call <SID>goyo_enter()
-  autocmd! User GoyoLeave nested call <SID>goyo_leave()
+  packadd vim-hexokinase
 
 endfunction
 
@@ -2417,6 +2446,7 @@ else
   call SetupPluginEndwise()
   " call SetupPluginFugitive()
   call SetupPluginFZF()
+  " call SetupPluginGoyoVim()
   " call SetupPluginGundoVim()
   cal SetupPluginHtml5Vim()
   " call SetupPluginImageVim()
@@ -2439,12 +2469,12 @@ else
   " call SetupPluginVimAirlineThemes()
   call SetupPluginVimBufkill()
   call SetupPluginVimCoffeeScript()
-  call SetupPluginVimCssColor()
+  " call SetupPluginVimCssColor()
   " call SetupPluginVimCtrlspace()
   call SetupPluginVimFishSyntax()
   call SetupPluginVimGitgutter()
   call SetupPluginVimGo()
-  " call SetupPluginGoyoVim()
+  call SetupPluginVimHexokinase()
   call SetupPluginVimJavaScript()
   call SetupPluginVimJson()
   call SetupPluginVimJSXPretty()
