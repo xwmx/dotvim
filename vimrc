@@ -2328,6 +2328,23 @@ function! SetupPluginVimSpeeddating()
 endfunction
 
 " ============================================================================
+" vim-stylus
+"
+" vim plugin for stylus
+"
+" https://github.com/iloginow/vim-stylus
+" ============================================================================
+
+function! SetupPluginVimStylus()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-stylus
+
+endfunction
+
+" ============================================================================
 " vim-textobj-line
 "
 "  Text objects for the current line.
@@ -2508,6 +2525,7 @@ else
   " NOTE: Disable vim-sleuth to avoid slowdowns.
   " call SetupPluginVimSleuth()
   " call SetupPluginVimSpeeddating()
+  call SetupPluginVimStylus()
   " call SetupPluginVimTextobjUser()
   " call SetupPluginVimTextobjUser()
   call SetupPluginVimToml()

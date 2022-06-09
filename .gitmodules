@@ -242,3 +242,6 @@
 [submodule "vendor/github.com/digitaltoad/vim-pug"]
 	path = vendor/github.com/digitaltoad/vim-pug
 	url = https://github.com/digitaltoad/vim-pug.git
+[submodule "vendor/github.com/iloginow/vim-stylus"]
+	path = vendor/github.com/iloginow/vim-stylus
+	url = https://github.com/iloginow/vim-stylus.git
