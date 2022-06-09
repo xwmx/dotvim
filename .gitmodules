@@ -239,3 +239,6 @@
 [submodule "vendor/github.com/RRethy/vim-hexokinase"]
 	path = vendor/github.com/RRethy/vim-hexokinase
 	url = https://github.com/RRethy/vim-hexokinase.git
+[submodule "vendor/github.com/digitaltoad/vim-pug"]
+	path = vendor/github.com/digitaltoad/vim-pug
+	url = https://github.com/digitaltoad/vim-pug.git

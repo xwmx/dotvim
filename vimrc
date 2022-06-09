@@ -2175,6 +2175,23 @@ function! SetupPluginVimPrettier()
 endfunction
 
 " ============================================================================
+" vim-pug
+"
+" Vim Pug (formerly Jade) template engine syntax highlighting and indention.
+"
+" https://github.com/digitaltoad/vim-pug
+" ============================================================================
+
+function! SetupPluginVimPug()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-pug
+
+endfunction
+
+" ============================================================================
 " vim-ruby
 "
 " Vim/Ruby Configuration Files.
@@ -2484,6 +2501,7 @@ else
   " call SetupPluginVimPandocSyntax()
   " call SetupPluginVimPolyglot()
   call SetupPluginVimPrettier()
+  call SetupPluginVimPug()
   call SetupPluginVimStartify()
   call SetupPluginVimSensible()
   call SetupPluginVimSignify()
