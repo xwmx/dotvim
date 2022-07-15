@@ -1187,6 +1187,23 @@ function! SetupPluginImageVim()
 endfunction
 
 " ============================================================================
+" jsonc.vim
+"
+" Syntax highlighting for CJSON in Vim
+"
+" https://github.com/neoclide/jsonc.vim
+" ============================================================================
+
+function! SetupPluginJSONCVim()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd jsonc.vim
+
+endfunction
+
+" ============================================================================
 " Kwbd.vim
 "
 " Add a buffer close to vim that doesn't close the window
@@ -2484,6 +2501,7 @@ else
   " call SetupPluginGundoVim()
   cal SetupPluginHtml5Vim()
   " call SetupPluginImageVim()
+  call SetupPluginJSONCVim()
   call SetupPluginKwbd()
   " NOTE: Disable in favor of ALE
   " call SetupPluginNeoformat()
