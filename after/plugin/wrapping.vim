@@ -79,6 +79,9 @@ command! -nargs=0 Wrap call ToggleWrap()
 command! -nargs=0 WrapToggle call ToggleWrap()
 command! -nargs=0 ToggleWrap call ToggleWrap()
 
+" :wrap command
+cnoreabbrev wrap :ToggleWrap
+
 " NOTE: This mapping overwrites a mapping from Vimwiki:
 " https://github.com/vimwiki/vimwiki
 nmap <leader>w :Wrap<CR>
