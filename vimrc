@@ -2584,7 +2584,7 @@ else
   call SetupPluginVimJavaScript()
   call SetupPluginVimJson()
   call SetupPluginVimJSXPretty()
-  call SetupPluginVimJSXTypescript()
+  " call SetupPluginVimJSXTypescript()
   call SetupPluginVimMarkdown()
   " call SetupPluginVimOrgmode()
   " call SetupPluginVimPandoc()
