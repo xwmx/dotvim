@@ -251,3 +251,6 @@
 [submodule "vendor/github.com/jparise/vim-graphql"]
 	path = vendor/github.com/jparise/vim-graphql
 	url = https://github.com/jparise/vim-graphql.git
+[submodule "vendor/github.com/peitalin/vim-jsx-typescript"]
+	path = vendor/github.com/peitalin/vim-jsx-typescript
+	url = https://github.com/peitalin/vim-jsx-typescript.git

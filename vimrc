@@ -2030,6 +2030,23 @@ function! SetupPluginVimJSXPretty()
 endfunction
 
 " ============================================================================
+" vim-jsx-typescript
+"
+" React JSX syntax highlighting for vim and Typescript.
+"
+" https://github.com/peitalin/vim-jsx-typescript
+" ============================================================================
+
+function! SetupPluginVimJSXTypescript()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-jsx-typescript
+
+endfunction
+
+" ============================================================================
 " vim-markdown
 "
 " Syntax highlighting, matching rules and mappings for the original Markdown
@@ -2549,6 +2566,7 @@ else
   call SetupPluginVimJavaScript()
   call SetupPluginVimJson()
   call SetupPluginVimJSXPretty()
+  call SetupPluginVimJSXTypescript()
   call SetupPluginVimMarkdown()
   " call SetupPluginVimOrgmode()
   " call SetupPluginVimPandoc()
