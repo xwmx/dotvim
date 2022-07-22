@@ -2113,19 +2113,19 @@ function! SetupPluginVimPandoc()
 endfunction
 
 " ============================================================================
-" Vim-Startify
+" vim-jsx-typescript
 "
-" The fancy start screen for Vim.
+" React JSX syntax highlighting for vim and Typescript.
 "
-" https://github.com/mhinz/vim-startify
+" https://github.com/peitalin/vim-jsx-typescript
 " ============================================================================
 
-function! SetupPluginVimStartify()
+function! SetupPluginVimJSXTypescript()
 
   " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Native Vim init:
-  packadd vim-startify
+  packadd vim-jsx-typescript
 
 endfunction
 
@@ -2380,6 +2380,24 @@ function! SetupPluginVimSpeeddating()
 endfunction
 
 " ============================================================================
+" vim-styled-components
+"
+" Vim bundle for http://styled-components.com based javascript files.
+"
+" https://github.com/styled-components/vim-styled-components
+" https://styled-components.com/
+" ============================================================================
+
+function! SetupPluginVimStyledComponents()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-styled-components
+
+endfunction
+
+" ============================================================================
 " vim-stylus
 "
 " vim plugin for stylus
@@ -2581,6 +2599,7 @@ else
   " call SetupPluginVimSleuth()
   " call SetupPluginVimSpeeddating()
   call SetupPluginVimStylus()
+  call SetupPluginVimStyledComponents()
   " call SetupPluginVimTextobjUser()
   " call SetupPluginVimTextobjUser()
   call SetupPluginVimToml()

@@ -254,3 +254,6 @@
 [submodule "vendor/github.com/peitalin/vim-jsx-typescript"]
 	path = vendor/github.com/peitalin/vim-jsx-typescript
 	url = https://github.com/peitalin/vim-jsx-typescript.git
+[submodule "vendor/github.com/styled-components/vim-styled-components"]
+	path = vendor/github.com/styled-components/vim-styled-components
+	url = https://github.com/styled-components/vim-styled-components.git
