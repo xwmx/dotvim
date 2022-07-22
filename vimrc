@@ -1921,6 +1921,24 @@ function! SetupPluginVimGo()
 endfunction
 
 " ============================================================================
+" vim-graphql
+"
+" A Vim plugin that provides GraphQL file detection, syntax highlighting, and
+" indentation.
+"
+" https://github.com/jparise/vim-graphql
+" ============================================================================
+
+function! SetupPluginVimGraphQL()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-graphql
+
+endfunction
+
+" ============================================================================
 " vim-hexokinase
 "
 " hexokinase.vim - (Neo)Vim plugin for asynchronously displaying the colours
@@ -2526,6 +2544,7 @@ else
   call SetupPluginVimFishSyntax()
   call SetupPluginVimGitgutter()
   call SetupPluginVimGo()
+  call SetupPluginVimGraphQL()
   call SetupPluginVimHexokinase()
   call SetupPluginVimJavaScript()
   call SetupPluginVimJson()

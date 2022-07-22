@@ -248,3 +248,6 @@
 [submodule "vendor/github.com/neoclide/jsonc.vim"]
 	path = vendor/github.com/neoclide/jsonc.vim
 	url = https://github.com/neoclide/jsonc.vim.git
+[submodule "vendor/github.com/jparise/vim-graphql"]
+	path = vendor/github.com/jparise/vim-graphql
+	url = https://github.com/jparise/vim-graphql.git
