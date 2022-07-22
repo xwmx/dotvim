@@ -2113,19 +2113,19 @@ function! SetupPluginVimPandoc()
 endfunction
 
 " ============================================================================
-" vim-jsx-typescript
+" Vim-Startify
 "
-" React JSX syntax highlighting for vim and Typescript.
+" The fancy start screen for Vim.
 "
-" https://github.com/peitalin/vim-jsx-typescript
+" https://github.com/mhinz/vim-startify
 " ============================================================================
 
-function! SetupPluginVimJSXTypescript()
+function! SetupPluginVimStartify()
 
   " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Native Vim init:
-  packadd vim-jsx-typescript
+  packadd vim-startify
 
 endfunction
 
