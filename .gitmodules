@@ -257,3 +257,6 @@
 [submodule "vendor/github.com/styled-components/vim-styled-components"]
 	path = vendor/github.com/styled-components/vim-styled-components
 	url = https://github.com/styled-components/vim-styled-components.git
+[submodule "vendor/github.com/HerringtonDarkholme/yats.vim"]
+	path = vendor/github.com/HerringtonDarkholme/yats.vim
+	url = https://github.com/HerringtonDarkholme/yats.vim.git

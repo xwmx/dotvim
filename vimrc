@@ -2517,6 +2517,25 @@ function! SetupPluginVimVisualStarSearch()
 
 endfunction
 
+" ============================================================================
+" yats
+"
+" Yet Another TypeScript Syntax.
+"
+" The most advanced TypeScript Syntax Highlighting in Vim
+"
+" https://github.com/HerringtonDarkholme/yats.vim
+" ============================================================================
+
+function! SetupPluginYats()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd yats.vim
+
+endfunction
+
 " ············································································
 " ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 " Load Plugins
@@ -2606,6 +2625,7 @@ else
   call SetupPluginVimTrailingWhitespace()
   " call SetupPluginVimVisualMulti()
   call SetupPluginVimVisualStarSearch()
+  call SetupPluginYats()
 endif
 
 " %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
