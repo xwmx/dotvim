@@ -223,6 +223,21 @@ set backupdir^=~/.vim/cache/backup//
 set directory^=~/.vim/cache/temp//
 
 " =============================================================================
+" netrw
+"
+" Network oriented reading, writing, and browsing.
+"
+" Commands:
+"   https://gist.github.com/danidiaz/37a69305e2ed3319bfff9631175c5d0f
+"
+" More info:
+"   https://github.com/vim/vim/blob/master/runtime/doc/pi_netrw.txt
+" =============================================================================
+
+" Display preview in vertical split.
+let g:netrw_preview = 1
+
+" =============================================================================
 " filetypes.vim
 "
 " Adapted from:
