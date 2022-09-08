@@ -1102,6 +1102,26 @@ function! SetupPluginFZF()
 endfunction
 
 " ============================================================================
+" copilot.vim
+"
+" GitHub Copilot for Neovim and Vim
+"
+" https://github.com/github/copilot.vim
+" ============================================================================
+
+function! SetupPluginGitHubCopilot()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+" Plug init:
+  " Plug 'https://github.com/github/copilot.vim'
+
+  " Native Vim init:
+  packadd copilot.vim
+
+endfunction
+
+" ============================================================================
 " goyo.vim
 "
 " Distraction-free writing in Vim.
@@ -2584,6 +2604,7 @@ else
   call SetupPluginEndwise()
   " call SetupPluginFugitive()
   call SetupPluginFZF()
+  " call SetupPluginGitHubCopilot()
   " call SetupPluginGoyoVim()
   " call SetupPluginGundoVim()
   cal SetupPluginHtml5Vim()

@@ -260,3 +260,6 @@
 [submodule "vendor/github.com/HerringtonDarkholme/yats.vim"]
 	path = vendor/github.com/HerringtonDarkholme/yats.vim
 	url = https://github.com/HerringtonDarkholme/yats.vim.git
+[submodule "vendor/github.com/github/copilot.vim"]
+	path = vendor/github.com/github/copilot.vim
+	url = https://github.com/github/copilot.vim.git
