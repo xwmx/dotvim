@@ -263,3 +263,6 @@
 [submodule "vendor/github.com/github/copilot.vim"]
 	path = vendor/github.com/github/copilot.vim
 	url = https://github.com/github/copilot.vim.git
+[submodule "vendor/github.com/evanleck/vim-svelte"]
+	path = vendor/github.com/evanleck/vim-svelte
+	url = https://github.com/evanleck/vim-svelte.git

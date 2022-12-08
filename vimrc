@@ -2148,23 +2148,6 @@ function! SetupPluginVimPandoc()
 endfunction
 
 " ============================================================================
-" Vim-Startify
-"
-" The fancy start screen for Vim.
-"
-" https://github.com/mhinz/vim-startify
-" ============================================================================
-
-function! SetupPluginVimStartify()
-
-  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
-
-  " Native Vim init:
-  packadd vim-startify
-
-endfunction
-
-" ============================================================================
 " vim-pandoc-syntax
 "
 " Standalone pandoc syntax module, to be used alongside vim-pandoc.
@@ -2415,6 +2398,23 @@ function! SetupPluginVimSpeeddating()
 endfunction
 
 " ============================================================================
+" Vim-Startify
+"
+" The fancy start screen for Vim.
+"
+" https://github.com/mhinz/vim-startify
+" ============================================================================
+
+function! SetupPluginVimStartify()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-startify
+
+endfunction
+
+" ============================================================================
 " vim-styled-components
 "
 " Vim bundle for http://styled-components.com based javascript files.
@@ -2446,6 +2446,23 @@ function! SetupPluginVimStylus()
 
   " Native Vim init:
   packadd vim-stylus
+
+endfunction
+
+" ============================================================================
+" vim-svelte
+"
+" Vim syntax highlighting and indentation for Svelte 3 components.
+"
+" https://github.com/evanleck/vim-svelte
+" ============================================================================
+
+function! SetupPluginVimSvelte()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-svelte
 
 endfunction
 
@@ -2647,7 +2664,6 @@ else
   " call SetupPluginVimPolyglot()
   call SetupPluginVimPrettier()
   call SetupPluginVimPug()
-  call SetupPluginVimStartify()
   call SetupPluginVimSensible()
   call SetupPluginVimSignify()
   " NOTE: Disable vim-sleuth to avoid slowdowns.
@@ -2655,6 +2671,7 @@ else
   " call SetupPluginVimSpeeddating()
   call SetupPluginVimStylus()
   call SetupPluginVimStyledComponents()
+  call SetupPluginVimSvelte()
   " call SetupPluginVimTextobjUser()
   " call SetupPluginVimTextobjUser()
   call SetupPluginVimToml()
