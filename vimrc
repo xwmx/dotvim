@@ -415,6 +415,14 @@ endfunction
 " ============================================================================
 " Tab Completion Plugins
 "
+" Conquer of Completion (CoC)
+" ---------------------------
+"
+" Nodejs extension host for vim & neovim, load extensions like VSCode and host
+" language servers.
+"
+"  https://github.com/neoclide/coc.nvim
+"
 " deoplete.nvim
 " -------------
 "
@@ -458,31 +466,58 @@ function! SetupTabCompletionPlugins()
 
   " Native Vim init:
   if has("gui_macvim") && has("gui_running")
-    let you_complete_me_init = '
-      \ _ycm_path="${HOME}/.vim/pack/plugins/opt/YouCompleteMe" &&
-      \ [ -e "${_ycm_path}" ] &&
-      \ [ ! -e "${_ycm_path}/third_party/ycmd/build.py" ] &&
-      \ (
-      \   cd "${_ycm_path}" &&
-      \   git submodule update --init --recursive
-      \ )'
-    call system(you_complete_me_init)
+    let gui_completion_plugin = 'CoC'
+    " let gui_completion_plugin = 'YouCompleteMe'
 
-    " NOTE: To install YouCompleteMe, run the following command. This must be
-    " done during at least some upgrades of YouCompleteMe.
-    "
-    " More Information:
-    " https://valloric.github.io/YouCompleteMe/#mac-os-x
-    let you_complete_me_install = '
-      \ _ycm_path="${HOME}/.vim/pack/plugins/opt/YouCompleteMe" &&
-      \ [ -e "${_ycm_path}/third_party/ycmd/build.py" ] &&
-      \ [ ! -e "${_ycm_path}/third_party/ycmd/ycm_core.so" ] &&
-      \ (
-      \   cd "${_ycm_path}" &&
-      \   ./install.py --clangd-completer --all
-      \ )'
-    call system(you_complete_me_install)
-    packadd YouCompleteMe
+    if gui_completion_plugin == 'YouCompleteMe'
+      " =============
+      " YouCompleteMe
+      " =============
+
+      let you_complete_me_init = '
+        \ _ycm_path="${HOME}/.vim/pack/plugins/opt/YouCompleteMe" &&
+        \ [   -e "${_ycm_path}"                                 ] &&
+        \ [ ! -e "${_ycm_path}/third_party/ycmd/build.py"       ] &&
+        \ (cd "${_ycm_path}" && git submodule update --init --recursive)'
+
+      call system(you_complete_me_init)
+
+      " " NOTE: To install YouCompleteMe, run the following command. This must be
+      " " done during at least some upgrades of YouCompleteMe.
+      " "
+      " " More Information:
+      " " https://valloric.github.io/YouCompleteMe/#mac-os-x
+      let you_complete_me_install = '
+        \ _ycm_path="${HOME}/.vim/pack/plugins/opt/YouCompleteMe" &&
+        \ [   -e "${_ycm_path}/third_party/ycmd/build.py"       ] &&
+        \ [ ! -e "${_ycm_path}/third_party/ycmd/ycm_core.so"    ] &&
+        \ (cd "${_ycm_path}" && ./install.py --clangd-completer --all)'
+
+      call system(you_complete_me_install)
+
+      packadd YouCompleteMe
+    elseif gui_completion_plugin == 'CoC'
+      " ===========================
+      " Conquer of Completion (CoC)
+      " ===========================
+
+      let coc_init = '
+        \ _coc_path="${HOME}/.vim/pack/plugins/opt/coc.nvim"    &&
+        \ [   -e "${_coc_path}/package.json"                  ] &&
+        \ [ ! -e "${_coc_path}/package-lock.json"             ] &&
+        \ [ ! -e "${_coc_path}/yarn.lock"                     ] &&
+        \ (cd "${_coc_path}" && yarn install)'
+
+      call system(coc_init)
+
+      let g:coc_global_extensions = [
+        \   'coc-json',
+        \   'coc-pairs',
+        \   'coc-highlight'
+        \ ]
+
+      packadd coc.nvim
+    endif
   else
     " packadd supertab
     packadd VimCompletesMe
@@ -1013,7 +1048,7 @@ function! SetupPluginEmmetVim()
 
   " Before: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
-  let g:user_emmet_leader_key='<C-Z>'
+  let g:user_emmet_leader_key = '<C-Z>'
 
   " See also:
   " https://drivy.engineering/setting-up-vim-for-react/
@@ -1045,6 +1080,12 @@ function! SetupPluginEndwise()
 
   " Native Vim init:
   packadd vim-endwise
+
+  " Cooperate with Conquer of Completion (CoC). More info:
+  " https://github.com/tpope/vim-endwise/issues/125#issuecomment-1076678001
+  inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm()
+    \ :"\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>\<c-r>=EndwiseDiscretionary()\<CR>"
+
 
 endfunction
 
