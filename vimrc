@@ -1091,11 +1091,12 @@ function! SetupPluginEndwise()
   " Native Vim init:
   packadd vim-endwise
 
-  " Cooperate with Conquer of Completion (CoC). More info:
-  " https://github.com/tpope/vim-endwise/issues/125#issuecomment-1076678001
-  inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm()
-    \ :"\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>\<c-r>=EndwiseDiscretionary()\<CR>"
-
+  if match(&runtimepath, 'coc.nvim') != -1
+    " Cooperate with Conquer of Completion (CoC). More info:
+    " https://github.com/tpope/vim-endwise/issues/125#issuecomment-1076678001
+    inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm()
+      \ :"\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>\<c-r>=EndwiseDiscretionary()\<CR>"
+  endif
 
 endfunction
 
