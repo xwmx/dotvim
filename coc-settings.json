@@ -1,4 +1,6 @@
 {
+  "typescript.validate.enable": false,
+  "javascript.validate.enable": false,
   "coc.preferences.silentAutoupdate": true,
   "coc.preferences.extensionUpdateCheck": "weekly"
 }

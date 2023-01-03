@@ -523,7 +523,8 @@ function! SetupTabCompletionPlugins()
         \   'coc-json',
         \   'coc-pairs',
         \   'coc-highlight',
-        \   'coc-solargraph'
+        \   'coc-solargraph',
+        \   'coc-tsserver'
         \ ]
 
       packadd coc.nvim
@@ -2068,6 +2069,9 @@ function! SetupPluginVimJavaScript()
 
   " Native Vim init:
   packadd vim-javascript
+
+  " https://github.com/pangloss/vim-javascript/blob/master/README.md#configuration-variables
+  let g:javascript_plugin_flow = 1
 
 endfunction
 
