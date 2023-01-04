@@ -522,7 +522,10 @@ function! SetupTabCompletionPlugins()
         \ _ycm_path="${HOME}/.vim/pack/plugins/opt/YouCompleteMe" &&
         \ [   -e "${_ycm_path}/third_party/ycmd/build.py"       ] &&
         \ [ ! -e "${_ycm_path}/third_party/ycmd/ycm_core.so"    ] &&
-        \ (cd "${_ycm_path}" && ./install.py --clangd-completer --all)'
+        \ (
+        \   cd "${_ycm_path}"                                     &&
+        \   ./install.py --clangd-completer --all --rust-completer --ts-completer
+        \ )'
 
       call system(you_complete_me_install)
 
