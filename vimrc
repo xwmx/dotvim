@@ -466,37 +466,9 @@ function! SetupTabCompletionPlugins()
 
   " Native Vim init:
   if has("gui_macvim") && has("gui_running")
-    let gui_completion_plugin = 'CoC'
-    " let gui_completion_plugin = 'YouCompleteMe'
+    let use_conquer_of_completon = 0
 
-    if gui_completion_plugin == 'YouCompleteMe'
-      " =============
-      " YouCompleteMe
-      " =============
-
-      let you_complete_me_init = '
-        \ _ycm_path="${HOME}/.vim/pack/plugins/opt/YouCompleteMe" &&
-        \ [   -e "${_ycm_path}"                                 ] &&
-        \ [ ! -e "${_ycm_path}/third_party/ycmd/build.py"       ] &&
-        \ (cd "${_ycm_path}" && git submodule update --init --recursive)'
-
-      call system(you_complete_me_init)
-
-      " NOTE: To install YouCompleteMe, run the following command. This must be
-      " done during at least some upgrades of YouCompleteMe.
-      "
-      " More Information:
-      " https://valloric.github.io/YouCompleteMe/#mac-os-x
-      let you_complete_me_install = '
-        \ _ycm_path="${HOME}/.vim/pack/plugins/opt/YouCompleteMe" &&
-        \ [   -e "${_ycm_path}/third_party/ycmd/build.py"       ] &&
-        \ [ ! -e "${_ycm_path}/third_party/ycmd/ycm_core.so"    ] &&
-        \ (cd "${_ycm_path}" && ./install.py --clangd-completer --all)'
-
-      call system(you_complete_me_install)
-
-      packadd YouCompleteMe
-    elseif gui_completion_plugin == 'CoC'
+    if use_conquer_of_completon
       " ===========================
       " Conquer of Completion (CoC)
       " ===========================
@@ -528,6 +500,33 @@ function! SetupTabCompletionPlugins()
         \ ]
 
       packadd coc.nvim
+    else
+      " =============
+      " YouCompleteMe
+      " =============
+
+      let you_complete_me_init = '
+        \ _ycm_path="${HOME}/.vim/pack/plugins/opt/YouCompleteMe" &&
+        \ [   -e "${_ycm_path}"                                 ] &&
+        \ [ ! -e "${_ycm_path}/third_party/ycmd/build.py"       ] &&
+        \ (cd "${_ycm_path}" && git submodule update --init --recursive)'
+
+      call system(you_complete_me_init)
+
+      " NOTE: To install YouCompleteMe, run the following command. This must be
+      " done during at least some upgrades of YouCompleteMe.
+      "
+      " More Information:
+      " https://valloric.github.io/YouCompleteMe/#mac-os-x
+      let you_complete_me_install = '
+        \ _ycm_path="${HOME}/.vim/pack/plugins/opt/YouCompleteMe" &&
+        \ [   -e "${_ycm_path}/third_party/ycmd/build.py"       ] &&
+        \ [ ! -e "${_ycm_path}/third_party/ycmd/ycm_core.so"    ] &&
+        \ (cd "${_ycm_path}" && ./install.py --clangd-completer --all)'
+
+      call system(you_complete_me_install)
+
+      packadd YouCompleteMe
     endif
   else
     " packadd supertab
