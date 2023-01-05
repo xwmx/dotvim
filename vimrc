@@ -524,7 +524,12 @@ function! SetupTabCompletionPlugins()
         \ [ ! -e "${_ycm_path}/third_party/ycmd/ycm_core.so"    ] &&
         \ (
         \   cd "${_ycm_path}"                                     &&
-        \   ./install.py --clangd-completer --all --rust-completer --ts-completer
+        \   ./install.py          \
+        \     --clangd-completer  \
+        \     --go-completer      \
+        \     --rust-completer    \
+        \     --ts-completer      \
+        \     --java-completer
         \ )'
 
       call system(you_complete_me_install)
