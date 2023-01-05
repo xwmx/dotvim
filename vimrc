@@ -482,19 +482,13 @@ function! SetupTabCompletionPlugins()
 
       call system(coc_init)
 
-      " TODO:
-      "   'coc-css'
-      "     https://www.npmjs.com/package/coc-css
-      "     NOTE: might need to use: `autocmd FileType scss setl iskeyword+=@-@`
-      "   'coc-rust-analyzer'
-      "     https://www.npmjs.com/package/coc-rust-analyzer
-      "   'coc-tsserver'
-      "     https://www.npmjs.com/package/coc-tsserver
       let g:coc_global_extensions = [
+        \   'coc-css',
         \   'coc-html',
         \   'coc-json',
         \   'coc-pairs',
         \   'coc-highlight',
+        \   'coc-rust-analyzer',
         \   'coc-solargraph',
         \   'coc-tsserver'
         \ ]
