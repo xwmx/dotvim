@@ -634,6 +634,10 @@ function! SetupPluginAle()
   let g:ale_lint_on_enter         = 0
   let g:ale_lint_on_save          = 1
 
+  " Turn off virtual text.
+  " https://github.com/dense-analysis/ale/blob/master/doc/ale.txt#L2291
+  let g:ale_virtualtext_cursor    = 0
+
   " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
   " Native Vim init:
