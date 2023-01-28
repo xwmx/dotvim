@@ -466,7 +466,7 @@ function! SetupTabCompletionPlugins()
 
   " Native Vim init:
   if has("gui_macvim") && has("gui_running")
-    let use_conquer_of_completon = 1
+    let use_conquer_of_completon = 0
 
     if use_conquer_of_completon
       " ===========================
