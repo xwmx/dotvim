@@ -8,17 +8,16 @@
 # Description:
 #   Set up dotvim, linking configuration files.
 _dotvim_config() {
-
   _dotvim_config_neovim_config() {
     if [[ ! -e "${HOME}/.config/nvim" ]]
     then
       ln -s "${HOME}/.config/nvim" "${HOME}/config/home/.config/nvim"
-      printf "Linked: ~/%s -> %s\\n" \
-        "${HOME}/.config/nvim" \
+      
+      printf "Linked: ~/%s -> %s\\n"  \
+        "${HOME}/.config/nvim"        \
         "${HOME}/config/home/.config/nvim"
     else
       printf "Already Exists: ~/.config/nvim\\n"
     fi
-  } && _dotvim_config_neovim_config
-
-} && _dotvim_config
+  }; _dotvim_config_neovim_config
+}; _dotvim_config
