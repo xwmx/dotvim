@@ -271,3 +271,6 @@
 	path = vendor/github.com/neoclide/coc.nvim
   url = https://github.com/neoclide/coc.nvim.git
 	ignore = dirty
+[submodule "vendor/github.com/tpope/vim-haml"]
+	path = vendor/github.com/tpope/vim-haml
+	url = https://github.com/tpope/vim-haml.git

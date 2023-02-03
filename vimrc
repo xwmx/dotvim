@@ -2032,6 +2032,23 @@ function! SetupPluginVimGraphQL()
 endfunction
 
 " ============================================================================
+" vim-haml
+"
+" Vim runtime files for Haml, Sass, and SCSS.
+"
+" https://github.com/tpope/vim-haml
+" ============================================================================
+
+function! SetupPluginVimHaml()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vim-haml
+
+endfunction
+
+" ============================================================================
 " vim-hexokinase
 "
 " hexokinase.vim - (Neo)Vim plugin for asynchronously displaying the colours
@@ -2713,6 +2730,7 @@ else
   call SetupPluginVimGitgutter()
   call SetupPluginVimGo()
   call SetupPluginVimGraphQL()
+  call SetupPluginVimHaml()
   call SetupPluginVimHexokinase()
   call SetupPluginVimJavaScript()
   call SetupPluginVimJson()
