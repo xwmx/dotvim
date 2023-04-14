@@ -1598,7 +1598,7 @@ function! SetupPluginNERDTree()
         " Only perform action with NERDTreeMouseMode since otherwise double
         " click is required..
         if g:NERDTreeMouseMode ==# 3
-          call a:node.open({'reuse':'currenttab', 'where': 'p', 'keepopen': 1})
+          call a:node.open({'reuse':'', 'where': 'p', 'keepopen': 1})
         endif
     endf
 
@@ -1624,14 +1624,14 @@ function! SetupPluginNERDTree()
     "
     " Open file in the last-used split in the current tab.
     function! NERDTreeDoubleClickOpenHandler(node)
-        call a:node.open({'reuse':'currenttab', 'stay': 1, 'where': 'p', 'keepopen': 1})
+        call a:node.open({'reuse':'', 'stay': 1, 'where': 'p', 'keepopen': 1})
     endf
 
     " <CR> Also opens file in the current tab.
     "
     " https://github.com/preservim/nerdtree/blob/master/doc/NERDTree.txt#L1276
     let g:NERDTreeCustomOpenArgs = {
-      \  'file': {'reuse':'currenttab', 'where':'p', 'keepopen':1, 'stay':1}
+      \  'file': {'reuse':'', 'where':'p', 'keepopen':1, 'stay':1}
       \ }
   endif
 
