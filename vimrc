@@ -443,6 +443,9 @@ endfunction
 " A super simple, super minimal, super light-weight tab-completion plugin for
 " Vim.
 "
+" NOTE: original repository missing
+" TODO: review
+"
 " https://github.com/ajh17/VimCompletesMe
 "
 " YouCompleteMe
@@ -531,8 +534,8 @@ function! SetupTabCompletionPlugins()
       packadd YouCompleteMe
     endif
   else
-    " packadd supertab
-    packadd VimCompletesMe
+    packadd supertab
+    " packadd VimCompletesMe
   endif
 
   " VimCompletesMe
