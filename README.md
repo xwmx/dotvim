@@ -14,3 +14,14 @@ git clone --recurse-submodules -j8 https://github.com/xwmx/dotvim.git ~/.vim
 - [`vimrc`](vimrc)
 - [`after/plugin`](after/plugin)
 - [`gvimrc`](gvimrc)
+
+## Resources
+
+- [Vim](https://github.com/vim/vim)
+    - [vim.org](https://www.vim.org/)
+- [MacVim](https://github.com/macvim-dev/macvim)
+    - [macvim.org](https://macvim.org/)
+- [Neovim](https://github.com/neovim/neovim)
+    - [neovim.io](https://neovim.io/)
+- [Neovide](https://github.com/neovide/neovide)
+    - [neovide.dev](https://neovide.dev/)
