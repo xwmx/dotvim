@@ -155,6 +155,8 @@ if has("gui_running")
   autocmd FileType ruby,eruby set noballooneval
 endif
 
+autocmd BufRead,BufNewFile Podfile set filetype=ruby
+
 " =========
 " sshconfig
 " =========
