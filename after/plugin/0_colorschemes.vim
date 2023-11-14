@@ -284,7 +284,10 @@ if has('gui_running') && has('gui_macvim') || has('gui_vimr')
 
   let current_scheme = get(g:, 'colors_name', 'default')
 
-  if current_scheme == 'seti'
+  if current_scheme == 'dracula'
+    " hi CursorColumn ctermbg=234 cterm=NONE guifg=NONE guibg=#44475a gui=NONE
+    hi CursorColumn ctermbg=234 cterm=NONE guifg=NONE guibg=#2b2b2b gui=NONE
+  elseif current_scheme == 'seti'
     " Custom ALE colors.
     "
     " More information:
