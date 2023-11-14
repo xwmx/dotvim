@@ -274,7 +274,7 @@ endfunction
 "colorscheme Tomorrow-Night
 
 set background=dark
-if has("gui_running") && has("gui_macvim") || has("gui_vimr")
+if has('gui_running') && has('gui_macvim') || has('gui_vimr')
   " colorscheme base16-default
   " colorscheme dracula
   colorscheme seti
@@ -282,53 +282,57 @@ if has("gui_running") && has("gui_macvim") || has("gui_vimr")
   " colorscheme vwilight
   " colorscheme Tomorrow-Night
 
-  " Custom ALE colors.
-  "
-  " More information:
-  " https://github.com/w0rp/ale
-  " ~/.vimrc
-  hi ALEWarningSign ctermfg=245 ctermbg=235  cterm=NONE guifg=#868686 guibg=#2b2b2b gui=NONE
-  hi ALEErrorSign   ctermfg=245 ctermbg=235  cterm=NONE guifg=#cf6a4c guibg=#2b2b2b gui=NONE
+  let current_scheme = get(g:, 'colors_name', 'default')
 
-  " Improve SpellCap undercurl (underline) color.
-  "
-  " ALEWarning is linked to SpellCap. (485880)
-  hi SpellCap term=reverse ctermbg=9 gui=undercurl guisp=#364464
+  if current_scheme == 'seti'
+    " Custom ALE colors.
+    "
+    " More information:
+    " https://github.com/w0rp/ale
+    " ~/.vimrc
+    hi ALEWarningSign ctermfg=245 ctermbg=235  cterm=NONE guifg=#868686 guibg=#2b2b2b gui=NONE
+    hi ALEErrorSign   ctermfg=245 ctermbg=235  cterm=NONE guifg=#cf6a4c guibg=#2b2b2b gui=NONE
 
-  " Flag / devicon color in NERDTree.
-  "
-  " Original:
-  " hi def link NERDTreeFlags Number
-  " Source:
-  " https://github.com/scrooloose/nerdtree/blob/master/syntax/nerdtree.vim#L89
-  hi def link NERDTreeFlags Directory
+    " Improve SpellCap undercurl (underline) color.
+    "
+    " ALEWarning is linked to SpellCap. (485880)
+    hi SpellCap term=reverse ctermbg=9 gui=undercurl guisp=#364464
 
-  " Directory & Folder name color in NERDTree.
-  "
-  " Original:
-  " hi Directory                    ctermfg=167   ctermbg=NONE  cterm=NONE          guifg=#cd3f45   guibg=NONE      gui=NONE
-  hi Directory                    ctermfg=167   ctermbg=NONE  cterm=NONE          guifg=#7F7F7F   guibg=NONE      gui=NONE
+    " Flag / devicon color in NERDTree.
+    "
+    " Original:
+    " hi def link NERDTreeFlags Number
+    " Source:
+    " https://github.com/scrooloose/nerdtree/blob/master/syntax/nerdtree.vim#L89
+    hi def link NERDTreeFlags Directory
 
-  " Link color in NERDTree
-  "
-  " Original:
-  hi PreProc                      ctermfg=197   ctermbg=NONE  cterm=NONE          guifg=#ff026a   guibg=NONE      gui=NONE
+    " Directory & Folder name color in NERDTree.
+    "
+    " Original:
+    " hi Directory                    ctermfg=167   ctermbg=NONE  cterm=NONE          guifg=#cd3f45   guibg=NONE      gui=NONE
+    hi Directory                    ctermfg=167   ctermbg=NONE  cterm=NONE          guifg=#7F7F7F   guibg=NONE      gui=NONE
 
-  " Set GitGutter colors
-  "
-  " More Information:
-  " https://github.com/airblade/vim-gitgutter/commit/fd834e48eed21cc3c3ab66779a2296a16f41cbca
-  " https://github.com/airblade/vim-gitgutter/commit/fd834e48eed21cc3c3ab66779a2296a16f41cbca
-  hi GitGutterAdd                      ctermfg=188   ctermbg=64    cterm=bold          guifg=#009900   guibg=#2b2b2b   gui=bold
-  hi GitGutterDelete                   ctermfg=88    ctermbg=NONE  cterm=NONE          guifg=#ff2222   guibg=#2b2b2b   gui=NONE
-  hi GitGutterChange                   ctermfg=188   ctermbg=23    cterm=NONE          guifg=#bbbb00   guibg=#2b2b2b   gui=NONE
+    " Link color in NERDTree
+    "
+    " Original:
+    hi PreProc                      ctermfg=197   ctermbg=NONE  cterm=NONE          guifg=#ff026a   guibg=NONE      gui=NONE
 
-  " Set Seti Pmenu colors.
-  " Original:
-  " hi Pmenu                        ctermfg=NONE  ctermbg=NONE  cterm=NONE          guifg=NONE      guibg=NONE      gui=NONE
-  " hi PmenuSel                     ctermfg=NONE  ctermbg=74    cterm=NONE          guifg=NONE      guibg=#4fa5c7   gui=NONE
-  hi Pmenu                        ctermfg=NONE  ctermbg=NONE  cterm=NONE          guifg=NONE      guibg=#282a2b      gui=NONE
-  hi PmenuSel                     ctermfg=NONE  ctermbg=74    cterm=NONE          guifg=#5eebb8     guibg=#4c4f4f   gui=NONE
+    " Set GitGutter colors
+    "
+    " More Information:
+    " https://github.com/airblade/vim-gitgutter/commit/fd834e48eed21cc3c3ab66779a2296a16f41cbca
+    " https://github.com/airblade/vim-gitgutter/commit/fd834e48eed21cc3c3ab66779a2296a16f41cbca
+    hi GitGutterAdd                      ctermfg=188   ctermbg=64    cterm=bold          guifg=#009900   guibg=#2b2b2b   gui=bold
+    hi GitGutterDelete                   ctermfg=88    ctermbg=NONE  cterm=NONE          guifg=#ff2222   guibg=#2b2b2b   gui=NONE
+    hi GitGutterChange                   ctermfg=188   ctermbg=23    cterm=NONE          guifg=#bbbb00   guibg=#2b2b2b   gui=NONE
+
+    " Set Seti Pmenu colors.
+    " Original:
+    " hi Pmenu                        ctermfg=NONE  ctermbg=NONE  cterm=NONE          guifg=NONE      guibg=NONE      gui=NONE
+    " hi PmenuSel                     ctermfg=NONE  ctermbg=74    cterm=NONE          guifg=NONE      guibg=#4fa5c7   gui=NONE
+    hi Pmenu                        ctermfg=NONE  ctermbg=NONE  cterm=NONE          guifg=NONE      guibg=#282a2b   gui=NONE
+    hi PmenuSel                     ctermfg=NONE  ctermbg=74    cterm=NONE          guifg=#5eebb8   guibg=#4c4f4f   gui=NONE
+  endif " if g:colors_name == 'seti'
 
   " Set `:terminal` colors.
   "
