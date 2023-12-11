@@ -276,8 +276,8 @@ endfunction
 set background=dark
 if has('gui_running') && has('gui_macvim') || has('gui_vimr')
   " colorscheme base16-default
-  " colorscheme dracula
-  colorscheme seti
+  colorscheme dracula
+  " colorscheme seti
   " colorscheme onedark
   " colorscheme vwilight
   " colorscheme Tomorrow-Night
@@ -285,8 +285,21 @@ if has('gui_running') && has('gui_macvim') || has('gui_vimr')
   let current_scheme = get(g:, 'colors_name', 'default')
 
   if current_scheme == 'dracula'
-    " hi CursorColumn ctermbg=234 cterm=NONE guifg=NONE guibg=#44475a gui=NONE
-    hi CursorColumn ctermbg=234 cterm=NONE guifg=NONE guibg=#2b2b2b gui=NONE
+    hi ColorColumn  guibg=#2e303d
+    hi CursorLine   guibg=#2e303d
+    " hi CursorColumn guibg=#2e303d
+    hi CursorColumn guibg=#2b2b2b
+    hi FoldColmun   guibg=#2e303d
+    hi htmlTagName  guifg=#f1fa8c
+    hi LineNr       guibg=#262626
+    hi Folded       guibg=#262626
+    hi Normal       guibg=#262626
+    hi PmenuSel     guibg=#2e303d
+    hi SignColumn   guibg=#2e303d
+    hi String       guifg=#8897FC
+    hi TabLineFill  guibg=#262626
+    hi TabLine      guibg=#262626
+    hi TabLineSel   guibg=#262626
   elseif current_scheme == 'seti'
     " Custom ALE colors.
     "
@@ -362,6 +375,10 @@ if has('gui_running') && has('gui_macvim') || has('gui_vimr')
 
 else
   colorscheme dracula
+
+  " TODO: dracula customizations
+  " if get(g:, 'colors_name', 'default') == 'dracula'
+  " endif
 
   " 'hybrid' is a good default to return to if necessary.
   " colorscheme hybrid

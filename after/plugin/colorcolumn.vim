@@ -16,7 +16,7 @@
 "   http://www.emacswiki.org/emacs/EightyColumnRule
 
 function! ColorColumnInit()
-  if has("gui_macvim")
+  if has("gui_macvim") && get(g:, 'colors_name', 'default') != 'dracula'
     " Experimental ColorColumn that tweaks the non-GUI version to make the
     " foreground less glaring (to avoid too much noise from newlines) and make
     " the background match the NonText background.
