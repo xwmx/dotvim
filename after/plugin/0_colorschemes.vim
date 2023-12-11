@@ -361,14 +361,16 @@ if has('gui_running') && has('gui_macvim') || has('gui_vimr')
     \ ]
 
 else
-  " colorscheme dracula
+  colorscheme dracula
+
   " 'hybrid' is a good default to return to if necessary.
   " colorscheme hybrid
 
   " vim-snazzy with adjustments.
-  colorscheme snazzy
+  " colorscheme snazzy
   " Match background to shell theme background.
   hi Normal guibg=#262626
+
   " Remove VertSplit line characters.
   set fillchars+=vert:\ 
 
