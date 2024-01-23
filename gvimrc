@@ -168,6 +168,18 @@ if !&sidescrolloff
   set sidescrolloff=1
 endif
 
+" Set `nowrap` and `MMScrollOneDirectionOnly` on MacVim with vim 9.1.0+.
+if has("gui_macvim") && v:version >= 901
+  let scrollOneDirectionOnlyStatus =
+    \ system("defaults read org.vim.MacVim MMScrollOneDirectionOnly 2>/dev/null")
+
+  if scrollOneDirectionOnlyStatus != "1\n"
+    call system("defaults write org.vim.MacVim MMScrollOneDirectionOnly 1")
+  endif
+
+  set nowrap
+endif
+
 " CustomScrollWheelRight()
 "
 " Only right scroll until all of the longest line is visible in the window.
