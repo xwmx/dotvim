@@ -377,8 +377,10 @@ else
   colorscheme dracula
 
   " TODO: dracula customizations
-  " if get(g:, 'colors_name', 'default') == 'dracula'
-  " endif
+  if get(g:, 'colors_name', 'default') == 'dracula'
+    hi DiffAdd    ctermfg=79  ctermbg=NONE cterm=bold guifg=#f8f8f2 guibg=#5fd7af gui=bold
+    hi DiffDelete ctermfg=127 ctermbg=NONE cterm=NONE guifg=#af00af guibg=NONE    gui=NONE
+  endif
 
   " 'hybrid' is a good default to return to if necessary.
   " colorscheme hybrid
