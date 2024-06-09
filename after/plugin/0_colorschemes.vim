@@ -38,6 +38,24 @@ endfunction
 " ============================================================================
 " dracula-theme-vim
 "
+" https://github.com/catppuccin/nvim
+" ============================================================================
+
+function! SetupPluginCatppuccin()
+
+  " Initialization: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd catppuccin
+
+  " Configuration: •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+endfunction
+call SetupPluginCatppuccin()
+
+" ============================================================================
+" dracula-theme-vim
+"
 " Dracula for Vim.
 "
 " https://draculatheme.com/vim/

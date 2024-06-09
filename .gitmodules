@@ -271,3 +271,6 @@
 [submodule "vendor/github.com/tpope/vim-haml"]
 	path = vendor/github.com/tpope/vim-haml
 	url = https://github.com/tpope/vim-haml.git
+[submodule "vendor/github.com/catppuccin/nvim"]
+	path = vendor/github.com/catppuccin/nvim
+	url = https://github.com/catppuccin/nvim.git
