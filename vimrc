@@ -2668,6 +2668,23 @@ function! SetupPluginVimVisualStarSearch()
 endfunction
 
 " ============================================================================
+" vista.vim
+"
+" 🌵 Viewer & Finder for LSP symbols and tags
+"
+" https://github.com/liuchengxu/vista.vim
+" ============================================================================
+
+function! SetupPluginVistaVim()
+
+  " Init: ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+  " Native Vim init:
+  packadd vista.vim
+
+endfunction
+
+" ============================================================================
 " yats
 "
 " Yet Another TypeScript Syntax.
@@ -2777,6 +2794,7 @@ else
   call SetupPluginVimTrailingWhitespace()
   " call SetupPluginVimVisualMulti()
   call SetupPluginVimVisualStarSearch()
+  " call SetupPluginVistaVim()
   call SetupPluginYats()
 endif
 

@@ -1,0 +1,1 @@
+../../../vendor/github.com/liuchengxu/vista.vim

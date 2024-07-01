@@ -274,3 +274,6 @@
 [submodule "vendor/github.com/catppuccin/nvim"]
 	path = vendor/github.com/catppuccin/nvim
 	url = https://github.com/catppuccin/nvim.git
+[submodule "vendor/github.com/liuchengxu/vista.vim"]
+	path = vendor/github.com/liuchengxu/vista.vim
+	url = https://github.com/liuchengxu/vista.vim.git
