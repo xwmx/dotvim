@@ -904,6 +904,13 @@ function! SetupPluginCtrlp()
   " Resources:
   " https://github.com/kien/ctrlp.vim/issues/305#issuecomment-9802791
   " https://vimhelp.org/eval.txt.html#timer_start%28%29
+
+  " NOTE: Only automatically refresh CtrlP in MacVim.
+  " TODO: Fix errors when running refresh command in non-GUI vim.
+  if ! has("gui_macvim") || ! has("gui_running")
+    return
+  endif
+
   let g:ctrlp_cache_refresh_is_focused  = 1
 
   if ! exists('g:ctrlp_cache_refresh_timer')
