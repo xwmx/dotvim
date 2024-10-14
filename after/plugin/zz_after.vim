@@ -155,7 +155,20 @@ if has("gui_running")
   autocmd FileType ruby,eruby set noballooneval
 endif
 
+" Podfile
+"
+" The Podfile is a specification that describes the dependencies of the
+" targets of one or more Xcode projects with CocoaPods.
+"
+" https://guides.cocoapods.org/using/the-podfile.html
 autocmd BufRead,BufNewFile Podfile set filetype=ruby
+
+" PropsTemplate Files
+"
+" PropsTemplate is a direct-to-Oj, JBuilder-like DSL for building JSON.
+"
+" https://github.com/thoughtbot/props_template
+autocmd BufRead,BufNewFile *.json.props set filetype=ruby
 
 " =========
 " sshconfig
