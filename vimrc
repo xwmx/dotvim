@@ -2743,7 +2743,7 @@ else
   call SetupPluginEndwise()
   " call SetupPluginFugitive()
   call SetupPluginFZF()
-  " call SetupPluginGitHubCopilot()
+  call SetupPluginGitHubCopilot()
   " call SetupPluginGoyoVim()
   " call SetupPluginGundoVim()
   cal SetupPluginHtml5Vim()
