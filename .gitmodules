@@ -113,6 +113,7 @@
 [submodule "vendor/github.com/ervandew/supertab"]
 	path = vendor/github.com/ervandew/supertab
 	url = https://github.com/ervandew/supertab.git
+	branch = main
 [submodule "vendor/github.com/junegunn/goyo.vim"]
 	path = vendor/github.com/junegunn/goyo.vim
 	url = https://github.com/junegunn/goyo.vim.git
