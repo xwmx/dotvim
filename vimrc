@@ -1204,6 +1204,9 @@ function! SetupPluginGitHubCopilot()
   " Native Vim init:
   packadd copilot.vim
 
+  " disable by default
+  Copilot disable
+
 endfunction
 
 " ============================================================================
