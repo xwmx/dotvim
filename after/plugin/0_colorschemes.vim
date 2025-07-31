@@ -300,6 +300,8 @@ if has('gui_running') && has('gui_macvim') || has('gui_vimr')
   " colorscheme vwilight
   " colorscheme Tomorrow-Night
 
+  highlight Terminal guibg=#111213 ctermbg=235
+
   let current_scheme = get(g:, 'colors_name', 'default')
 
   if current_scheme == 'dracula'
