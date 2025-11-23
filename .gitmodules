@@ -278,3 +278,6 @@
 [submodule "vendor/github.com/liuchengxu/vista.vim"]
 	path = vendor/github.com/liuchengxu/vista.vim
 	url = https://github.com/liuchengxu/vista.vim.git
+[submodule "vendor/github.com/chrisbra/Colorizer"]
+	path = vendor/github.com/chrisbra/Colorizer
+	url = https://github.com/chrisbra/Colorizer.git
