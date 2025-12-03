@@ -2763,7 +2763,7 @@ else
   " https://github.com/macvim-dev/macvim/wiki/Python-2.x-and-Python-3.x
   " call SetupPluginDeniteNVim()
   " call SetupPluginDockerfileVim()
-  call SetupPluginColorizer()
+  " call SetupPluginColorizer()
   " call SetupPluginEmmetVim()
   call SetupPluginEndwise()
   " call SetupPluginFugitive()
@@ -2800,7 +2800,7 @@ else
   call SetupPluginVimGo()
   call SetupPluginVimGraphQL()
   call SetupPluginVimHaml()
-  " call SetupPluginVimHexokinase()
+  call SetupPluginVimHexokinase()
   call SetupPluginVimJavaScript()
   call SetupPluginVimJson()
   call SetupPluginVimJSXPretty()
