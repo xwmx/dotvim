@@ -1012,7 +1012,7 @@ function! SetupPluginCtrlp()
     if exists("g:loaded_ctrlp") && g:loaded_ctrlp
       augroup CtrlPExtension
         autocmd!
-        autocmd FocusGained * call CtrlPCacheRefreshFocus()
+        " autocmd FocusGained * call CtrlPCacheRefreshFocus()
         autocmd FocusLost   * call CtrlPCacheRefreshUnfocus()
       augroup END
     endif
