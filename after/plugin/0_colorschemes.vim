@@ -320,7 +320,34 @@ if has('gui_running') && has('gui_macvim') || has('gui_vimr')
     hi TabLineFill  guibg=#262626
     hi TabLine      guibg=#262626
     hi TabLineSel   guibg=#262626
+  elseif current_scheme == 'vwilight'
+    hi ColorColumn  guibg=#1A1A1A
+    hi CursorColumn guibg=#1A1A1A
+    hi CursorLine   guibg=#1A1A1A
+    " hi Directory    guifg=#854532
+    hi String       guifg=#7990b5
   elseif current_scheme == 'seti'
+    hi Function     guifg=#66a6e3
+    hi Label        guifg=#66a6e3
+    hi String       guifg=#66a6e3
+    hi Tag          guifg=#66a6e3
+    hi Type         guifg=#66a6e3
+
+    hi Conditional        guifg=#56ca82
+    hi Define             guifg=#56ca82
+    hi Keyword            guifg=#56ca82
+    hi MatchParen         guifg=#56ca82
+    hi Operator           guifg=#56ca82
+    hi Statement          guifg=#56ca82
+    hi rubyClass          guifg=#56ca82
+    hi rubyControl        guifg=#56ca82
+    hi rubyGlobalVariable guifg=#56ca82
+    hi rubyOperator       guifg=#56ca82
+    hi rubyPseudoVariable guifg=#56ca82
+    hi yamlAnchor         guifg=#56ca82
+    hi yamlAlias          guifg=#56ca82
+    hi SignifySignAdd     guifg=#56ca82
+
     " Custom ALE colors.
     "
     " More information:
