@@ -348,6 +348,12 @@ if has('gui_running') && has('gui_macvim') || has('gui_vimr')
     hi yamlAlias          guifg=#56ca82
     hi SignifySignAdd     guifg=#56ca82
 
+    " hi rubyInstanceVariable guifg=#6f88b0
+    " hi rubyInstanceVariable guifg=#8fafe3
+    " hi rubyInstanceVariable guifg=#8fe3d8
+    " hi rubyInstanceVariable guifg=#56dbd2
+    hi rubyInstanceVariable guifg=#93b9cf
+
     " Custom ALE colors.
     "
     " More information:
